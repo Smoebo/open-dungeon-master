@@ -1,229 +1,175 @@
-# ODM research note (Albert / Smoebo)
+# ODM research note
 
-**Date:** 2026-10-08 (America/Toronto). **Maintainer of this note:** Grok Bot, for Albert Ng (GitHub `Smoebo`).
-**Upstream:** https://github.com/Lebbitheplow/open-dungeon-master (MIT; maintainer `Lebbitheplow` / lebbi; contact lebbitheplow@proton.me).
-**This branch:** `research/notes` on `Smoebo/open-dungeon-master`. Docs only.
+**Updated 2026-10-08** (America/Toronto). **Upstream:** https://github.com/Lebbitheplow/open-dungeon-master (MIT; maintainer lebbi / `Lebbitheplow`, lebbitheplow@proton.me). **Branch:** `research/notes` on `Smoebo/open-dungeon-master`, docs only.
 
-Status words used below: **confirmed** = read in code or docs at a cited path; **open PR** = proposed upstream but not merged; **unverified** = claimed somewhere but not checked first-hand; **unknown** = no evidence found.
+Status words: **confirmed** = read at a cited path; **open PR** = proposed, not merged; **unverified** = claimed, not checked; **unknown** = no evidence.
 
----
+## a. Scope
 
-## a. Purpose and scope
+- Research notes for ODM contributors. Started from Albert's (`Smoebo`) Tabletop Companion (TC, `Smoebo/tabletop-companion`) research after the 2026-10-05 decision to build on ODM (TC `docs/companion-design-decisions.md`; replaces TC `docs/research/grok-weekly-tabletop-companion.md`, branch `codex/first-playable-core`).
+- Research only. Not for merging upstream; nothing here is posted upstream. Claims cite a path, release or URL; upstream paths are at `main` `198a871` (v0.24.9).
+- Fork `main` is `f9b5ee7` (v0.24.7), 26 commits behind (2026-10-08); fork created 2026-10-06 2:26 PM ET. `Smoebo` is pull-only upstream (API `admin/maintain/push/triage = false`; collaborators endpoint 403).
 
-This is the living research note for Albert's work as a contributor to Open Dungeon Master (ODM). It replaces
-`docs/research/grok-weekly-tabletop-companion.md` (Smoebo/tabletop-companion, branch `codex/first-playable-core`) as the
-place where weekly research lands, because Albert decided on 2026-10-05 to build on ODM instead of his own app
-(`docs/companion-design-decisions.md`, "2026-10-05 - Build on Open Dungeon Master", same repo and branch).
+## b. Current state (verified 2026-10-08)
 
-Scope:
+**v0.24.9**, 2026-10-07 8:29 PM ET ("Local models get their window back, feats grant what they say, GPT-6 and Codex run a table"); six releases v0.24.4 (Oct 4) to v0.24.9 (Oct 7) ([releases](https://github.com/Lebbitheplow/open-dungeon-master/releases)). 33 stars, 13 forks, TypeScript/Next.js, created 2026-07-17. Commits: Lebbitheplow 375, newideas99 45 (original Open Dungeon base), mcerina-exm 23, tw48083 10, others <10. MIT, copyright Jacob Ferrari and Kaleb Lutterman. Client (desktop + Android, app-hosted): https://github.com/Lebbitheplow/open-dungeon-master-client.
 
-- Research and recommend. No product code changes on this branch.
-- This branch is a notebook and is **never meant to be merged upstream**. Nothing here is posted to the upstream repo.
-- Every claim cites a file path, release or URL. Upstream paths are relative to upstream `main` at `198a871` (release 0.24.9) unless stated.
-
-Fork note: the fork's `main` (and so this branch's base) is at `f9b5ee7` (release 0.24.7), **26 commits behind** upstream `main`
-as of 2026-10-08. The fork was created 2026-10-06 2:26 PM ET. Smoebo's permissions on upstream are **pull only**
-(repo API: `admin/maintain/push/triage = false`; the collaborators endpoint returns 403 "Must have push access").
-
----
-
-## b. ODM current state (verified 2026-10-08)
-
-**Latest release:** v0.24.9, published 2026-10-07 8:29 PM ET ("Local models get their window back, feats grant what they say,
-GPT-6 and Codex run a table"). Cadence is very fast: v0.24.4 (Oct 4) through v0.24.9 (Oct 7) is six releases in four days
-(https://github.com/Lebbitheplow/open-dungeon-master/releases). Repo: 33 stars, 13 forks, TypeScript/Next.js, created 2026-07-17.
-Contributors by commit count: Lebbitheplow 375, newideas99 45 (author of the original Open Dungeon fork base), mcerina-exm 23,
-tw48083 10, others under 10. LICENSE: MIT, copyright Jacob Ferrari and Kaleb Lutterman. A separate client repo,
-https://github.com/Lebbitheplow/open-dungeon-master-client (desktop + Android), carries the app-hosted mode.
-
-| Capability | What ODM ships | Evidence |
+| Capability | What ships | Evidence |
 |---|---|---|
-| DM modes | `dmMode` is `"ai" \| "human" \| "assisted"`. AI narrates; a human narrates with a DM console and 64 engine adjudications; assisted lets the human hand the AI monster turns, read-alouds or a counted "cover" stretch | `src/lib/dm/viewer.ts`; README "Human DM and the workshop"; `docs/human-dm-plan.md` |
-| Co-DM | An assistant DM seat with full in-game powers, appointed via `/dm/seat`; **only exists when a human is DM** (`isDmSeat` returns false when `dmMode === "ai"`) | `src/lib/dm/viewer.ts`; `docs/human-dm-plan.md` 8i; `docs/rules-coverage.md` |
-| Workshop prep | A campaign row with `kind = 'workshop'` that never plays: maps, region, encounters, cast, bestiary with derived CR, storyboard, lore, tables, rules, world-pack builder, bundle export/import | `docs/ROADMAP.md` "The Workshop, phases 1 to 9"; `docs/workshop-plan.md` |
-| Party lead + Director | At an AI table the lead holds story authority (sees the secret arc, rerolls/edits narration, rewinds chapters) and can arm a one-turn private "Direct" steer; players see that something is armed, not what | README "Narrative"; `viewer.ts` `capsForRole` (lead gets `secretStory` only in AI mode) |
-| Setups | Three shapes: **hosted server** (npm/Docker; local model, API key or CLI agent), **no-server** (desktop/Android app embeds a server, shares via room code; human DM, no AI by default), **own key** (paste an OpenAI key or, on desktop, use a signed-in CLI agent) | opendungeonmaster.com home and `/guide/start/choose-your-setup/` (search snippets; site blocks fetch); client README |
-| AI backends | llama.cpp/Ollama/LM Studio/vLLM, OpenAI-compatible APIs (OpenRouter etc.), or Claude Code / Codex / opencode / Grok Build started with no tools of their own, only the turn's DM tools over the server's MCP endpoint | README "AI and LLM integration"; `docs/agent-harness.md`; `docs/harness-mcp-plan.md` |
-| Connected player agents | A user's own MCP client connects as that user with a hashed, revocable bearer token. Scopes in code: `read`, `play`, `characters`, `campaigns`, `dm` (plus opt-in `admin` in the plan). `dm` works only for the person in a human/assisted DM seat. No OAuth (bearer only, on purpose) | `src/lib/agents/grants.ts` line 13; `docs/harness-mcp-plan.md` 7.2 and 14 |
-| Voice | In-process mediasoup SFU, floor-aware turn taking, up to eight DM-managed side rooms, optional battle-map proximity/whisper/shout; off by default (`VOICE_ENABLED`), needs HTTPS + one UDP/TCP port | README "Voice chat"; `docs/configuration.md` |
-| Ask the DM | Out-of-character questions answered from the campaign record without moving the story; since v0.24.6 it reads server HP and recent dice. Plus a one-turn note to the DM, drafted from your thread and sent only after you confirm the exact text | README "Platform and multiplayer"; v0.24.6 notes |
-| Private whispers | One-way DM-to-player whispers and private player-to-player threads, kept out of the shared stream. **But** the AI DM prompt carries whispers it sent and received, with an instruction not to reveal them | README; Companion survey of `src/lib/dm/prompt.ts` (TC `docs/exchanges/2026-10-05-odm-survey/README.md`) |
-| DM-only rolls/notes/lore | Public, DM-only, blind and self rolls ("Roll in secret", v0.24.4); world-facts register with player-visible vs DM-only facts; storyboard secrets import as DM-only notes; sheet notes stripped for other seats | README; `src/lib/table-delivery.ts`; `docs/ROADMAP.md` phase 7 |
-| Rules engine | ~50 server engines; "the narrator never owns the numbers". Ruleset is D&D 5e **SRD 5.1 (2014)**. Open5e pack includes an SRD 5.2 (2024) backfill, but 2024 rows that change a 2014 mechanic are recorded as gaps | README; `docs/rules-coverage.md`; `docs/rules-enforcement-audit.md`; `docs/content.md` |
-| World packs | A JSON manifest that renames rules into a setting plus lore/monsters; "a pure name mapping. Every mechanic stays 5e" | README "Campaign plugins"; `docs/worlds.md` |
-| Safety | Lines and veils; X-card pauses the DM turn queue and offers rewind/reroll/continue | `docs/vtt-parity-implementation-plan.md` 9.1; `src/lib/dm/safety.ts` |
-| Undo/approval | Optional `inventoryApprovals` stages item/gold changes as player-approved offers; per-entry audit undo and revert-turn routes; chapter snapshots and lead-confirmed rewind | README "Items and anti-cheat"; `src/app/api/campaigns/[campaignId]/audit/` |
+| DM modes, co-DM | `dmMode` `ai`/`human`/`assisted`. Human DM: console, 64 engine adjudications. Assisted: AI takes monster turns, read-alouds or a counted "cover". Co-DM seat (`/dm/seat`) only at human-DM tables | `src/lib/dm/viewer.ts` (`isDmSeat`); `docs/human-dm-plan.md` (8i) |
+| Lead + Director | AI tables: lead sees the secret arc, rerolls/edits narration, rewinds chapters, arms a private one-turn "Direct" (players see it is armed, not what) | README "Narrative"; `viewer.ts` `capsForRole` |
+| Workshop | `kind = 'workshop'` campaign: maps, encounters, cast, bestiary (derived CR), storyboard, lore, world-pack builder, bundles | `docs/ROADMAP.md` phases 1-9; `docs/workshop-plan.md` |
+| Setups | **Hosted** (npm/Docker; local model, API key or CLI agent); **no-server** (app embeds server, room code, human DM, no AI by default); **own key** (OpenAI key or desktop CLI agent) | opendungeonmaster.com `/guide/start/choose-your-setup/` (search snippets; site blocks fetch); client README |
+| AI backends | llama.cpp/Ollama/LM Studio/vLLM, OpenAI-compatible APIs, or Claude Code/Codex/opencode/Grok Build limited to the turn's DM tools over the server MCP | `docs/agent-harness.md`; `docs/harness-mcp-plan.md` |
+| Connected agents | Hashed revocable bearer token. Scopes `read`, `play`, `characters`, `campaigns`, `dm` (+ planned opt-in `admin`); `dm` only for a human/assisted DM. No OAuth, on purpose | `src/lib/agents/grants.ts` l.13; `harness-mcp-plan.md` 7.2, 14 |
+| Voice | mediasoup SFU, floor-aware, up to 8 side rooms, optional map proximity. Off by default (`VOICE_ENABLED`); needs HTTPS + one UDP/TCP port | README "Voice chat"; `docs/configuration.md` |
+| Ask the DM | OOC answers from the record (server HP + recent dice since v0.24.6); one-turn note to the DM, sent after confirming the text | README; v0.24.6 notes |
+| Secrets | DM whispers, private player threads; public/DM-only/blind/self rolls (v0.24.4); DM-only world facts and storyboard notes; sheet notes stripped. AI prompt still carries whispers ("don't reveal") | `src/lib/table-delivery.ts`; `src/lib/dm/prompt.ts` (TC `docs/exchanges/2026-10-05-odm-survey/README.md`) |
+| Rules, world packs | ~50 server engines ("the narrator never owns the numbers"); 5e **SRD 5.1 (2014)**; Open5e SRD 5.2 backfill with changed 2024 mechanics logged as gaps. World packs rename only ("Every mechanic stays 5e") | `docs/rules-coverage.md`; `docs/rules-enforcement-audit.md`; `docs/content.md`; `docs/worlds.md` |
+| Safety, undo | Lines/veils; X-card pauses the DM queue. Optional `inventoryApprovals`; audit undo, revert-turn, chapter rewind | `src/lib/dm/safety.ts`; `docs/vtt-parity-implementation-plan.md` 9.1; `src/app/api/campaigns/[campaignId]/audit/` |
 
----
+## c. Planned work
 
-## c. ODM planned work
+- **ROADMAP "Next":** authoring-time ruleset validation (`src/lib/rulesets/validate.ts`, deferred); homebrew monsters in bundles; per-account dice-source sync; multiple DM personalities; split `src/app/solo/page.tsx`; drop mflux/sdnq enums. Limits: single process (SQLite, event bus, turn queue, voice); empty ambience; typed dice are trust-based.
+- **Milestone `stabilization`** (1 open / 9 closed, no due date): "Hardening the core flows before 1.0 ... with a test that keeps each fix fixed. Proposed in #3." The only 1.0 signal.
+- **Plan docs with open tails:** `human-dm-plan.md`, `workshop-plan.md`, `vtt-parity-implementation-plan.md`, `visual-overhaul-plan.md` ("Not built: the NPC conversation panel", 0.21.0), `harness-mcp-plan.md` (13 open questions; 14 left out: external agent as AI DM, OAuth), `vtt-feature-gap-report.md` (2024 toggle deferred until an open 5.2 dataset). No CHANGELOG; release notes instead.
 
-There is a public roadmap file and a milestone. The strongest signals, though, are **eight open PRs the maintainer opened on
-2026-10-08 between 11:54 AM and 12:33 PM ET**, several of which hit Companion gaps directly.
+**Open PRs by Lebbitheplow** (#141-#145 opened 2026-10-08, 11:54 AM-12:33 PM ET):
 
-**`docs/ROADMAP.md` "Next"** (dated items are all delivered; "Next" is short):
-ruleset validation at authoring time (`src/lib/rulesets/validate.ts`, deferred); homebrew monsters travelling with workshop bundles;
-per-account dice-source sync; multiple DM personalities; split `src/app/solo/page.tsx`; remove vestigial mflux/sdnq enums.
-Known limitations: single process (SQLite, event bus, turn queue, voice), ambience ships empty, typed dice are a trust feature.
-
-**Milestone `stabilization`** (open, 1 open / 9 closed, no due date): "Hardening the core flows before 1.0 ... Bugs in these
-flows come first, with a test that keeps each fix fixed. Proposed in #3." This is the only signal of a 1.0 plan.
-
-**Open PRs by Lebbitheplow, 2026-10-08 (not merged):**
-
-| PR | What it proposes | Why it matters to Albert |
+| PR | Proposes | Why it may matter |
 |---|---|---|
-| #143 | Every event type declares its audience in `src/lib/event-audience.ts`; **undeclared events reach nobody**; enemy damage figures and the cover brief projected server-side; `scripts/test-event-audience.mjs` | Deny-by-default delivery, i.e. the privacy unit Albert picked as his first ODM unit |
-| #144 | `dmMode: "steered"`: AI narrates every turn, the creator takes a DM seat with no character, holding arc, console, Direct and secret rolls; lead becomes a plain player. Plus "Dispute this ruling" settled by the steerer or a majority vote | Non-playing human seat on AI-run games; keeps the secret arc away from a player; correction voting |
-| #142 | `vitalsApprovals`: damage, healing and conditions on PCs become pending offers (from AI, console or a connected agent's `odm_dm_invoke`); approval replays the audited call | Approve-before-write beyond items/gold |
-| #145 | Quick start: one-evening adventure *The Silent Bell of Marrow's Crossing* with four pregens | Companion's "prepared starter adventure" decision |
-| #141 | Shared-server policy: who may create campaigns, paid-AI gate, `usage_events` ledger, Admin > Usage (answers issues #137/#138) | Hosting for friends without spending the owner's key |
-| #134, #135, #139 | Spell/combat feats; four gap-hunting test suites; priced pack gear (#136) | Stabilization |
+| #143 | Each event type declares its audience (`src/lib/event-audience.ts`); **undeclared events reach nobody**; enemy damage and cover brief stay server-side; `scripts/test-event-audience.mjs` | Deny-by-default delivery (gap 6) |
+| #144 | `dmMode: "steered"`: AI narrates, creator takes a character-less DM seat (arc, console, Direct, secret rolls), lead becomes a player; "Dispute this ruling" settled by steerer or vote | Gaps 2, 11 |
+| #142 | `vitalsApprovals`: PC damage/healing/conditions become offers (AI, console or `odm_dm_invoke`); approval replays the audited call | Gap 5 |
+| #145 | Quick start *The Silent Bell of Marrow's Crossing*: one evening, four pregens | Gap 12 |
+| #141 | Campaign-creation and paid-AI policy, `usage_events` ledger, Admin > Usage (#137, #138) | Hosting without spending the owner's key |
+| #134, #135, #139 | Spell/combat feats; four gap-hunting suites; priced pack gear (#136) | Stabilization |
 
-Whether these PRs were prompted by Albert's team is **unknown**; they match Albert's 2026-10-05 decisions closely, so check before duplicating work.
+## d. Open work by area (upstream, 2026-10-08 1:15 PM ET)
 
-**Open issues (6):** #140 Battle Maps drawer empty on failed load; #138 user-owned AI providers for hosted campaigns; #137 admin
-usage overview; #136 unpriced Open5e gear (all by GeekSheikh, 2026-10-08); #57 language-independent text reading (mcerina,
-proposal); #37 consolidation phase on core-flow polish (mcerina, label `core-flow`).
+| Area | Issues | PRs |
+|---|---|---|
+| Privacy | - | #143 event audiences (Lebbitheplow) |
+| DM modes | - | #144 steered mode + disputes; #142 vitals approvals (Lebbitheplow) |
+| Rules / character creation | #136 priced Open5e gear unpriced (GeekSheikh) | #139 fixes #136; #134 feats, for #125 (Lebbitheplow) |
+| Server admin | #137 usage overview; #138 user-owned AI providers (GeekSheikh) | #141 for #137, #138 (Lebbitheplow) |
+| Bugs / tests | #140 Battle Maps drawer empty on failed list request (GeekSheikh) | #135 gap-hunting suites, five fixes (Lebbitheplow) |
+| Onboarding | - | #145 quick start (Lebbitheplow) |
+| Core flow / language | #37 consolidation phase, `core-flow`; #57 language-independent text reading (mcerina) | - |
 
-**Plan docs with open tails:** `docs/human-dm-plan.md`, `docs/workshop-plan.md`, `docs/vtt-parity-implementation-plan.md`,
-`docs/visual-overhaul-plan.md` (0.21.0 notes: "Not built: the NPC conversation panel"), `docs/harness-mcp-plan.md`
-(section 13 open questions; section 14 "left out on purpose": an external agent as AI DM over the Workbench; OAuth),
-`docs/vtt-feature-gap-report.md` ("2024 rules toggle ... defer until an open 5.2 dataset is imported"). No CHANGELOG file; release notes serve that role.
+No open PR yet for #140, #37 or #57.
 
----
+## e. Gaps vs Tabletop Companion ideas
 
-## d. Gaps vs the planned Tabletop Companion
+Sources: TC `docs/companion-design-decisions.md` (2026-09-09 "D&D first, other supplied RPG rules later"; 2026-09-11 "Two longer-term hybrid DM arrangements", "Same-Wi-Fi first test", "Private play for the live test"; 2026-09-12 "Local use"; 2026-10-05 "Build on ODM") and TC research note (R8, R12, R13, R15, steal list). Status at 0.24.9.
 
-Sources for Companion intent: TC `docs/companion-design-decisions.md` (esp. 2026-09-09 "D&D first, other supplied RPG rules later",
-2026-09-11 "Two longer-term hybrid DM arrangements", "Same-Wi-Fi first test", "Private play for the live test", 2026-09-12
-"Local use", 2026-10-05 "Build on ODM") and the TC research note (R8, R12, R13, R15, steal list). Status is for upstream `main` at 0.24.9.
-
-| # | Companion feature | ODM status | Evidence |
+| # | TC idea | ODM status | Evidence |
 |---|---|---|---|
-| 1 | Swappable rules modules (SRD 5.2/5.2.1, 3.5, GURPS, Daggerheart; editions change) | **Confirmed missing.** One 5e SRD 5.1 engine in `src/lib/srd/` + `src/lib/dm/`; world packs rename only; 2024 rows are logged as gaps; "Ruleset validation" in Next is 5e variant rules, not other systems | README "Systems & engines", "Campaign plugins"; `docs/rules-enforcement-audit.md`; `docs/vtt-feature-gap-report.md` |
-| 2 | Non-playing human co-DM seat on AI-run games | **Confirmed missing on main; in open PR #144** ("steered" mode). Today the only human with secrets at an AI table is the lead, who also plays a character | `viewer.ts` `isDmSeat`/`capsForRole`; PR #144 |
-| 3 | Pause-and-redirect control separate from X-card | **Pause: confirmed missing** (only `src/lib/dm/safety.ts` calls `pauseDmQueue`, with the X-card reason). **Redirect: partial** (Director one-turn steer, narration reroll, chapter rewind) | `src/lib/dm/queue.ts`, `safety.ts`; README "Narrative" |
-| 4 | Longer whole-session handoffs in Assisted mode | **Partial.** Cover is capped at `MAX_COVER_TURNS = 20` answers, and the cover prompt forbids ending chapters, resolving the central question, killing named NPCs or new twists. PR #144's steered mode may cover the "AI runs, human steers" case | `src/lib/dm/delegation.ts`; `docs/human-dm-plan.md` 7c |
-| 5 | Propose / dry-run / approve + undo for AI and agent state changes | **Partial.** Approve-first only for items/gold (`inventoryApprovals`, off by default); vitals in open PR #142. Undo exists (audit entry undo, revert-turn, rewind). No dry-run preview; agent `dm`-scope calls apply directly unless a switch stages them | README; `audit/[entryId]/undo`, `audit/revert-turn` routes; PR #142 |
-| 6 | Fail-closed, server-enforced knowledge tiers | **Partial.** Server-side caps exist (`capsFor`), rolls redacted, sheet notes stripped. But stream delivery on main is a deny-list (`DM_ONLY_EVENTS` in `src/lib/table-delivery.ts`), the AI prompt holds the outline and whispers, and redacted rolls still "visibly happened" (vs Grimoire's 404). Deny-by-default is open PR #143 | `table-delivery.ts`; `viewer.ts`; PR #143 |
-| 7 | Optional read-only external canon import (WorldForge) | **Confirmed missing.** World Anvil import ruled out; fallback is paste/upload an article as lore. Nearest seam: the transactional content-import planner/executor and workshop bundles | `docs/ROADMAP.md` (World Anvil paragraph); README "Content import" |
-| 8 | Private DM-to-one-player text for in-person tables | **Partial.** One-way DM whispers and private threads exist, the table runs on phones, and there is a chrome-free second-screen table view. A flow designed for a DM narrating aloud in the same room is **unverified** | README; `docs/ROADMAP.md` phases 26-30 ("the room") |
-| 9 | Local same-Wi-Fi hub | **Partial / conflicting.** Server from source binds `0.0.0.0:3005` (`npm run start:lan`) and works on a LAN. App-hosted worlds share through a Cloudflare tunnel issued by the ODM broker; client README says "friends on the same Wi-Fi can use the LAN address", while TC's 2026-10-05 survey found a desktop-hosted world binds `127.0.0.1`. Fully offline app hosting **unverified** | README "Quick start"; client README lines ~74, ~128, ~305; TC survey README |
-| 10 | Audited privacy evidence | **Partial.** Strong test culture (`test-viewer-roles`, `test-enforce-permissions`, PR #143's chunk-by-chunk test), but no independent privacy audit or evidence pack, and leaks were fixed after launch (v0.12.1 campaign keys in member snapshots; v0.24.5 hidden-token board record, uploads without login) | `docs/rules-coverage.md`; release notes v0.24.5; guide "Where a key lives" |
-| 11 | Correction authority / voting | **Missing on main; open PR #144** (disputes upheld/overruled/voted; the fix itself stays with undo) | PR #144 |
-| 12 | Prepared starter adventure + pregens | **Missing on main; open PR #145** | PR #145 |
-| 13 | Voice: DM listens to table talk, acts only on a trigger phrase | **Unverified / likely missing.** ODM has push-to-talk with confirm-then-send and transcription for human-DM tables | README "Voice"; TC decisions 2026-09-12 |
-| 14 | Consent-scoped disclosure for private-sheet corrections; history-preserving current-value corrections | **Unverified.** ODM has inline narration edit (dice markers preserved) and audit undo; no consent/disclosure flow found | README "Narrative"; TC decisions 2026-09-13, 2026-09-19 |
+| 1 | Swappable rules modules (SRD 5.2/5.2.1, 3.5, GURPS, Daggerheart) | **Confirmed missing.** One 5e engine (`src/lib/srd/`, `src/lib/dm/`); "ruleset validation" means 5e variants | README "Systems & engines"; `vtt-feature-gap-report.md` |
+| 2 | Non-playing human co-DM on AI tables | **Missing on main; open PR #144.** Only the lead (a player) holds secrets | `viewer.ts` |
+| 3 | Pause-and-redirect apart from X-card | **Pause: confirmed missing** (only `safety.ts` calls `pauseDmQueue`). **Redirect: partial** (Direct, reroll, rewind) | `src/lib/dm/queue.ts` |
+| 4 | Whole-session assisted handoff | **Partial.** `MAX_COVER_TURNS = 20`; cover can't end chapters, resolve the central question, kill named NPCs or add twists. #144 may cover it | `src/lib/dm/delegation.ts`; `human-dm-plan.md` 7c |
+| 5 | Propose / dry-run / approve + undo | **Partial.** Approve-first for items/gold (off by default); vitals in #142; undo exists; no dry-run; agent `dm` calls apply directly | `audit/[entryId]/undo`, `audit/revert-turn` |
+| 6 | Fail-closed knowledge tiers | **Partial.** `capsFor` caps, redaction. Main uses a deny-list (`DM_ONLY_EVENTS`); prompt holds outline and whispers; redacted rolls "visibly happened" (Grimoire: 404). Fix in #143 | `table-delivery.ts` |
+| 7 | Read-only canon import (WorldForge) | **Confirmed missing.** World Anvil import ruled out (paste as lore). Seam: transactional import planner, bundles | ROADMAP (World Anvil); README "Content import" |
+| 8 | Private DM-to-player text in person | **Partial.** Whispers, phone play, second-screen view. Narrate-aloud flow **unverified** | ROADMAP phases 26-30 |
+| 9 | Same-Wi-Fi hub | **Partial / conflicting.** Source server binds `0.0.0.0:3005` (`npm run start:lan`). App worlds use the broker's Cloudflare tunnel; client README says LAN works, TC survey saw `127.0.0.1`. Offline **unverified** | client README ~l.74, ~128, ~305 |
+| 10 | Audited privacy evidence | **Partial.** Tests (`test-viewer-roles`, `test-enforce-permissions`, #143); no independent audit; fixed leaks: v0.12.1 campaign keys in member snapshots, v0.24.5 hidden-token board record and logged-out uploads | v0.24.5 notes; guide "Where a key lives" |
+| 11 | Correction voting | **Missing on main; open PR #144** (fix stays with undo) | PR #144 |
+| 12 | Starter adventure + pregens | **Missing on main; open PR #145** | PR #145 |
+| 13 | Voice: DM acts only on a trigger phrase | **Unverified / likely missing.** Push-to-talk, confirm-then-send, transcription | TC 2026-09-12 |
+| 14 | Consent-scoped private-sheet corrections, history kept | **Unverified.** Narration edit (dice kept), audit undo; no consent flow found | TC 2026-09-13, 2026-09-19 |
 
----
+## f. Worth adopting from competitors
 
-## e. Worth adopting from competitors (TC steal list mapped to ODM)
+| Idea | Source | Where it would land in ODM |
+|---|---|---|
+| Dry-run, then approval cards | Familiar (beta 2026-09-25; v2.26.0 2026-10-05 adds cost preview, `/undo`, MCP `undo-last-workflow`) | `dryRun` on `odm_dm_invoke` and the AI tool path, returning the would-be audit row; reuse #142's offer bar |
+| Hidden = 404; one projection for portal, agent, export | Grimoire 1.5.3b-f | #143 is half; add an "export as the player sees it" check |
+| Read-only player MCP by default | Grimoire | Default new grants to `read` (current default **unverified**); test `read` is refused on writes (Grimoire 1.5.3e bug) |
+| Explicit write grant, OAuth | Archivist MCP (`agent_write`) | Keep scopes; OAuth only if hosted multi-user needs it |
+| Separate referee and narrator AIs | TableForge "Mirelle" | ODM has story vs utility models; name a "referee" role; opt-in rules check (srdcheck) |
+| Between-session self-serve | ScryRPG, MythWeaver, Archivist, Grimoire "My Character" | Check shops, trade, level-up, Ask, library outside live play; else a lobby view |
 
-| Steal | Source | ODM today | Where it would land |
-|---|---|---|---|
-| Dry-run, then approval cards for inventory/coin | Familiar (beta 2026-09-25); v2.26.0 (2026-10-05) adds "ask what something costs first" and undo via `/undo` or MCP `undo-last-workflow` | Item/gold offers exist; no preview of an AI/agent call before it is staged | A `dryRun` flag on `odm_dm_invoke` and the AI tool path that returns the would-be audit row; reuse the offer bar from PR #142 |
-| Server-side absence (hidden = 404), one projection for portal, agent and export | Grimoire 1.5.3b-f | Redaction, not absence; Workbench reads reuse web redaction (good); deny-list on main | PR #143 is the absence half; then an "export as the player sees it" check |
-| Read-only player MCP by default | Grimoire | `read` scope exists; `play` lets an agent act. Default scopes for a new grant **unverified** | Default new grants to `read`; test that `read` is refused on every mutating route (Grimoire 1.5.3e bug) |
-| Read vs write separated by an explicit grant (`agent_write`), OAuth | Archivist MCP | Scopes split read/play/characters/campaigns/dm; bearer tokens, OAuth deliberately left out | Keep scopes; OAuth only if a hosted multi-user server needs it |
-| Dual specialized AI roles (referee/memory vs narrator) | TableForge "Mirelle" | Story vs utility model roles with separate sampling; engines own numbers | Name a "referee" role in docs; consider an opt-in rules-check pass (see srdcheck below) |
-| Between-session player self-serve (loot, shop, sheet) | ScryRPG, MythWeaver, Archivist, Grimoire "My Character" | Shops with haggling, player trade, level-up flow, Ask, character library | Check whether these work outside a live session; add a "between sessions" lobby view if not |
+## g. Watchlist
 
----
-
-## f. Watchlist
-
-Commercial entries are carried from the TC note (last checked there 2026-10-05) unless marked new; not all re-checked today.
+**Commercial** (from TC note, checked 2026-10-05 unless new):
 
 | Product | Note |
 |---|---|
-| Familiar (Foundry) | **New:** v2.26.0 stable 2026-10-05 5:13 PM ET: 230 tools, undo (`/undo`, MCP `undo-last-workflow`), reactions as player Cast/Pass cards, any OpenAI-compatible endpoint. Still Foundry-bound DM tooling |
-| TableForge | Multiplayer AI DM with SRD 2024 engine; Mirelle adjudication/memory AI; host pays, guests free. Oct changelog: party chat, recaps |
-| ScryRPG | Around-play hub: loot, shops, approve-before-write familiar; Foundry module closed beta |
-| MythWeaver | Prep co-DM with human approval; DM-vs-player knowledge framing |
-| Archivist | Recap/compendium; hosted MCP with OAuth; `agent_write` gate |
+| Familiar (Foundry) | **New:** v2.26.0, 2026-10-05 5:13 PM ET: 230 tools, undo, Cast/Pass reaction cards, any OpenAI-compatible endpoint |
+| TableForge | Multiplayer AI DM, SRD 2024 engine, Mirelle; host pays, guests free. Oct: party chat, recaps |
+| ScryRPG | Loot, shops, approve-before-write; Foundry module closed beta |
+| MythWeaver | Prep co-DM with human approval; DM-vs-player knowledge |
+| Archivist | Recaps; hosted MCP with OAuth; `agent_write` |
 | Grimoire (ttrpg.bot) | Common/Player/GM-Secret tiers, hidden = 404; read-only player MCP; export = player view (1.5.3f) |
-| Skeinkeeper | Pre-MVP Discord voice + Foundry MCP; watch only |
+| Skeinkeeper | Pre-MVP Discord voice + Foundry MCP |
 
-Open source (stars and last push read from the GitHub API on 2026-10-08):
+**Open source** (GitHub API, 2026-10-08; push dates ET):
 
-| Project | License | Stars | Last push (ET) | Note |
+| Project | License | Stars | Push | Note |
 |---|---|---|---|---|
-| [AnyWorld](https://github.com/iamarxs/AnyWorld) | MIT | 36 | Oct 8 | Python/FastAPI multiplayer browser game; freeform AI-only DM, no rules engine. Created 2026-09-15 |
-| [Loreweaver](https://github.com/1A7432/loreweaver) | MIT | 63 | Oct 6 | Self-hosted AI GM/Keeper for 5e SRD + Call of Cthulhu 7e; function calling, shared sessions, AI party members, SillyTavern card import. Two rule systems in one app is a reference for gap 1 |
-| [NarrativeEngine-P](https://github.com/Sagesheep/NarrativeEngine-P) | MIT | 102 | Oct 7 | Solo AI-DM memory and living NPCs; ODM credits it for design ideas (`docs/LICENSES.md`) |
-| [open-tabletop-gm](https://github.com/Bobby-Gray/open-tabletop-gm) | not detected by API | 58 | Sep 16 | LLM-agnostic GM framework; 5e as reference "system module", others pluggable; single-player. Best architecture reference for gap 1 |
-| [dmcp](https://github.com/shawnrushefsky/dmcp) | MIT | 12 | Jan 6 | MCP server for an agent DM; quiet since January |
-| [ADnD](https://github.com/jncchds/adnd) | MIT | 0 | Sep 28 | C#/SignalR multiplayer AI GM; README claims 5e, PF2e, CoC 7e and custom systems; whispers and OOC excluded from the AI's context; PostgreSQL work queue. Small but feature-relevant |
-| [STMP](https://github.com/RossAscends/STMP) | AGPL-3.0 | 123 | 2025-10-01 | SillyTavern MultiPlayer: several users chatting with one AI; no rules engine; quiet for a year |
+| [AnyWorld](https://github.com/iamarxs/AnyWorld) | MIT | 36 | Oct 8 | Python/FastAPI multiplayer, AI-only DM, no rules. Created 2026-09-15 |
+| [Loreweaver](https://github.com/1A7432/loreweaver) | MIT | 63 | Oct 6 | 5e SRD + CoC 7e, shared sessions, AI party, SillyTavern cards. Gap 1 reference |
+| [NarrativeEngine-P](https://github.com/Sagesheep/NarrativeEngine-P) | MIT | 102 | Oct 7 | Solo AI-DM memory; credited in `docs/LICENSES.md` |
+| [open-tabletop-gm](https://github.com/Bobby-Gray/open-tabletop-gm) | not detected | 58 | Sep 16 | 5e as pluggable "system module"; single-player. Best gap 1 reference |
+| [dmcp](https://github.com/shawnrushefsky/dmcp) | MIT | 12 | Jan 6 | Agent-DM MCP server; quiet |
+| [ADnD](https://github.com/jncchds/adnd) | MIT | 0 | Sep 28 | C#/SignalR; claims 5e, PF2e, CoC 7e, custom; whispers/OOC kept from AI; PostgreSQL queue |
+| [STMP](https://github.com/RossAscends/STMP) | AGPL-3.0 | 123 | 2025-10-01 | SillyTavern MultiPlayer; no rules; quiet |
 
----
+**New finds** (created 2026):
 
-## g. New open-source scan (2026-10-08)
-
-Searched GitHub (via the GitHub MCP `search_repositories`) for projects created in 2026. Credible new ones:
-
-| Project | License | Stars | Last push (ET) | Why watch |
+| Project | License | Stars | Push | Note |
 |---|---|---|---|---|
-| [DiceFrame](https://github.com/diceframe/diceframe) | AGPL-3.0 | 107 | Oct 8 | Self-hosted AI TRPG engine, multiple rule systems (D&D 5e light, CoC 7e, custom d20, diceless), multiplayer WebUI with invites, SSE, experimental WebRTC direct play, QQ group bot. Early release. Closest new multi-system multiplayer peer. AGPL: study only, do not copy into MIT ODM |
-| [Covel](https://github.com/ackness/covel) | MIT | 55 | Oct 8 | Agentic AI-RPG framework: kernel + capability plugins + portable world packs; "proposals, validation" in the kernel; hidden story events kept out of prompts until conditions hold. Reference for plugin seams and keeping secrets out of the prompt |
-| [srdcheck](https://github.com/chaoz23/srdcheck) | not detected | 3 | Aug 25 | Deterministic, cited rules verdicts for agents; **SRD 5.2.1 + 5.1 adapters**; transition proposals that fail closed on stale state. Small but directly relevant to gaps 1 and 5 |
-| [VelvetRP](https://github.com/mojomast/velvetrp) | none detected | 2 | Oct 7 | "The model proposes, the server owns what became true"; human-DM mode with exact AI proposals to review; SRD 5.1 with a coverage matrix |
-| [CampaignRepo](https://github.com/avorial/CampaignRepo) | MIT | 8 | Sep 23 | Git-backed campaign wiki; `:::gm` secret blocks; no-login player portal; MCP writes land in a review queue. Read-only canon-source pattern (gap 7) |
-| [lorekit](https://github.com/matluz1/lorekit) | Apache-2.0 | 10 | Apr 4 | MCP TTRPG engine with deterministic rules, NPC agents, branching saves; quiet since April |
+| [DiceFrame](https://github.com/diceframe/diceframe) | AGPL-3.0 | 107 | Oct 8 | Multi-system (5e light, CoC 7e, custom d20, diceless), multiplayer WebUI, SSE, experimental WebRTC, QQ bot. Closest peer. AGPL: study only |
+| [Covel](https://github.com/ackness/covel) | MIT | 55 | Oct 8 | Kernel + plugins + world packs; proposals/validation; hidden events kept out of prompts |
+| [srdcheck](https://github.com/chaoz23/srdcheck) | not detected | 3 | Aug 25 | Cited rules verdicts, **SRD 5.2.1 + 5.1**, fail-closed transitions. Gaps 1, 5 |
+| [VelvetRP](https://github.com/mojomast/velvetrp) | none detected | 2 | Oct 7 | "The model proposes, the server owns what became true"; SRD 5.1 coverage matrix |
+| [CampaignRepo](https://github.com/avorial/CampaignRepo) | MIT | 8 | Sep 23 | Git wiki, `:::gm` blocks, no-login portal, MCP review queue. Gap 7 |
+| [lorekit](https://github.com/matluz1/lorekit) | Apache-2.0 | 10 | Apr 4 | MCP engine, NPC agents, branching saves; quiet |
 
-Lower-signal finds (0-16 stars, mostly solo or Claude Code plugins): claude-dnd (SergeyKhval), chronicle (solo, home network),
-oracle / nightwire (real-time table GMs), eldritchdm (Discord + MCP rules engine), cozyvtt-mcp (agent DM over a self-hosted VTT),
-asyncrpg (play-by-email LLM DM), lonely-dungeon-master (projector + webcam minis). Not added to the watchlist.
+Not watched (0-16 stars): claude-dnd (SergeyKhval), chronicle (solo, home network), oracle / nightwire (real-time GMs), eldritchdm (Discord + MCP rules), cozyvtt-mcp (agent DM over a VTT), asyncrpg (play-by-email), lonely-dungeon-master (projector + webcam minis).
 
-**Weekly GitHub queries to reuse** (bump the date):
+## h. Weekly search queries (bump the date)
 
-- `"dungeon master" ai created:>=2026-01-01 stars:>=10` sorted by stars
-- `topic:ai-dungeon-master created:>=2026-01-01` sorted by stars
+- `"dungeon master" ai created:>=2026-01-01 stars:>=10` (sort: stars)
+- `topic:ai-dungeon-master created:>=2026-01-01` (sort: stars)
 - `"game master" llm ttrpg created:>=2026-01-01 stars:>=5`
-- `ttrpg mcp created:>=2026-01-01` sorted by stars
+- `ttrpg mcp created:>=2026-01-01` (sort: stars)
 - `llm tabletop multiplayer created:>=2026-01-01`
 - `topic:ttrpg topic:self-hosted pushed:>=<last week>`
-- `repo:Lebbitheplow/open-dungeon-master is:pr is:open` and `is:issue is:open` (upstream signals)
+- `repo:Lebbitheplow/open-dungeon-master is:pr is:open` and `is:issue is:open`
 
----
+## i. Recommendations
 
-## h. Recommendations for Albert as an ODM contributor
+- **O1.** Review #143 before new privacy work; what remains is the prompt's outline/whispers and redaction vs absence (gap 6).
+- **O2.** Test #144 steered mode against TC's "human-steered AI DM" (2026-09-11). Still missing: pause, AI check-ins, private pre-play planning (gaps 2-4).
+- **O3.** Propose a non-X-card pause: `pauseDmQueue(campaignId, reason)` already takes a reason; add a "hold" with a private redirect note (gap 3).
+- **O4.** Ask whether whole-session cover is wanted before coding; steered mode may replace it (gap 4).
+- **O5.** Map where 5e is assumed (`src/lib/srd/`, `src/lib/dm/`, tool schemas, sheet shape) before rules-module code. SRD 5.2 is the cheapest start (Open5e `srd-2024` rows). References: open-tabletop-gm, Loreweaver, srdcheck (gap 1).
+- **O6.** Build dry-run on #142's offer bar (gap 5).
+- **O7.** Add WorldForge as a read-only lore source via the import planner (gap 7).
+- **O8.** Same-Wi-Fi test with internet off, source server and desktop app; is the broker needed? (gap 9).
+- **O9.** Lead with tests: a privacy evidence matrix like `test-event-audience.mjs` fits `stabilization` (gap 10).
+- **O10.** Sync first: fork is 0.24.7; TC `odm-companion` starts at 0.24.6 (`48a4a7e`). Rebase onto 0.24.9 plus merged #141-#145.
+- **O11.** Default agent grants to `read`; verify current defaults first (section f).
 
-Short, concrete, each tied to evidence. None of these posts anything upstream; anything that would (a comment, PR or issue) needs Albert's own go-ahead.
+## j. Verify next week
 
-- **O1. Check PR #143 before starting the privacy unit.** It already does deny-by-default delivery with a test (section c). If it merges, the first Companion unit shrinks to what it leaves out: the AI prompt carrying outline and whispers, and redaction vs absence (gap 6).
-- **O2. Test PR #144 "steered" mode against Companion's "human-steered AI DM" decision** (TC decisions 2026-09-11). Note what is still missing: a pause, AI check-ins with the human, and private planning before play (gaps 2-4).
-- **O3. Propose a pause that is not the X-card.** `pauseDmQueue(campaignId, reason)` already takes a reason and only `safety.ts` calls it. A steerer/DM "hold" reason with a private redirect note is a small, well-scoped change (gap 3).
-- **O4. Ask whether a whole-session cover is wanted.** Today it is 20 answers and story-freezing (`delegation.ts`). With steered mode it may be unnecessary; settle that before writing code (gap 4).
-- **O5. Write a rules-seam map before any rules-module code.** List where 5e is assumed (`src/lib/srd/`, `src/lib/dm/`, tool schemas, sheet shape). SRD 5.2 is the cheapest first step because the Open5e pack already carries `srd-2024` rows and the audit lists the 2024 gaps. Use open-tabletop-gm, Loreweaver and srdcheck as references (gap 1).
-- **O6. Build dry-run on PR #142's offer bar.** A `dryRun` on `odm_dm_invoke` that returns the would-be change matches Familiar's pattern and ODM's audit model (gap 5).
-- **O7. Put WorldForge import in as a read-only lore source** through the existing transactional import planner, the same place ODM sends pasted World Anvil articles (gap 7).
-- **O8. Run a same-Wi-Fi test with the internet off,** both server-from-source and desktop app, and record whether the broker is needed. That settles the conflicting evidence on gap 9.
-- **O9. Lead with tests.** The `stabilization` milestone wants "a test that keeps each fix fixed". A privacy evidence matrix written as tests (like `test-event-audience.mjs`) is the contribution most likely to be welcome and covers gap 10.
-- **O10. Sync before code.** The fork's `main` is 26 commits behind (0.24.7), and TC's `odm-companion` branch starts at 0.24.6 (`48a4a7e`). Rebase onto 0.24.9 plus whatever of #141-#145 merges before building.
-- **O11. Default connected-agent grants to `read`** and check that `read` is refused on every write route (Grimoire 1.5.3e had exactly that bug). Verify current defaults first (section e).
-
-**Verify next week**
-
-1. Whether #141-#145 merged, and in which release.
-2. Steered mode in practice: does the lead really lose `secretStory`? Can the steerer pause?
-3. Desktop-hosted world: LAN address vs `127.0.0.1` bind; whether it works offline.
-4. Default scopes on a new connected-agent grant; what `play` can read.
-5. Whether the AI prompt still carries whispers and the secret outline after #143.
-6. Movement on the `stabilization` milestone and issues #37 / #57 (mcerina proposals).
-7. DiceFrame and Covel release cadence; srdcheck status and license.
-8. Familiar after v2.26.0; Grimoire 1.5.3e/f final dates; TableForge Mirelle changes.
+1. Which of #141-#145 merged, and in which release.
+2. Steered mode: does the lead lose `secretStory`? Can the steerer pause?
+3. Desktop-hosted world: LAN vs `127.0.0.1`; offline use.
+4. Default scopes on a new agent grant; what `play` can read.
+5. Prompt whispers/outline after #143.
+6. `stabilization`; #37, #57; any PR for #140.
+7. DiceFrame, Covel cadence; srdcheck status and license.
+8. Familiar after v2.26.0; Grimoire 1.5.3e/f dates; TableForge Mirelle.
 
 ## Sources
 
-Upstream repo files cited above at `198a871`; https://github.com/Lebbitheplow/open-dungeon-master/releases (v0.24.4-v0.24.9);
-open PRs #134, #135, #139, #141-#145 and issues #37, #57, #136-#140; milestone `stabilization`;
-https://github.com/Lebbitheplow/open-dungeon-master-client (README);
-opendungeonmaster.com (home, `/guide/start/choose-your-setup/`, `/guide/android/first-launch/`, `/guide/ai/where-keys-live/`, via search snippets);
-Smoebo/tabletop-companion@`codex/first-playable-core`: `docs/research/grok-weekly-tabletop-companion.md`, `docs/companion-design-decisions.md`, `docs/exchanges/2026-10-05-odm-survey/README.md`;
-https://github.com/Ryanjansen92/familiar-releases/releases/tag/v2.26.0; GitHub API metadata for every repo in sections f and g.
+Upstream at `198a871`; releases v0.24.4-v0.24.9; PRs #134, #135, #139, #141-#145; issues #37, #57, #136-#138, #140; milestone `stabilization`; client README; opendungeonmaster.com (`/guide/start/choose-your-setup/`, `/guide/android/first-launch/`, `/guide/ai/where-keys-live/`, search snippets); `Smoebo/tabletop-companion`@`codex/first-playable-core` docs above; https://github.com/Ryanjansen92/familiar-releases/releases/tag/v2.26.0; GitHub API for sections g.
 
 ## Changelog
 
-- **2026-10-08** - Note created on `research/notes`. Research pivots from Tabletop Companion to ODM.
+- **2026-10-08** - Created; research moves from Tabletop Companion to ODM.
+- **2026-10-08** - Rewritten for the contributor team: about half the length, "Why it may matter" column, new section d, PR timing corrected (only #141-#145 opened 11:54 AM-12:33 PM ET).
