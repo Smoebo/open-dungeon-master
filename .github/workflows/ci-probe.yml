@@ -3,8 +3,8 @@ name: CI probe
 # Throwaway: runs the party-order drag scenario on Linux desktop to find why
 # it fails on the report-kit branches. Deleted with the probe branches.
 on:
-  push:
-    branches: ["ci-probe/**"]
+  pull_request:
+    branches: [ci-probe-base]
 
 permissions:
   contents: read
