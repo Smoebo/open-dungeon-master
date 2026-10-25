@@ -48,7 +48,7 @@ export default function CampaignPage({
 
   // This browser keeps the game page's own errors for "Report a problem"
   // (issue #459, src/lib/page-errors.ts).
-  useEffect(() => installPageErrorRecorder(), []);
+  // probe c: recorder off
 
   if (state.loading) {
     return (
