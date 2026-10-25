@@ -631,6 +631,8 @@
     "lib/backend-host.ts#str-eq": [["key",1,"host names and address prefixes"]],
     "lib/backend-host.ts#toLowerCase": [["key",1,"hostname"]],
     "lib/backgrounds/index.ts#toLowerCase": [["key",1,"background id"]],
+    "lib/battlemap/attack-art.ts#str-list": [["english-source",14,"SRD beast names and stat-block attack names picking a natural-strike picture; an unlisted or translated name gets the neutral strike art, so a miss costs only the picture"]],
+    "lib/battlemap/attack-art.ts#str-key": [["english-source",1,"SRD beast names and stat-block attack names picking a natural-strike picture; an unlisted or translated name gets the neutral strike art, so a miss costs only the picture"]],
     "lib/battlemap/beats.ts#str-case": [["key",11,"beat kinds"]],
     "lib/battlemap/condition-glyphs.ts#str-key": [["key",2,"condition labels (engine vocabulary)"]],
     "lib/battlemap/condition-glyphs.ts#toLowerCase": [["key",1,"condition labels (engine vocabulary)"]],
