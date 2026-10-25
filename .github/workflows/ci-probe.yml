@@ -1,0 +1,39 @@
+name: CI probe
+
+# Throwaway: runs the party-order drag scenario on Linux desktop to find why
+# it fails on the report-kit branches. Deleted with the probe branches.
+on:
+  push:
+    branches: ["ci-probe/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright-core install --with-deps chromium
+      - name: Pair, run 1
+        continue-on-error: true
+        run: npm run test:browser -- --only composer-limits,party-order --viewports desktop
+      - name: Pair, run 2
+        continue-on-error: true
+        run: npm run test:browser -- --only composer-limits,party-order --viewports desktop
+      - name: party-order alone
+        continue-on-error: true
+        run: npm run test:browser -- --only party-order --viewports desktop
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: probe-screens
+          path: /tmp/odm-browser-*/
+          if-no-files-found: ignore
