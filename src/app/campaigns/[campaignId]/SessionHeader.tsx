@@ -347,7 +347,7 @@ export const SessionHeader = memo(function SessionHeader({
             </button>
           </Tooltip>
         </div>
-        <div className="hidden sm:flex">
+        <div className="hidden">
           <Tooltip content="Report a problem: save a report file for a GitHub issue" side="bottom">
             <button
               type="button"
