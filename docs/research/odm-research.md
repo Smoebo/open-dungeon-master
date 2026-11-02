@@ -1,79 +1,79 @@
 # ODM research note
 
-**Updated 2026-10-26** (America/Toronto). **Upstream:** https://github.com/Lebbitheplow/open-dungeon-master (MIT; maintainer lebbi / `Lebbitheplow`, lebbitheplow@proton.me). **Branch:** `research/notes` on `Smoebo/open-dungeon-master`, docs only.
+**Updated 2026-11-02** (America/Toronto). **Upstream:** https://github.com/Lebbitheplow/open-game-master (MIT; maintainer lebbi / `Lebbitheplow`, lebbitheplow@proton.me). **Renamed 2026-10-27 (v0.31.0): Open Dungeon Master is now Open Game Master (OGM)**; the old repo URL redirects. "ODM" below means the same project. **Branch:** `research/notes` on `Smoebo/open-dungeon-master` (fork name unchanged), docs only.
 
 Status words: **confirmed** = read at a cited path; **closed** = merged upstream; **unverified** = claimed, not checked; **unknown** = no evidence.
 
 ## a. Scope
 
 - Research notes for ODM contributors. Started from Albert's (`Smoebo`) Tabletop Companion (TC, `Smoebo/tabletop-companion`) research after the 2026-10-05 decision to build on ODM (TC `docs/companion-design-decisions.md`).
-- Research only. Not for merging upstream; nothing here is posted upstream. Claims cite a path, release, PR or URL; upstream paths are at `main` `817e76c` (v0.30.2, 2026-10-25 10:52 PM ET).
-- Fork `main` is **even with upstream** (`817e76c`, 0 ahead / 0 behind). `Smoebo` is pull-only upstream; their PRs land through forks.
+- Research only. Not for merging upstream; nothing here is posted upstream. Claims cite a path, release, PR or URL; upstream paths are at `main` `2819283` (v0.32.0, 2026-11-02 6:06 AM ET).
+- Fork `main` is **even with upstream** (0 ahead / 0 behind). `Smoebo` is pull-only upstream; their PRs land through forks.
 
-## b. Current state (verified 2026-10-26)
+## b. Current state (verified 2026-11-02)
 
-**v0.30.2**, 2026-10-25 11:32 PM ET. Eight releases since last week: v0.28.3 (Oct 20), v0.28.4 (Oct 21), v0.29.0 (Oct 22), v0.29.1 (Oct 22 11:49 PM), v0.30.0 (Oct 24), v0.30.1 (Oct 25 12:06 AM), v0.30.2 ([releases](https://github.com/Lebbitheplow/open-dungeon-master/releases)). **488 commits** since `v0.28.2`; ~110 PRs merged since Oct 19 (about half by Smoebo). **52 stars, 22 forks.** Client (desktop + Android): **v0.21.2**, 2026-10-25 11:55 PM ET ([client](https://github.com/Lebbitheplow/open-dungeon-master-client)).
+**v0.32.0, the first beta** (prerelease, Docker `:beta`), 2026-11-02 5:58 AM ET; **v0.31.4 is stable** (Oct 31 10:11 PM ET). Seven releases since last week: v0.30.3 (Oct 27), v0.31.0 (Oct 27, rename), v0.31.1 (Oct 28), v0.31.2 (Oct 29), v0.31.3 (Oct 31), v0.31.4, v0.32.0 ([releases](https://github.com/Lebbitheplow/open-game-master/releases)). **878 commits** since `v0.30.2`; **158 PRs merged** since Oct 26 (59 by Smoebo). **72 stars (+20), 31 forks.** Client: **v0.23.0 beta / v0.22.4 stable** ([client](https://github.com/Lebbitheplow/open-game-master-client), also renamed).
 
-**New since 2026-10-19** (release notes v0.28.3–v0.30.2):
+**New since 2026-10-26** (release notes v0.30.3–v0.32.0):
 
 | Area | What shipped | Evidence |
 |---|---|---|
-| Pause the table | Any human seat can call a break; banner names who paused and counts up; only pauser, lead or DM resumes; running DM turn finishes but its audio is held; in-character refused, OOC allowed; agents see lifecycle `paused` and cannot pause; survives restart; X-card stacks on top | #453 (Smoebo); `src/lib/dm/table-break.ts`, `queue.ts` (multi-reason gate) |
-| Wait for the table | Opt-in: AI DM answers once everyone has acted or passed; respects a break | #438 (Smoebo); `src/lib/dm/table-wait.ts` |
-| Correction ledger | Every fix a table makes to the AI DM (undo, revert, sheet edit, HP/turn-order fix, narration edit, reroll, overruled ruling, rewind) is counted; Admin shows narrator quality; edited narration keeps the narrator's take | #522 (Smoebo, closes #460); builds on #515 tester report kit |
-| Report a problem | One-file tester report, gated issue forms, testing guide; admin-only | #515 (Smoebo), #527 |
-| One ruleset | **Everything is SRD 5.1:** 2024 rows removed from the content pack; 2014 magic-item prices | #506 (issue #502); v0.30.0 |
-| Workshop classes | Homebrew classes made in the workshop play like any other; subclass audit fixes | #477, #476 (mcerina audit #474); v0.29.0 |
-| NPCs and companions | NPC advances (opt-in), scheming NPCs seen through by Insight (whispered to one player), companion conscience, pacts, sides in a fight; companion command | #507, #494 |
-| Undo / review | Undo move; builder "Put it back" undo; draft a world from an idea, reviewed before anything is made; reimport keeps campaign edits and offers the import's version (Restore mine / Keep the import's) | #493, #510, #462, #499 (Smoebo) |
-| Prep mid-adventure | Lead (AI table) or DM steps out to campaign prep with the table kept running | #533 (issue #530); v0.30.2 |
-| Rolls | Prose beside a roll waits for the dice, so clues can't leak before a check | #536 (#531); v0.30.2 |
-| Local models | llama.cpp recommended, Ollama supported; 16 GB minimum with gpt-oss-20b; local turns about half as long (100 s to 50 s in the town smoke) | #475, #463, #535 |
-| WorldForge | Large worlds budgeted (World tab usable at 4,000 entries); world packs take workshop factions; Ask shows its passages; storyboard provenance | #479, #440, #439, #441 (Smoebo) |
-| Addons | Native session stage, independent viewport, stage controls, threads permission, draw-once | #420, #421, #458 (Xargot), #518, #519 |
-| Table / builder | Shops opened by the DM; haggling; offered pregens; AI-drafted pregens; owed choices on join; spell desk; party hook; two-tap board moves; Hand grouped by cost with colours | #456, #509, #508, #516, #510, #455, #485, #532 |
+| Rename | Open Game Master; the role is "Game Master (GM)" everywhere; `opengamemaster.com` (old domain answers until year end); Docker `lebbi/open-game-master` (old image names still published); `@GM` and `@DM` both work; nothing saved changes | #558, #559, #560, #565; v0.31.0 |
+| Release channels | Every build ships as a nightly **beta**; betas that hold up are promoted **stable** unchanged every 2–4 weeks. Same for apps | `docs/releases.md`; v0.32.0 |
+| Sessions | **End the session / Start session N**: play stops where it stands, sheets and prep stay open, every seat sees the next meeting with RSVP; after a long gap a "Previously, on..." recap; the shared recap leaves out what only some characters know | #616 (closes #586) |
+| Secrets and breaks | Hidden attributes, effects and private notes reach only allowed seats, live and on replay; a break now holds trades, rolls, clock, floor and monster turns (talk, corrections, prep stay open) | #547 |
+| Engine resolves first | Every complete Hand card is resolved by the engine before the narrator speaks; a player's **whole declared action** resolves in one GM turn (agent GMs no longer need "keep going"); **improvised actions** are rolled, not refused | #629–#633, #749/#751 (mcerina), #742/#752 (mcerina) |
+| Rules fidelity | **SRD 5.1 text audit**: every rule the engine breaks is a failing test, then fixed (monsters, combat, gear, magic items, spells, multiclass); content pack stores what the app read from each entry, held to a golden set; "a 5.1 table never gets Level Up's version"; initiative order and reactions hold | #673 (part of #570), #684–#693, #669–#672, #713, #739 |
+| Undo / test bench | **Revert this turn** takes back everything (death saves, clock); Workshop **Test fight** (replaces Deploy); saved fight set-ups, dice script, turn trace, scripted events, Resolve as played; a Hand scorer counts cards resolved by the right tool | #627, #556, #739 (from #685), #628 |
+| Agents | Connected player agent takes its whole combat turn; poll link follows a player to a new hero; Test backend plays one campaign-shaped turn | #700, #701, #624 (Smoebo) |
+| Characters | Multiclass at creation (Smoebo); species with player choices; companions you keep; "Hopes for this story" (private, read by the GM); a fallen hero's player brings in a new one; race and gender on NPC/foe faces (Smoebo) | #568, #555, #573, #574, #617, #747 |
+| Companions / romance | Conscience gaps closed (server keeps companions at warning; split party); romance at the table, exclusive by default, paced by story time | #564, #723–#726 |
+| Languages | Light, romance safety, dictation and narrator voice in all 15 table languages; Spanish/French/Italian/Portuguese narrators | #734 (mcerina) |
+| Addons | Native 3D board addons on Windows desktop (`combatOnly` option); 3D models get foe sex; safety alerts and break banners stay visible over native boards | #584, #745, #748 (Xargot) |
+| Contributors | CONTRIBUTING guide; a PR needs no issue of its own | #575, #697 |
 
-Unchanged from prior weeks: single process (SQLite, event bus, queue, voice), Human/Assisted/Steered modes, voice off by default, deny-by-default event audiences, WorldForge inside the workshop.
+Unchanged: single process (SQLite, event bus, queue, voice), Human/Assisted/Steered modes, deny-by-default event audiences, WorldForge inside the workshop (this week only portrait/race touches, no canon-contract change).
 
 ## c. Planned work
 
-- **`docs/ROADMAP.md` "Next"** (ROADMAP moved under `docs/`) still opens with ruleset validation against the selected ruleset.
-- **Milestone `stabilization`**: 0 open / 11 closed (still marked open). **#37 consolidation proposal closed as completed** (Oct 20), as was **#288** 3D view idea. **#275 fresh-install walkthrough closed** today (Oct 26).
-- **Working style:** lebbi still batches every open PR into a nightly "carrier" release (#496, #511, #526, #537). Integration audits keep landing in `docs/` (e.g. `workshop-creator-import-audit-2026-10-22.md`).
+- **`docs/ROADMAP.md` "Next"** still opens with ruleset validation (`src/lib/rulesets/validate.ts`), then homebrew monsters travelling with workshop bundles.
+- **#570** (mcerina, 4 comments) is the live design thread: measure model accuracy with fixed seeded scenarios before changing prompts, let the Hand talk to the engine directly (now largely shipped, #629/#749), and shared code conventions (CONTRIBUTING #575). The SRD text audit is filed as part of it.
+- **#685 audit** (`docs/issue-685-audit-2026-11-01.md`) turned into the fight bench in v0.32.0.
+- Milestone `stabilization`: 0 open / 11 closed, still open. Working style unchanged: lebbi batches every open PR of the day into one audited release (#759).
 
-## d. Open work by area (upstream, 2026-10-26 ~9:00 AM ET)
+## d. Open work by area (upstream, 2026-11-02 ~9:00 AM ET)
 
-2 open PRs; 4 open issues. ~28 issues closed since 2026-10-19. Client: 1 open PR, no open issues.
+**0 open PRs**; 11 open issues. 67 issues closed since 2026-10-26. Client: no open PRs or issues.
 
-| Area | Issues | PRs | Why it may matter |
-|---|---|---|---|
-| Community | #168 Discord server is up (Smoebo) | - | Coordination channel for proposals |
-| Voice / narration | #539 TTS fails after first turn in desktop client (GDPguy) | #540 retried narration + read-aloud scenario (Lebbitheplow); client PR #88 `play()` waits for sound address (Lebbitheplow) | Desktop narration regression; fix in flight |
-| DM tools | - | #542 parameter names and hint paths that misstated what they hold (mcerina) | Model tool-call accuracy, especially on local models |
-| Backends / docs | #541 DemonRoute as an OpenAI-compatible endpoint example (haterfactory) | - | More backend choices for hosts |
-| Builder / homebrew | #538 Custom species traits with selectable options (boneweevil1-del) | - | Next step after workshop classes (#477) |
-
-**Proposals:** none open. #37 (consolidation) and #288 (3D view) closed as completed on 2026-10-20.
+| Area | Issues | Why it may matter |
+|---|---|---|
+| Turn flow (bug) | #761 AI party members and PC turns advance before the player finishes (GDPguy) | Regression risk from the "whole declared action" and initiative work |
+| UI (bug) | #760 Campaign page keeps scrolling to the input while the AI streams (said46) | Readability during long narration |
+| Tool budget | #746 Small-window tool set has no room left; any new core-tool argument breaks `test-tool-profiles` (Smoebo) | Blocks the `start_encounter` proposals below on 48K-context local models |
+| Encounters | #740 `absent` party members, #741 long `distanceFeet` spawns no tokens, #743 party inside / enemies outside (ziomik) | Scene fidelity for fights; all need tool arguments (see #746) |
+| Narration | #744 Orphan closers like `)*` saved at the start of narration (ziomik) | Output cleanup |
+| Rules / conventions | #570 Discussion: rules fidelity, the Hand and code conventions (mcerina) | Where measurement and rules-module questions belong |
+| Community / docs | #562 Send app players to the main repo, ask for a star once (Smoebo); #541 DemonRoute endpoint example (haterfactory); #168 Discord server (Smoebo) | Growth and backend docs |
 
 ## e. Gaps vs Tabletop Companion ideas
 
-Sources: TC `docs/companion-design-decisions.md` and TC research note. Status at v0.30.2; changes since 2026-10-19 in bold.
+Sources: TC `docs/companion-design-decisions.md` and TC research note. Status at v0.32.0; changes since 2026-10-26 in bold.
 
 | # | TC idea | ODM status | Evidence |
 |---|---|---|---|
-| 1 | Swappable rules modules (SRD 5.2, 3.5, GURPS, Daggerheart) | Confirmed missing. **Moved further away:** "one ruleset, SRD 5.1" removed 2024 rows; homebrew now grows inside 5e (workshop classes) | #506, #477 |
+| 1 | Swappable rules modules (SRD 5.2, 3.5, GURPS, Daggerheart) | Confirmed missing. **5.1 now audited line by line; but the content pack's per-entry readings already separate a "5.1 table" from Level Up entries, a small ruleset seam** | #673, #669–#672 |
 | 2 | Non-playing human co-DM on AI tables | Closed (steering seat, v0.25.0) | #144 |
-| 3 | Pause-and-redirect apart from X-card | **Pause closed** (Pause the table, any seat, X-card separate and stacking). Redirect still partial: no private redirect note on a hold; prep mid-adventure lets the lead step out | #453, #533; `src/lib/dm/table-break.ts` |
-| 4 | Whole-session assisted handoff | Partial. `MAX_COVER_TURNS = 20` unchanged | `src/lib/dm/delegation.ts` |
-| 5 | Propose / dry-run / approve + undo | Partial, **deepened:** undo move, builder undo, world draft reviewed first, reimport restore. `dryRun` still not exposed to the console or agents | #493, #510, #462, #499 |
-| 6 | Fail-closed knowledge tiers | Mostly closed. **Deepened:** text beside a roll withheld until the dice; storyteller secrets never reach the lead at an AI table. Whispers/outline in DM prompt not rechecked | #536, #507 |
-| 7 | Read-only canon import (WorldForge) | Closed shape. **Deepened:** reimport records what a campaign kept over the source (DM-only notice, Use import's / Keep mine / Restore mine). Still no read-only canon flag | #499; `src/lib/worldforge/model.ts` `KeptValue` |
-| 8 | Private DM-to-player text in person | Partial. **Deepened:** Insight results and pact actions whispered to one player | #507 |
-| 9 | Same-Wi-Fi hub | Shipped in code (desktop), live test unverified. Discord sign-in now skips a stale saved Wi-Fi address | #484 |
-| 10 | Audited privacy evidence | Partial, **stronger evidence base:** correction ledger and tester report kit give measured narrator quality; still no independent privacy audit | #522, #515 |
-| 11 | Correction voting | Closed; **corrections now counted** | #144, #522 |
-| 12 | Starter adventure + pregens | Closed; **plus** offered and AI-drafted pregens | #145, #508, #516 |
-| 13 | Voice: DM acts only on a trigger phrase | Unverified / likely missing | - |
+| 3 | Pause-and-redirect apart from X-card | Pause closed; **break now holds every game action**. Redirect note on resume still missing. **End session (#616) adds a between-session stop** | #453, #547, #616 |
+| 4 | Whole-session assisted handoff | Partial. `MAX_COVER_TURNS = 20` unchanged. **Deepened for agents:** whole declared action in one GM turn; player agent takes its whole combat turn | `src/lib/dm/delegation.ts`, #749, #700 |
+| 5 | Propose / dry-run / approve + undo | Partial, **deepened:** Revert this turn takes back everything; saved fight set-ups and Resolve as played. `dryRun` still internal (cast guard and rules helpers) | #627, #739 |
+| 6 | Fail-closed knowledge tiers | **Nearly closed:** hidden attributes/effects/private notes per seat incl. replay; shared recap drops partial knowledge; players get only introduced people and visible cast changes | #547, #616, #709, #736 |
+| 7 | Read-only canon import (WorldForge) | Closed shape; no change this week. Still no read-only canon flag | #499; `src/lib/worldforge/model.ts` |
+| 8 | Private DM-to-player text in person | Partial. **Deepened:** private notes and "Hopes for this story" per seat; agent GM's whisper back answers the player | #547, #574, v0.31.3 |
+| 9 | Same-Wi-Fi hub | Shipped in code (desktop), live test unverified | #484 |
+| 10 | Audited privacy evidence | Partial. **Test base stronger:** Hand scorer, seeded dice script and turn trace make reproducible checks possible; still no independent privacy audit | #628, #739, #570 |
+| 11 | Correction voting | Closed; corrections counted | #144, #522 |
+| 12 | Starter adventure + pregens | Closed | #145, #508, #516 |
+| 13 | Voice: DM acts only on a trigger phrase | Unverified / likely missing (a closed microphone now stays closed, #544) | - |
 | 14 | Consent-scoped private-sheet corrections | Unverified | - |
 
 ## f. Worth adopting from competitors
@@ -88,11 +88,12 @@ Sources: TC `docs/companion-design-decisions.md` and TC research note. Status at
 | Separate referee and narrator AIs | TableForge "Mirelle" (every table) | Opt-in referee role; srdcheck for cited verdicts |
 | Import preview, confirm, receipt; conflicts stop at the boundary | **New:** DiceFrame v3.0.0 stable (Oct 19) | Matches #499's kept-value record; a receipt per WorldForge import would make canon sync auditable (O7) |
 | Scoped agent modes (suggest / routine / task), bulk visibility plan confirmed once | **New:** DiceFrame v3 DF Agent | Model for player/DM agent grants and batch reveal on party Atlas |
+| Ended saves stay read-only; relationship scores roll back with the save | **New:** DiceFrame v3.0.4 (Nov 2) | ODM's bonds and romance are now big state; check that Revert this turn and End session restore or freeze them the same way (#627, #616) |
 | Between-session self-serve | ScryRPG, MythWeaver, Archivist, Grimoire; ODM has agent level-up, shops, prep mid-adventure | Shops, trade, level-up, Ask outside live play |
 
 ## g. Watchlist
 
-**Commercial** (checked 2026-10-26):
+**Commercial** (last checked 2026-10-26; not rechecked 2026-11-02):
 
 | Product | Note |
 |---|---|
@@ -104,22 +105,22 @@ Sources: TC `docs/companion-design-decisions.md` and TC research note. Status at
 | Grimoire (ttrpg.bot) | No release since 1.5.3g (Oct 13) |
 | Skeinkeeper | Pre-MVP (not rechecked) |
 
-**Open source** (GitHub API, 2026-10-26; push dates ET):
+**Open source** (GitHub API, 2026-11-02; push dates ET):
 
 | Project | License | Stars | Push | Note |
 |---|---|---|---|---|
-| [DiceFrame](https://github.com/diceframe/diceframe) | AGPL-3.0 | 136 (+8) | Oct 26 | **v3.0.0 stable** (Oct 19), v3.0.2 (Oct 22): modular runtime, generic adventure packages, import preview/confirm/receipt, DF Agent scoped modes, CoC resources. Study only |
-| [Covel](https://github.com/ackness/covel) | MIT | 61 | Oct 26 | Active (not re-read) |
-| [Loreweaver](https://github.com/1A7432/loreweaver) | MIT | 67 | Oct 22 | Gap 1 reference |
-| [NarrativeEngine-P](https://github.com/Sagesheep/NarrativeEngine-P) | MIT | 108 | Oct 22 | Solo AI-DM memory |
-| [open-tabletop-gm](https://github.com/Bobby-Gray/open-tabletop-gm) | not detected | 61 | Oct 9 | 5e as a pluggable system module. Best gap 1 reference |
-| [AnyWorld](https://github.com/iamarxs/AnyWorld) | MIT | 40 | Oct 12 | Multiplayer, AI-only DM |
+| [DiceFrame](https://github.com/diceframe/diceframe) | AGPL-3.0 | 144 (+8) | Nov 2 | **v3.0.4** (Nov 2): D&D 2024 class features and spells, battle HUD and initiative bar, Adventure v2 scene progression, affinity scores with rollback, Tavern PNG import, ended saves read-only. Prior: modular runtime, import preview/confirm/receipt. Study only |
+| [Covel](https://github.com/ackness/covel) | MIT | 66 | Nov 2 | v0.0.53 (Oct 28) (not re-read) |
+| [Loreweaver](https://github.com/1A7432/loreweaver) | MIT | 67 | Nov 2 | Gap 1 reference; dev builds daily |
+| [NarrativeEngine-P](https://github.com/Sagesheep/NarrativeEngine-P) | MIT | 113 | Nov 1 | Solo AI-DM memory; v2.1.0 (Oct 29) |
+| [open-tabletop-gm](https://github.com/Bobby-Gray/open-tabletop-gm) | not detected | 62 | Oct 27 | 5e as a pluggable system module. Best gap 1 reference |
+| [AnyWorld](https://github.com/iamarxs/AnyWorld) | MIT | 41 | Oct 31 | Multiplayer, AI-only DM |
 | [srdcheck](https://github.com/chaoz23/srdcheck) | not detected | 3 | Oct 21 | Cited SRD verdicts |
-| [CozyVTT](https://github.com/CheekyChinchilla/CozyVTT) | AGPL-3.0 | 23 | Oct 25 | **v1.5.4 "Mending"** (Oct 25): 200+ fixes; sheet and rolls from initiative tracker; token facing. Study only |
+| [CozyVTT](https://github.com/CheekyChinchilla/CozyVTT) | AGPL-3.0 | 27 | Nov 1 | v1.5.4 "Mending"** (Oct 25): 200+ fixes; sheet and rolls from initiative tracker; token facing. Study only |
 
 **Study-only (low stars / niche):** [navi-dnd](https://github.com/AlexandrNemashkalo/navi-dnd) (5 stars, C# 5e AI DM); [eldritchdm](https://github.com/shoemoney/eldritchdm) (Apache-2.0, three-brain Discord bot).
 
-New-project scan (GitHub, created since Oct 12): only zero-star repos (e.g. `pmghartman/tavern`, `CannonPrince711/cannonvtt`); nothing credible enough to add. Quiet / unchanged: VelvetRP, CampaignRepo, ADnD, dmcp, lorekit, STMP.
+New-project scan (GitHub, created since Oct 19): only zero-star repos (e.g. `blackars/TTRPG-AI-DM-Web`); nothing credible enough to add. Quiet / unchanged: VelvetRP, CampaignRepo, ADnD, dmcp, lorekit, STMP.
 
 ## h. Weekly search queries (bump the date)
 
@@ -128,44 +129,45 @@ New-project scan (GitHub, created since Oct 12): only zero-star repos (e.g. `pmg
 - `"game master" llm ttrpg created:>=2026-01-01 stars:>=5`
 - `ttrpg mcp created:>=2026-01-01` (sort: stars)
 - `llm tabletop multiplayer created:>=2026-01-01`
-- `topic:ttrpg topic:self-hosted pushed:>=2026-10-26`
-- `ai gm rpg multiplayer created:>=2026-10-26 stars:>=3`
-- `repo:Lebbitheplow/open-dungeon-master is:pr is:open` and `is:issue is:open`; same for `open-dungeon-master-client`
+- `topic:ttrpg topic:self-hosted pushed:>=2026-11-02`
+- `ai gm rpg multiplayer created:>=2026-11-02 stars:>=3`
+- `repo:Lebbitheplow/open-game-master is:pr is:open` and `is:issue is:open`; same for `open-game-master-client`
 
 ## i. Recommendations
 
 - **O1.** ~~Review #143~~ Merged. Remaining: keep whispers and outline out of the DM prompt where possible, and test redaction vs absence (gap 6).
 - **O2.** Test the steering seat (merged, v0.25.0) against TC's "human-steered AI DM". Confirmed: the lead loses `secretStory`. Pause now exists (#453); AI check-ins still missing (gap 4).
-- **O3.** ~~Propose a non-X-card pause~~ **Shipped as Pause the table (#453).** Remaining delta: let the person who resumes (DM, lead, steerer) attach a private redirect note the DM reads on Resume (gap 3).
+- **O3.** ~~Propose a non-X-card pause~~ **Shipped as Pause the table (#453).** Remaining delta: let the person who resumes (DM, lead, steerer) attach a private redirect note the DM reads on Resume (gap 3). **2026-11-02:** the same note would fit End session / Start session N (#616), read with the "Previously, on..." recap.
 - **O4.** Ask whether whole-session cover is still wanted now that the steering seat, pause and prep mid-adventure exist (gap 4).
-- **O5.** Map where 5e is assumed before any rules-module code. **Delta:** #506 makes SRD 5.1 the only ruleset and `docs/ROADMAP.md` still lists ruleset validation first; a rules module would now start from one clean 5.1 seam. References: open-tabletop-gm, Loreweaver, DiceFrame v3 modular runtime, srdcheck (gap 1).
+- **O5.** Map where 5e is assumed before any rules-module code. **2026-11-02:** the SRD 5.1 text audit (#673) and per-entry pack readings that keep Level Up out of a 5.1 table (#669–#672) are the pattern a second ruleset would copy: its own text audit as failing tests, its own readings. #570 is the thread to raise it in. **Delta:** #506 makes SRD 5.1 the only ruleset and `docs/ROADMAP.md` still lists ruleset validation first; a rules module would now start from one clean 5.1 seam. References: open-tabletop-gm, Loreweaver, DiceFrame v3 modular runtime, srdcheck (gap 1).
 - **O6.** Expose `dryRun` beyond the cast guard and build previews on #142's offer bar; undo move, builder undo and world-draft review are patterns to reuse (gap 5).
 - **O7.** ~~Add WorldForge as a read-only lore source~~ Done another way (#169, #393). **Delta:** #499's kept-value record is most of a canon-sync contract; an optional "read-only canon" flag could make the table side always "Keep the import's", and an import receipt (DiceFrame v3) would make sync auditable.
 - **O8.** Same-Wi-Fi test with internet off on the desktop app's "Share on this Wi-Fi"; check voice and Android (gap 9).
-- **O9.** Lead with tests: a privacy evidence matrix (event audiences, text-leak suite, browser harness, fields-not-English, roll-text withholding) fits `stabilization` (gap 10). The correction ledger (#522) now gives narrator-quality numbers to report beside it.
-- **O10.** ~~Sync the fork~~ **Done:** fork `main` even with upstream at `817e76c`. Rebase TC `odm-companion` onto v0.30.2 if still used.
+- **O9.** Lead with tests (**2026-11-02:** the fight bench's dice script and turn trace, #739, and the Hand scorer, #628, make seeded privacy and leak scenarios practical): a privacy evidence matrix (event audiences, text-leak suite, browser harness, fields-not-English, roll-text withholding) fits `stabilization` (gap 10). The correction ledger (#522) now gives narrator-quality numbers to report beside it.
+- **O10.** ~~Sync the fork~~ **Done:** fork `main` even with upstream. Fork keeps its old name; GitHub redirects upstream links, so renaming it is optional.
 - **O11.** New grants default to `read` + `play` (confirmed). Suggest `read` only for player agents, or label `play` clearly.
 - **O12.** Keep settled disputes (#144) as a table-rulings list the DM prompt reads (TableForge). Overruled rulings are now counted by #522, so the data is there.
 - **O13.** Test that revoking an agent grant or share closes live streams and assistant-link relays (DiceFrame, Grimoire).
 - **O14.** Stop / queue watchdog (hung-turn recovery) and Pause the table (break) now both exist. **Delta:** make sure Help and the tours name the difference, so tables don't press Stop for a break.
 - **O15.** Addon catalogue hygiene: #420/#421/#458/#519 merged (session stage, viewport, threads permission). Confirm propose-then-server-decides and player-safe fog still hold with threads, and add a seat-rights check to the catalogue audit.
-- **O16.** *(new)* Use the correction ledger (#522) per model and backend: publish narrator-quality rates for the recommended local setup (llama.cpp + gpt-oss-20b) in the fresh-install docs. Why it may matter: hosts choosing a model get evidence, not anecdotes.
+- **O16.** Use the correction ledger (#522) per model and backend: publish narrator-quality rates for the recommended local setup (llama.cpp + gpt-oss-20b) in the fresh-install docs. Why it may matter: hosts choosing a model get evidence, not anecdotes. **2026-11-02:** #570's seeded scenarios plus the scorer (#628) are the way to produce those numbers.
+- **O17.** *(new)* Settle the small-window tool budget (#746) before the `start_encounter` asks (#740, #741, #743) add arguments: for example, one grouped `scene` argument or tools loaded per intent. Why it may matter: 48K-context local tables are the recommended setup, and every new argument currently breaks them.
+- **O18.** *(new)* Since betas now ship nightly and stable every 2–4 weeks (`docs/releases.md`), run the O8 Wi-Fi test and O13 revocation test on the stable build. Why it may matter: results then hold for most installs, which follow stable.
 
 ## j. Verify next week
 
-1. Pause the table: is a private redirect note on Resume planned? (O3)
-2. "Share on this Wi-Fi" with internet off: play, voice, Android.
-3. Revocation: open streams and assistant-link relay after a grant is revoked.
-4. Read-only canon option after #499's kept-value record.
-5. Prompt whispers and outline after #143 (recheck).
-6. Desktop TTS regression #539 / PRs #540, client #88; #538 custom species traits; #542 tool parameter names.
-7. DiceFrame v3.x; CozyVTT after 1.5.4; TableForge multiclassing vs ODM's.
-8. ScryRPG, MythWeaver, Archivist, Skeinkeeper, Familiar (not rechecked this week).
-9. Whether milestone `stabilization` is closed now that #37 and #275 are done.
+1. #761 (turns advancing early): cause and fix; whether it came from #739/#749.
+2. Redirect note on resume or session start (O3).
+3. "Share on this Wi-Fi" with internet off, on stable v0.31.4 (O8, O18).
+4. Revocation: open streams and assistant-link relay after a grant is revoked (O13).
+5. Read-only canon option after #499 (O7).
+6. #746 tool budget and the `start_encounter` issues #740/#741/#743 (O17).
+7. #570 replies on measurement and rules fidelity.
+8. Commercial watchlist (TableForge, Grimoire, ScryRPG, MythWeaver, Archivist, Skeinkeeper, Familiar): not rechecked this week.
 
 ## Sources
 
-Upstream at `817e76c`; releases v0.28.3–v0.30.2; PRs #438, #453, #462, #475, #477, #479, #493, #494, #499, #506, #507, #510, #515, #522, #533, #535, #536; open issues #168, #538, #539, #541; open PRs #540, #542; client PR #88; milestone `stabilization`; client releases through v0.21.2; https://www.ttrpg.bot/changelog/; https://tableforge.gg/changelog; DiceFrame v3.0.0/v3.0.2; CozyVTT v1.5.4; GitHub API for section g.
+Upstream at `2819283`; releases v0.30.3–v0.32.0; `docs/releases.md`, `docs/ROADMAP.md`, `docs/issue-685-audit-2026-11-01.md`, `src/lib/dm/delegation.ts`; PRs #547, #556, #564, #568, #574, #584, #616, #627–#633, #669–#673, #700, #713, #734, #739, #742, #747, #749; open issues #168, #541, #562, #570, #740, #741, #743, #744, #746, #760, #761; client releases v0.22.4 and v0.23.0; DiceFrame v3.0.4; GitHub API for section g.
 
 ## Changelog
 
@@ -174,3 +176,4 @@ Upstream at `817e76c`; releases v0.28.3–v0.30.2; PRs #438, #453, #462, #475, #
 - **2026-10-12** - Weekly delta: v0.25.0-v0.26.3 (about 300 commits). Gaps 2, 11, 12 closed; gap 7 closed in a different shape (WorldForge built in, #169); gap 6 mostly closed; gap 9 shipped in the desktop client, untested. No open PRs; section d now has a Proposals group (#37 open, #57 closed by #183). New adopt ideas O12 (table rulings) and O13 (revocation ends streams). New watch: CozyVTT.
 - **2026-10-19** - Weekly delta: v0.26.4–v0.28.2 (~571 commits; head `9da9d1b`; client v0.19.2). World at table, addons + first catalogue addon, Stop/watchdog, `@DM` OOC, Atlas/party Atlas, agent level-up, fields-not-English, worn-on. Gaps 1, 3, 5, 7, 8, 10 marked deepened. Open work refreshed (PRs #420/#421/#423/#425; issues #275/#424); Proposals now #37 and #288. O7/O10 deltas; **O14** (Stop ≠ pause) and **O15** (addon catalogue hygiene). Competitor/OSS: DiceFrame v3 beta, Grimoire 1.5.3g, TableForge Oct, CozyVTT 1.5.3; navi-dnd / eldritchdm study-only. Stars 47 / forks 22; Smoebo/main ~172 behind.
 - **2026-10-26** - Weekly delta: v0.28.3–v0.30.2 (488 commits; head `817e76c`; client v0.21.2). **Gap 3 pause closed** (Pause the table, #453); gap 1 moved further away (SRD 5.1 only, #506); gaps 5, 6, 7, 8, 10, 11, 12 deepened (undo move/builder, roll-text withholding, reimport kept-value #499, correction ledger #522). #37, #288, #275 closed; Proposals empty. O3 and O10 retired as done; deltas on O2, O5, O7, O9, O12, O14, O15; **O16** (narrator-quality numbers per model). DiceFrame v3.0.0 stable, CozyVTT 1.5.4, TableForge multiclassing. Stars 52 / forks 22; fork even with upstream.
+- **2026-11-02** - Weekly delta: v0.30.3–v0.32.0 (878 commits; head `2819283`; client v0.23.0 beta). **Renamed Open Game Master** (repo `Lebbitheplow/open-game-master`); stable/beta channels, v0.32.0 first beta. End session / Start session N, secrets per seat, engine resolves cards first, whole declared actions, improvised actions, SRD 5.1 text audit, Revert this turn, fight bench. Gap 6 nearly closed; gaps 1, 3, 4, 5, 8, 10 deepened. 0 open PRs; 11 open issues. O3, O5, O9, O10, O16 deltas; **O17** (tool budget #746) and **O18** (test on stable). DiceFrame v3.0.4. Stars 72 / forks 31; fork even with upstream.
