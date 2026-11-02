@@ -90,20 +90,26 @@ Sources: TC `docs/companion-design-decisions.md` and TC research note. Status at
 | Scoped agent modes (suggest / routine / task), bulk visibility plan confirmed once | **New:** DiceFrame v3 DF Agent | Model for player/DM agent grants and batch reveal on party Atlas |
 | Ended saves stay read-only; relationship scores roll back with the save | **New:** DiceFrame v3.0.4 (Nov 2) | ODM's bonds and romance are now big state; check that Revert this turn and End session restore or freeze them the same way (#627, #616) |
 | Between-session self-serve | ScryRPG, MythWeaver, Archivist, Grimoire; ODM has agent level-up, shops, prep mid-adventure | Shops, trade, level-up, Ask outside live play |
+| Agent "free rein" with a fixed ask-first list; a failed change rolls back whole ("Nothing was applied" means exactly that) | **New:** ScryRPG (Oct 24) | Player/GM agent grants and `odm_dm_invoke`: routine edits go through; deleting, revealing, permissions, another seat's character or a large change asks first. Why it may matter: one written list is easier to audit than per-tool rules, and all-or-nothing writes keep Revert this turn (#627) simple |
+| Disguised items: the player-side appearance drives weight, price and loot splits; using one sends the GM an identify request | **New:** ScryRPG (Nov 2) | Per-seat hidden attributes (#547), trade and shops. Why it may matter: derived numbers (carry weight, sale price) are a leak path the per-seat secrets work may not cover yet; worth a gap 6 test |
+| Imports: the last visibility pass can only hide, never reveal; GM can undo a player's import | **New:** ScryRPG (Oct 24) | WorldForge import (#499, O7), next to the import receipt idea above. Why it may matter: a hide-only final pass makes canon sync fail closed |
+| Stale writes refused: an edit or AI write based on data that changed since it loaded is rejected and asked again | **New:** Grimoire 1.6.0 (Oct 28); ScryRPG (Sep 24, inventory) | Agent tools that write sheets, inventory or world state. Why it may matter: agent GMs and player agents act on state read turns earlier; a version check stops silent overwrites of a human's edit |
+| Player-scoped in-world calendar: "today in the world" follows the last played session; players see only dates and eras they already know | **New:** Grimoire 1.6.0 (Oct 28) | End session / Start session N (#616) and the "Previously, on..." recap: say how much story time passed, filtered per seat. Why it may matter: session boundaries are now explicit, and time between them is shared state that can leak future events |
+| Per-player post-session highlights (an award per player, key moments, quotes) about 10 minutes after the session ends | **New:** Archivist Session Gems (Oct 28) | After End session (#616), built from each seat's own view. Why it may matter: a between-session reason to come back that respects per-seat knowledge |
 
 ## g. Watchlist
 
-**Commercial** (last checked 2026-10-26; not rechecked 2026-11-02):
+**Commercial** (last checked 2026-11-02; changes since 2026-10-19):
 
 | Product | Note |
 |---|---|
-| Familiar (Foundry) | No release since v2.26.0 (Oct 5) (not rechecked) |
-| TableForge | **New Oct entries:** multiclassing from Level Up; class features on the sheet with a Use Feature action; fewer needless checks. Prior: homebrew rulings persist, Mirelle referee, companions in fights |
-| ScryRPG | Loot, shops, approve-before-write (not rechecked) |
-| MythWeaver | Prep co-DM with approval (not rechecked) |
-| Archivist | Recaps; hosted MCP with OAuth (not rechecked) |
-| Grimoire (ttrpg.bot) | No release since 1.5.3g (Oct 13) |
-| Skeinkeeper | Pre-MVP (not rechecked) |
+| Familiar (Foundry) | No change found: v2.26.0 (Oct 5) is still the latest ([releases](https://github.com/Ryanjansen92/familiar-releases/releases), Foundry package page) |
+| TableForge | No change found after the Oct 26 dev update (multiclassing; class features with Use Feature; fewer needless checks), already listed last week. Changelog dates by month only. Prior: homebrew rulings persist, Mirelle referee, companions in fights (Oct 17) ([changelog](https://tableforge.gg/changelog), r/TableForgeDM) |
+| ScryRPG | **Four releases** ([changelog](https://scryrpg.com/changelog/)): **Nov 2** disguised unidentified items (appearance drives weight/price/splits; use asks the GM), custom-worded lore connections, familiar gets full agent toolset; **Oct 26** per-system sheets (PF2e, Draw Steel, Daggerheart), create missing spells, GM-only NPC names kept out of player encounters; **Oct 24** familiar private page + party room, free rein with ask-first list, all-or-nothing rollback, import pages with hide-only final check and GM undo of player imports, monthly AI allowance; **Oct 21** players link own characters to factions |
+| MythWeaver | No dated change found (no public changelog; Android open beta Aug 28 is the last dated release). Site now shows Community sharing of lore/maps and an iOS TestFlight beta, undated |
+| Archivist | **Session Gems** (Oct 28): per-player Hero Award, Key Moments, Memorable Quotes ~10 min after a session, by email/Discord ([blog](https://www.myarchivist.ai/blog/session-gems)). **API/MCP** (Oct 31): Markdown in/out for journals ([changelog](https://github.com/archivistai/api-examples/blob/main/CHANGELOG.md)) |
+| Grimoire (ttrpg.bot) | **1.6.0** (Oct 28): custom in-world calendars; "today in the world" follows played sessions; player-shared calendar shows only known dates/events; flashback sessions; stale date writes refused; MCP calendar tools incl. player-scoped `get_calendar_month` ([changelog](https://www.ttrpg.bot/changelog/)) |
+| Skeinkeeper | No change found: repo last pushed Sep 10, 1 star, still pre-MVP ([repo](https://github.com/skeinkeeper/skeinkeeper)) |
 
 **Open source** (GitHub API, 2026-11-02; push dates ET):
 
@@ -163,11 +169,10 @@ New-project scan (GitHub, created since Oct 19): only zero-star repos (e.g. `bla
 5. Read-only canon option after #499 (O7).
 6. #746 tool budget and the `start_encounter` issues #740/#741/#743 (O17).
 7. #570 replies on measurement and rules fidelity.
-8. Commercial watchlist (TableForge, Grimoire, ScryRPG, MythWeaver, Archivist, Skeinkeeper, Familiar): not rechecked this week.
 
 ## Sources
 
-Upstream at `2819283`; releases v0.30.3–v0.32.0; `docs/releases.md`, `docs/ROADMAP.md`, `docs/issue-685-audit-2026-11-01.md`, `src/lib/dm/delegation.ts`; PRs #547, #556, #564, #568, #574, #584, #616, #627–#633, #669–#673, #700, #713, #734, #739, #742, #747, #749; open issues #168, #541, #562, #570, #740, #741, #743, #744, #746, #760, #761; client releases v0.22.4 and v0.23.0; DiceFrame v3.0.4; GitHub API for section g.
+Upstream at `2819283`; releases v0.30.3–v0.32.0; `docs/releases.md`, `docs/ROADMAP.md`, `docs/issue-685-audit-2026-11-01.md`, `src/lib/dm/delegation.ts`; PRs #547, #556, #564, #568, #574, #584, #616, #627–#633, #669–#673, #700, #713, #734, #739, #742, #747, #749; open issues #168, #541, #562, #570, #740, #741, #743, #744, #746, #760, #761; client releases v0.22.4 and v0.23.0; DiceFrame v3.0.4; GitHub API for section g. Commercial recheck: ScryRPG changelog, ttrpg.bot changelog, TableForge changelog and r/TableForgeDM, Archivist blog and API changelog, Familiar GitHub releases, mythweaver.gg, Skeinkeeper repo.
 
 ## Changelog
 
@@ -177,3 +182,4 @@ Upstream at `2819283`; releases v0.30.3–v0.32.0; `docs/releases.md`, `docs/ROA
 - **2026-10-19** - Weekly delta: v0.26.4–v0.28.2 (~571 commits; head `9da9d1b`; client v0.19.2). World at table, addons + first catalogue addon, Stop/watchdog, `@DM` OOC, Atlas/party Atlas, agent level-up, fields-not-English, worn-on. Gaps 1, 3, 5, 7, 8, 10 marked deepened. Open work refreshed (PRs #420/#421/#423/#425; issues #275/#424); Proposals now #37 and #288. O7/O10 deltas; **O14** (Stop ≠ pause) and **O15** (addon catalogue hygiene). Competitor/OSS: DiceFrame v3 beta, Grimoire 1.5.3g, TableForge Oct, CozyVTT 1.5.3; navi-dnd / eldritchdm study-only. Stars 47 / forks 22; Smoebo/main ~172 behind.
 - **2026-10-26** - Weekly delta: v0.28.3–v0.30.2 (488 commits; head `817e76c`; client v0.21.2). **Gap 3 pause closed** (Pause the table, #453); gap 1 moved further away (SRD 5.1 only, #506); gaps 5, 6, 7, 8, 10, 11, 12 deepened (undo move/builder, roll-text withholding, reimport kept-value #499, correction ledger #522). #37, #288, #275 closed; Proposals empty. O3 and O10 retired as done; deltas on O2, O5, O7, O9, O12, O14, O15; **O16** (narrator-quality numbers per model). DiceFrame v3.0.0 stable, CozyVTT 1.5.4, TableForge multiclassing. Stars 52 / forks 22; fork even with upstream.
 - **2026-11-02** - Weekly delta: v0.30.3–v0.32.0 (878 commits; head `2819283`; client v0.23.0 beta). **Renamed Open Game Master** (repo `Lebbitheplow/open-game-master`); stable/beta channels, v0.32.0 first beta. End session / Start session N, secrets per seat, engine resolves cards first, whole declared actions, improvised actions, SRD 5.1 text audit, Revert this turn, fight bench. Gap 6 nearly closed; gaps 1, 3, 4, 5, 8, 10 deepened. 0 open PRs; 11 open issues. O3, O5, O9, O10, O16 deltas; **O17** (tool budget #746) and **O18** (test on stable). DiceFrame v3.0.4. Stars 72 / forks 31; fork even with upstream.
+- **2026-11-02 (follow-up)** - Commercial watchlist rechecked (skipped in the weekly run): ScryRPG (4 releases), Grimoire 1.6.0, Archivist Session Gems; no change for Familiar, TableForge, MythWeaver, Skeinkeeper. Six **New** adopt ideas in section f (ask-first list + atomic agent writes, disguised items, hide-only import pass, stale-write refusal, player-scoped calendar, per-player highlights). Section j item 8 done.
