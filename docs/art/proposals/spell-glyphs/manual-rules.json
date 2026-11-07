@@ -1,0 +1,1158 @@
+{
+  "Animal Shapes": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Beast Bond": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Blur": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Borrowed Knowledge": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Expeditious Retreat": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "False Life": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Fortune's Favor": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Friends": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Glibness": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Greater Invisibility": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Invisibility": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Magic Weapon": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Mass Polymorph": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Mirror Image": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Polymorph": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Rary's Telepathic Bond": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Seeming": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Shapechange": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Shillelagh": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Skill Empowerment": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Spider Climb": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Sudden Awakening": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Tongues": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "True Polymorph": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "True Strike": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Alter Self": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Awaken": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Enhance Ability": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Gaseous Form": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Heroes' Feast": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Heroism": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Otherworldly Guise": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Wind Walk": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Guardian of Nature": {
+    "primaryEffect": "buff",
+    "reason": "Manual dominant benefit/transformation; do not mistake listed immunities or optional attacks for the primary effect."
+  },
+  "Investiture of Stone": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Bane": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category.",
+    "target": "multiple"
+  },
+  "Charm Monster": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category. No local rules text; this per-spell proposal requires content-pack verification.",
+    "target": "single",
+    "flags": {
+      "save": "WIS"
+    }
+  },
+  "Command": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Compelled Duel": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Confusion": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Control Winds": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Darkness": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Draconic Mischief": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Earthbind": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Elemental Bane": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Enemies Abound": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Faerie Fire": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Grasping Vine": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Grease": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Gust": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Gust of Wind": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Hunter's Mark": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Immovable Object": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Magic Jar": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Maze": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Power Word Kill": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Power Word Pain": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category. No local rules text; this per-spell proposal requires content-pack verification.",
+    "target": "single",
+    "flags": {
+      "save": "CON"
+    },
+    "saveContext": "Repeat save, not an initial targeting save.",
+    "reviewLevel": 7,
+    "metadataWarning": {
+      "sourceLevel": 4,
+      "verifiedLevel": 7,
+      "reference": "https://media.wizards.com/2017/dnd/downloads/DnDXL2017_Spells.pdf"
+    }
+  },
+  "Puppet": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Ray of Enfeeblement": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Reverse Gravity": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Silvery Barbs": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Slow": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Soul Cage": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Stinking Cloud": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Temporal Shunt": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Time Stop": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Transmute Rock": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Wall of Sand": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Zone of Truth": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Web": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Forcecage": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Imprisonment": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Planar Binding": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Symbol": {
+    "primaryEffect": "control",
+    "reason": "Manual hostile control/debuff/obstruction; incidental damage or teleport prevention is not the primary category."
+  },
+  "Catnap": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Contingency": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Feather Fall": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Fog Cloud": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Gentle Repose": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Leomund's Tiny Hut": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Otiluke's Resilient Sphere": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Sequester": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Temple of the Gods": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Wall of Force": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Wall of Stone": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Wall of Water": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Antimagic Field": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Hallow": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Magic Circle": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Mordenkainen's Private Sanctum": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Freedom of Movement": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Greater Restoration": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Holy Aura": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Lesser Restoration": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Mind Blank": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Protection from Evil and Good": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Dispel Evil and Good": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Feign Death": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Meld into Stone": {
+    "primaryEffect": "protection",
+    "reason": "Manual defensive/restorative effect; condition/teleport mentions describe protection rather than an offensive effect."
+  },
+  "Beast Sense": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Comprehend Languages": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Find the Path": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Speak with Animals": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Speak with Dead": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Telepathy": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Wild Cunning": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Speak with Plants": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Contact Other Plane": {
+    "primaryEffect": "detection",
+    "reason": "Manual information/communication; bad-outcome damage is not the primary intent."
+  },
+  "Goodberry": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "Raise Dead": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "Reincarnate": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "Resurrection": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "Revivify": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "Spare the Dying": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "True Resurrection": {
+    "primaryEffect": "heal",
+    "reason": "Manual recovery/restoration of life, grouped with healing rather than summoning undead."
+  },
+  "Arcane Gate": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Astral Projection": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Demiplane": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Dream of the Blue Veil": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Etherealness": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Gate": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Passwall": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Rope Trick": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Vortex Warp": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage."
+  },
+  "Dimension Door": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage.",
+    "target": "self"
+  },
+  "Teleport": {
+    "primaryEffect": "teleport",
+    "reason": "Manual planar travel/blink/access; ignore incidental failed-travel damage.",
+    "target": "multiple"
+  },
+  "Clone": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category.",
+    "target": "touch"
+  },
+  "Giant Insect": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Infernal Calling": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Phantom Steed": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Planar Ally": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Simulacrum": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category.",
+    "target": "touch"
+  },
+  "Speedy Courier": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Animate Objects": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Create Homunculus": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Mordenkainen's Faithful Hound": {
+    "primaryEffect": "summon",
+    "reason": "Manual creation/animation of a creature or servant, not an incidental attack damage category."
+  },
+  "Green-Flame Blade": {
+    "primaryEffect": "fire",
+    "reason": "Manual weapon rider: primary energy fire, physical weapon damage remains secondary."
+  },
+  "Frostbite": {
+    "primaryEffect": "cold",
+    "reason": "Explicit manual rule: local manifest metadata exists but no rules text; verify against installed content pack before production.",
+    "target": "single",
+    "flags": {
+      "save": "CON"
+    },
+    "reviewLevel": 0,
+    "metadataWarning": {
+      "sourceLevel": 5,
+      "verifiedLevel": 0,
+      "reference": "https://www.dndbeyond.com/spells/2382-frostbite"
+    }
+  },
+  "Ray of Sickness": {
+    "primaryEffect": "poison",
+    "reason": "Explicit manual rule: local manifest metadata exists but no rules text; verify against installed content pack before production.",
+    "target": "single",
+    "flags": {
+      "save": "CON"
+    }
+  },
+  "Catapult": {
+    "primaryEffect": "physical",
+    "reason": "Manual direct physical attack, not summoning a persistent creature. No local rules text; this per-spell proposal requires content-pack verification.",
+    "target": "single",
+    "flags": {
+      "save": "DEX"
+    },
+    "reviewLevel": 1,
+    "metadataWarning": {
+      "sourceLevel": 6,
+      "verifiedLevel": 1,
+      "reference": "https://www.dndbeyond.com/spells/2372-catapult"
+    }
+  },
+  "Conjure Barrage": {
+    "primaryEffect": "physical",
+    "reason": "Manual direct physical attack, not summoning a persistent creature.",
+    "target": "cone"
+  },
+  "Conjure Volley": {
+    "primaryEffect": "physical",
+    "reason": "Manual direct physical attack, not summoning a persistent creature.",
+    "target": "sphere"
+  },
+  "Thunderclap": {
+    "primaryEffect": "thunder",
+    "reason": "Explicit manual rule: local manifest metadata exists but no rules text; verify against installed content pack before production.",
+    "target": "sphere",
+    "flags": {
+      "save": "CON"
+    },
+    "reviewLevel": 0,
+    "metadataWarning": {
+      "sourceLevel": 3,
+      "verifiedLevel": 0,
+      "reference": "https://www.dndbeyond.com/spells/2401-thunderclap"
+    }
+  },
+  "Chill Touch": {
+    "primaryEffect": "necrotic",
+    "reason": "Manual necrotic attack: preventing healing or stealing life must not classify this as a healing spell."
+  },
+  "Vampiric Touch": {
+    "primaryEffect": "necrotic",
+    "reason": "Manual necrotic attack: preventing healing or stealing life must not classify this as a healing spell."
+  },
+  "Animal Messenger": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Continual Flame": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Ceremony": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Control Flames": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Control Weather": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph.",
+    "target": "sphere"
+  },
+  "Create Food and Water": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Create or Destroy Water": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Creation": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Dancing Lights": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Daylight": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Disguise Self": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Drawmij's Instant Summons": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Druidcraft": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Fabricate": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Gift of Gab": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Hallucinatory Terrain": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Illusory Script": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Knock": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Leomund's Secret Chest": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Light": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mage Hand": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Magic Mouth": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Major Image": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mending": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Message": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mighty Fortress": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Minor Illusion": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mirage Arcane": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mold Earth": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mordenkainen's Magnificent Mansion": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Move Earth": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Nystul's Magic Aura": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Plant Growth": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Prestidigitation": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Programmed Illusion": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Purify Food and Drink": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Pyrotechnics": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Sending": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Shape Water": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Silent Image": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Skywrite": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Stone Shape": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Tenser's Floating Disk": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Tether Essence": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Thaumaturgy": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Wristpocket": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Dream": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Mislead": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Project Image": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Conjured Tower": {
+    "primaryEffect": "utility",
+    "reason": "Manual intentional utility: general creation, messaging, illusion or environmental manipulation has no narrower primary glyph."
+  },
+  "Chromatic Orb": {
+    "primaryEffect": "fire",
+    "effectAlternatives": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "thunder"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "single"
+  },
+  "Chaos Bolt": {
+    "primaryEffect": "force",
+    "effectAlternatives": [
+      "acid",
+      "cold",
+      "fire",
+      "force",
+      "lightning",
+      "poison",
+      "psychic",
+      "thunder"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "single"
+  },
+  "Prismatic Spray": {
+    "primaryEffect": "radiant",
+    "effectAlternatives": [
+      "fire",
+      "acid",
+      "lightning",
+      "poison",
+      "cold",
+      "control"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "cone"
+  },
+  "Prismatic Wall": {
+    "primaryEffect": "protection",
+    "effectAlternatives": [
+      "fire",
+      "acid",
+      "lightning",
+      "poison",
+      "cold",
+      "control"
+    ],
+    "requiresRuntimeChoice": false,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "cube-wall"
+  },
+  "Glyph of Warding": {
+    "primaryEffect": "protection",
+    "effectAlternatives": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder",
+      "utility"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "touch"
+  },
+  "Dragon's Breath": {
+    "primaryEffect": "buff",
+    "effectAlternatives": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime."
+  },
+  "Elemental Weapon": {
+    "primaryEffect": "buff",
+    "effectAlternatives": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime."
+  },
+  "Forbiddance": {
+    "primaryEffect": "radiant",
+    "effectAlternatives": [
+      "radiant",
+      "necrotic"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime."
+  },
+  "Spirit Guardians": {
+    "primaryEffect": "radiant",
+    "effectAlternatives": [
+      "radiant",
+      "necrotic"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime."
+  },
+  "Spirit Shroud": {
+    "primaryEffect": "buff",
+    "effectAlternatives": [
+      "cold",
+      "necrotic",
+      "radiant"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "self"
+  },
+  "Fire Shield": {
+    "primaryEffect": "protection",
+    "effectAlternatives": [
+      "cold",
+      "fire"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "self"
+  },
+  "Hunger of Hadar": {
+    "primaryEffect": "cold",
+    "effectAlternatives": [
+      "cold",
+      "acid"
+    ],
+    "requiresRuntimeChoice": false,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "sphere"
+  },
+  "Ice Knife": {
+    "primaryEffect": "cold",
+    "effectAlternatives": [
+      "physical",
+      "cold"
+    ],
+    "requiresRuntimeChoice": false,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "sphere"
+  },
+  "Ice Storm": {
+    "primaryEffect": "cold",
+    "effectAlternatives": [
+      "physical",
+      "cold"
+    ],
+    "requiresRuntimeChoice": false,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "sphere"
+  },
+  "Flame Strike": {
+    "primaryEffect": "fire",
+    "effectAlternatives": [
+      "fire",
+      "radiant"
+    ],
+    "requiresRuntimeChoice": false,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "sphere"
+  },
+  "Destructive Wave": {
+    "primaryEffect": "thunder",
+    "effectAlternatives": [
+      "thunder",
+      "radiant",
+      "necrotic"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "sphere"
+  },
+  "Storm of Vengeance": {
+    "primaryEffect": "lightning",
+    "effectAlternatives": [
+      "thunder",
+      "acid",
+      "lightning",
+      "cold"
+    ],
+    "requiresRuntimeChoice": false,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime.",
+    "target": "sphere"
+  },
+  "Wish": {
+    "primaryEffect": "utility",
+    "effectAlternatives": [
+      "utility",
+      "heal",
+      "protection",
+      "teleport",
+      "summon"
+    ],
+    "requiresRuntimeChoice": true,
+    "reason": "Explicit multi-mode/multi-damage rule. Primary is a review/default glyph only; preserve alternatives and resolve selected mode at runtime."
+  },
+  "Magic Missile": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Fireball": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "sphere"
+  },
+  "Hold Person": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "single"
+  },
+  "Hold Monster": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "single"
+  },
+  "Animate Dead": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count. Base casting animates one corpse; maintaining control and upcasting have other target counts.",
+    "target": "single",
+    "targetAlternatives": [
+      "single",
+      "multiple"
+    ],
+    "requiresRuntimeTargetChoice": true
+  },
+  "Create Undead": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Danse Macabre": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Blight": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "single"
+  },
+  "Cause Fear": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "single"
+  },
+  "Sapping Sting": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "single"
+  },
+  "Aid": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Mass Cure Wounds": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Mass Healing Word": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Mass Heal": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Bless": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "multiple"
+  },
+  "Sleep": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "sphere"
+  },
+  "Color Spray": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "cone"
+  },
+  "Misty Step": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "self"
+  },
+  "Shield": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "self"
+  },
+  "Mage Armor": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "touch"
+  },
+  "Cure Wounds": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "touch"
+  },
+  "Disintegrate": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "single"
+  },
+  "Detect Magic": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "self"
+  },
+  "Detect Thoughts": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "self"
+  },
+  "Detect Evil and Good": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "self"
+  },
+  "Detect Poison and Disease": {
+    "reason": "Manual base-target rule, not an incidental shape/secondary clause or upcast target count.",
+    "target": "self"
+  }
+}

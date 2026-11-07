@@ -1,0 +1,12 @@
+{
+  "render": "text",
+  "labels": [
+    "STR",
+    "DEX",
+    "CON",
+    "INT",
+    "WIS",
+    "CHA"
+  ],
+  "reason": "Read save ability as text, not another ambiguous picture."
+}
