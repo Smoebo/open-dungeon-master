@@ -1,0 +1,1002 @@
+{
+  "theme": "hearth",
+  "createdAt": "2026-11-15T00:10:00.602Z",
+  "checks": [
+    {
+      "label": "Appearance picker 1360px dark scale 1",
+      "detail": {
+        "dialog": {
+          "x": 312,
+          "y": 143.796875,
+          "right": 1048,
+          "bottom": 856.203125
+        },
+        "client": 734,
+        "scroll": 734,
+        "columns": "337px 337px",
+        "cards": [
+          {
+            "x": 337.2652587890625,
+            "y": 277.3487854003906,
+            "row": 132,
+            "width": 336.469482421875,
+            "height": 224.41180419921875
+          },
+          {
+            "x": 686,
+            "y": 277.171875,
+            "row": 132,
+            "width": 337,
+            "height": 224.765625
+          },
+          {
+            "x": 347.1099853515625,
+            "y": 521.220458984375,
+            "row": 369,
+            "width": 316.780029296875,
+            "height": 228.19970703125
+          },
+          {
+            "x": 686,
+            "y": 513.9375,
+            "row": 369,
+            "width": 337,
+            "height": 242.765625
+          }
+        ]
+      }
+    },
+    {
+      "label": "Appearance picker 1360px light scale 1",
+      "detail": {
+        "dialog": {
+          "x": 312,
+          "y": 143.796875,
+          "right": 1048,
+          "bottom": 856.203125
+        },
+        "client": 734,
+        "scroll": 734,
+        "columns": "337px 337px",
+        "cards": [
+          {
+            "x": 337,
+            "y": 277.171875,
+            "row": 132,
+            "width": 337,
+            "height": 224.765625
+          },
+          {
+            "x": 686,
+            "y": 277.171875,
+            "row": 132,
+            "width": 337,
+            "height": 224.765625
+          },
+          {
+            "x": 337,
+            "y": 513.9375,
+            "row": 369,
+            "width": 337,
+            "height": 242.765625
+          },
+          {
+            "x": 686,
+            "y": 513.9375,
+            "row": 369,
+            "width": 337,
+            "height": 242.765625
+          }
+        ]
+      }
+    },
+    {
+      "label": "Appearance picker 390px dark scale 1",
+      "detail": {
+        "dialog": {
+          "x": 15.6015625,
+          "y": 65.8125,
+          "right": 374.3984375,
+          "bottom": 778.1875
+        },
+        "client": 357,
+        "scroll": 357,
+        "columns": "308.797px",
+        "cards": [
+          {
+            "x": 40.6015625,
+            "y": 199.1875,
+            "row": 132,
+            "width": 308.796875,
+            "height": 106
+          },
+          {
+            "x": 40.6015625,
+            "y": 317.1875,
+            "row": 250,
+            "width": 308.796875,
+            "height": 106
+          },
+          {
+            "x": 40.6015625,
+            "y": 435.1875,
+            "row": 368,
+            "width": 308.796875,
+            "height": 106
+          },
+          {
+            "x": 40.6015625,
+            "y": 553.1875,
+            "row": 486,
+            "width": 308.796875,
+            "height": 106
+          }
+        ]
+      }
+    },
+    {
+      "label": "Appearance picker 390px light scale 1",
+      "detail": {
+        "dialog": {
+          "x": 15.6015625,
+          "y": 65.8125,
+          "right": 374.3984375,
+          "bottom": 778.1875
+        },
+        "client": 357,
+        "scroll": 357,
+        "columns": "308.797px",
+        "cards": [
+          {
+            "x": 40.6015625,
+            "y": 199.1875,
+            "row": 132,
+            "width": 308.796875,
+            "height": 106
+          },
+          {
+            "x": 40.6015625,
+            "y": 317.1875,
+            "row": 250,
+            "width": 308.796875,
+            "height": 106
+          },
+          {
+            "x": 40.6015625,
+            "y": 435.1875,
+            "row": 368,
+            "width": 308.796875,
+            "height": 106
+          },
+          {
+            "x": 40.6015625,
+            "y": 553.1875,
+            "row": 486,
+            "width": 308.796875,
+            "height": 106
+          }
+        ]
+      }
+    },
+    {
+      "label": "Appearance picker 320px light scale 1.25",
+      "detail": {
+        "dialog": {
+          "x": 12.8046875,
+          "y": 32,
+          "right": 307.1953125,
+          "bottom": 608
+        },
+        "client": 292,
+        "scroll": 292,
+        "columns": "232.391px",
+        "cards": [
+          {
+            "x": 43.8046875,
+            "y": 268,
+            "row": 235,
+            "width": 232.390625,
+            "height": 243
+          },
+          {
+            "x": 43.8046875,
+            "y": 526,
+            "row": 493,
+            "width": 232.390625,
+            "height": 243
+          },
+          {
+            "x": 43.8046875,
+            "y": 784,
+            "row": 751,
+            "width": 232.390625,
+            "height": 243
+          },
+          {
+            "x": 43.8046875,
+            "y": 1042,
+            "row": 1009,
+            "width": 232.390625,
+            "height": 265.5
+          }
+        ]
+      }
+    },
+    {
+      "label": "Picker layout accommodates four and six themes"
+    },
+    {
+      "label": "Lobby 1360px dark"
+    },
+    {
+      "label": "Lobby 1360px light"
+    },
+    {
+      "label": "Lobby 390px dark"
+    },
+    {
+      "label": "Lobby 390px light"
+    },
+    {
+      "label": "Long story 1360px dark scale 1",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "16px",
+        "composer": {
+          "x": 296,
+          "y": 814,
+          "width": 540,
+          "height": 52,
+          "right": 836,
+          "bottom": 866
+        },
+        "story": {
+          "x": 262,
+          "y": 71,
+          "width": 704,
+          "height": 649,
+          "right": 966,
+          "bottom": 720
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 1360px dark scale 1.25",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "20px",
+        "composer": {
+          "x": 304,
+          "y": 796,
+          "width": 500,
+          "height": 65,
+          "right": 804,
+          "bottom": 861
+        },
+        "story": {
+          "x": 262,
+          "y": 85,
+          "width": 704,
+          "height": 594.5,
+          "right": 966,
+          "bottom": 679.5
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 1360px light scale 1",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "16px",
+        "composer": {
+          "x": 296,
+          "y": 814,
+          "width": 540,
+          "height": 52,
+          "right": 836,
+          "bottom": 866
+        },
+        "story": {
+          "x": 262,
+          "y": 71,
+          "width": 704,
+          "height": 649,
+          "right": 966,
+          "bottom": 720
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 1360px light scale 1.25",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "20px",
+        "composer": {
+          "x": 304,
+          "y": 796,
+          "width": 500,
+          "height": 65,
+          "right": 804,
+          "bottom": 861
+        },
+        "story": {
+          "x": 262,
+          "y": 85,
+          "width": 704,
+          "height": 594.5,
+          "right": 966,
+          "bottom": 679.5
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 390px dark scale 1",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "16px",
+        "composer": {
+          "x": 26,
+          "y": 645.8125,
+          "width": 338,
+          "height": 48,
+          "right": 364,
+          "bottom": 693.8125
+        },
+        "story": {
+          "x": 4,
+          "y": 107,
+          "width": 382,
+          "height": 436.8125,
+          "right": 386,
+          "bottom": 543.8125
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 390px dark scale 1.25",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "20px",
+        "composer": {
+          "x": 31,
+          "y": 603,
+          "width": 328,
+          "height": 60,
+          "right": 359,
+          "bottom": 663
+        },
+        "story": {
+          "x": 4,
+          "y": 147.328125,
+          "width": 382,
+          "height": 329.171875,
+          "right": 386,
+          "bottom": 476.5
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 390px light scale 1",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "16px",
+        "composer": {
+          "x": 26,
+          "y": 645.8125,
+          "width": 338,
+          "height": 48,
+          "right": 364,
+          "bottom": 693.8125
+        },
+        "story": {
+          "x": 4,
+          "y": 107,
+          "width": 382,
+          "height": 436.8125,
+          "right": 386,
+          "bottom": 543.8125
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 390px light scale 1.25",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "20px",
+        "composer": {
+          "x": 31,
+          "y": 603,
+          "width": 328,
+          "height": 60,
+          "right": 359,
+          "bottom": 663
+        },
+        "story": {
+          "x": 4,
+          "y": 147.328125,
+          "width": 382,
+          "height": 329.171875,
+          "right": 386,
+          "bottom": 476.5
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 320px dark scale 1",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "16px",
+        "composer": {
+          "x": 26,
+          "y": 453.8125,
+          "width": 268,
+          "height": 36,
+          "right": 294,
+          "bottom": 489.8125
+        },
+        "story": {
+          "x": 4,
+          "y": 120.828125,
+          "width": 312,
+          "height": 230.984375,
+          "right": 316,
+          "bottom": 351.8125
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 320px dark scale 1.25",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "20px",
+        "composer": {
+          "x": 31,
+          "y": 414,
+          "width": 258,
+          "height": 45,
+          "right": 289,
+          "bottom": 459
+        },
+        "story": {
+          "x": 4,
+          "y": 147.328125,
+          "width": 312,
+          "height": 140.171875,
+          "right": 316,
+          "bottom": 287.5
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 320px light scale 1",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "16px",
+        "composer": {
+          "x": 26,
+          "y": 453.8125,
+          "width": 268,
+          "height": 36,
+          "right": 294,
+          "bottom": 489.8125
+        },
+        "story": {
+          "x": 4,
+          "y": 120.828125,
+          "width": 312,
+          "height": 230.984375,
+          "right": 316,
+          "bottom": 351.8125
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Long story 320px light scale 1.25",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "20px",
+        "composer": {
+          "x": 31,
+          "y": 414,
+          "width": 258,
+          "height": 45,
+          "right": 289,
+          "bottom": 459
+        },
+        "story": {
+          "x": 4,
+          "y": 147.328125,
+          "width": 312,
+          "height": 140.171875,
+          "right": 316,
+          "bottom": 287.5
+        },
+        "hand": null,
+        "map": null,
+        "dialog": null
+      }
+    },
+    {
+      "label": "Registered themes replace or clear shared artwork"
+    },
+    {
+      "label": "Dice dialog 1360px dark large text",
+      "detail": {
+        "width": 598,
+        "scroll": 598
+      }
+    },
+    {
+      "label": "Dice dialog 1360px light large text",
+      "detail": {
+        "width": 598,
+        "scroll": 598
+      }
+    },
+    {
+      "label": "Dice dialog 390px dark large text",
+      "detail": {
+        "width": 365,
+        "scroll": 365
+      }
+    },
+    {
+      "label": "Dice dialog 390px light large text",
+      "detail": {
+        "width": 365,
+        "scroll": 365
+      }
+    },
+    {
+      "label": "Dice dialog 320px dark large text",
+      "detail": {
+        "width": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "label": "Dice dialog 320px light large text",
+      "detail": {
+        "width": 299,
+        "scroll": 299
+      }
+    },
+    {
+      "label": "Combat map 1360px dark scale 1",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "16px",
+        "composer": {
+          "x": 340,
+          "y": 814,
+          "width": 496,
+          "height": 52,
+          "right": 836,
+          "bottom": 866
+        },
+        "story": null,
+        "hand": {
+          "x": 324,
+          "y": 481.109375,
+          "width": 612,
+          "height": 218.5,
+          "right": 936,
+          "bottom": 699.609375
+        },
+        "map": {
+          "x": 326,
+          "y": 182.140625,
+          "width": 608,
+          "height": 507.46875,
+          "right": 934,
+          "bottom": 689.609375
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 1360px dark scale 1.25",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "20px",
+        "composer": {
+          "x": 376,
+          "y": 796,
+          "width": 428,
+          "height": 65,
+          "right": 804,
+          "bottom": 861
+        },
+        "story": null,
+        "hand": {
+          "x": 355,
+          "y": 429,
+          "width": 578,
+          "height": 228.5,
+          "right": 933,
+          "bottom": 657.5
+        },
+        "map": {
+          "x": 357,
+          "y": 200.75,
+          "width": 574,
+          "height": 443.75,
+          "right": 931,
+          "bottom": 644.5
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 1360px light scale 1",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "16px",
+        "composer": {
+          "x": 340,
+          "y": 814,
+          "width": 496,
+          "height": 52,
+          "right": 836,
+          "bottom": 866
+        },
+        "story": null,
+        "hand": {
+          "x": 324,
+          "y": 481.109375,
+          "width": 612,
+          "height": 218.5,
+          "right": 936,
+          "bottom": 699.609375
+        },
+        "map": {
+          "x": 326,
+          "y": 182.140625,
+          "width": 608,
+          "height": 507.46875,
+          "right": 934,
+          "bottom": 689.609375
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 1360px light scale 1.25",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "20px",
+        "composer": {
+          "x": 376,
+          "y": 796,
+          "width": 428,
+          "height": 65,
+          "right": 804,
+          "bottom": 861
+        },
+        "story": null,
+        "hand": {
+          "x": 355,
+          "y": 429,
+          "width": 578,
+          "height": 228.5,
+          "right": 933,
+          "bottom": 657.5
+        },
+        "map": {
+          "x": 357,
+          "y": 200.75,
+          "width": 574,
+          "height": 443.75,
+          "right": 931,
+          "bottom": 644.5
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 390px dark scale 1",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "16px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 16,
+          "y": 199,
+          "width": 358,
+          "height": 269,
+          "right": 374,
+          "bottom": 468
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 390px dark scale 1.25",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "20px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 19,
+          "y": 245,
+          "width": 352,
+          "height": 264.5,
+          "right": 371,
+          "bottom": 509.5
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 390px light scale 1",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "16px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 16,
+          "y": 199,
+          "width": 358,
+          "height": 269,
+          "right": 374,
+          "bottom": 468
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 390px light scale 1.25",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "pageWidth": 390,
+        "pageHeight": 844,
+        "textSize": "20px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 19,
+          "y": 245,
+          "width": 352,
+          "height": 264.5,
+          "right": 371,
+          "bottom": 509.5
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 320px dark scale 1",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "16px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 16,
+          "y": 199,
+          "width": 288,
+          "height": 208.8125,
+          "right": 304,
+          "bottom": 407.8125
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 320px dark scale 1.25",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "20px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 19,
+          "y": 282.328125,
+          "width": 282,
+          "height": 180,
+          "right": 301,
+          "bottom": 462.328125
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 320px light scale 1",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "16px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 16,
+          "y": 199,
+          "width": 288,
+          "height": 208.8125,
+          "right": 304,
+          "bottom": 407.8125
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Combat map 320px light scale 1.25",
+      "detail": {
+        "width": 320,
+        "height": 640,
+        "pageWidth": 320,
+        "pageHeight": 640,
+        "textSize": "20px",
+        "composer": null,
+        "story": null,
+        "hand": null,
+        "map": {
+          "x": 19,
+          "y": 282.328125,
+          "width": 282,
+          "height": 180,
+          "right": 301,
+          "bottom": 462.328125
+        },
+        "dialog": null
+      }
+    },
+    {
+      "label": "Map keyboard zoom and enlarged board",
+      "detail": {
+        "width": 1360,
+        "height": 900,
+        "pageWidth": 1360,
+        "pageHeight": 900,
+        "textSize": "16px",
+        "composer": {
+          "x": 340,
+          "y": 814,
+          "width": 496,
+          "height": 52,
+          "right": 836,
+          "bottom": 866
+        },
+        "story": null,
+        "hand": {
+          "x": 324,
+          "y": 481.109375,
+          "width": 612,
+          "height": 218.5,
+          "right": 936,
+          "bottom": 699.609375
+        },
+        "map": {
+          "x": 326,
+          "y": 182.140625,
+          "width": 608,
+          "height": 507.46875,
+          "right": 934,
+          "bottom": 689.609375
+        },
+        "dialog": {
+          "x": 0,
+          "y": 0,
+          "width": 1360,
+          "height": 900,
+          "right": 1360,
+          "bottom": 900
+        }
+      }
+    },
+    {
+      "label": "Combat hand opens a card",
+      "detail": "Longbow, in hand, Action"
+    }
+  ],
+  "failures": []
+}
