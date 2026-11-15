@@ -1,0 +1,172 @@
+{
+  "headRefOid": "ee8af415cd0ccbbb83b856f16209a46103c189ce",
+  "isDraft": true,
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-15T00:48:33Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853140",
+      "name": "build",
+      "startedAt": "2026-11-15T00:44:08Z",
+      "status": "COMPLETED",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-15T00:49:59Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659620968/job/132645802777",
+      "name": "windows build",
+      "startedAt": "2026-11-15T00:43:56Z",
+      "status": "COMPLETED",
+      "workflowName": "Windows smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645852940",
+      "name": "tests (1/3)",
+      "startedAt": "2026-11-15T00:44:08Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659620968/job/132645802652",
+      "name": "windows tests (1/3)",
+      "startedAt": "2026-11-15T00:43:56Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Windows smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853243",
+      "name": "tests (2/3)",
+      "startedAt": "2026-11-15T00:44:08Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659620968/job/132645802673",
+      "name": "windows tests (2/3)",
+      "startedAt": "2026-11-15T00:43:56Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Windows smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853168",
+      "name": "tests (3/3)",
+      "startedAt": "2026-11-15T00:44:07Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659620968/job/132645802412",
+      "name": "windows tests (3/3)",
+      "startedAt": "2026-11-15T00:43:56Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Windows smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853087",
+      "name": "browser (1/6)",
+      "startedAt": "2026-11-15T00:44:07Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853121",
+      "name": "browser (2/6)",
+      "startedAt": "2026-11-15T00:44:08Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853050",
+      "name": "browser (3/6)",
+      "startedAt": "2026-11-15T00:44:07Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853165",
+      "name": "browser (4/6)",
+      "startedAt": "2026-11-15T00:44:07Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853194",
+      "name": "browser (5/6)",
+      "startedAt": "2026-11-15T00:44:07Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094/job/132645853185",
+      "name": "browser (6/6)",
+      "startedAt": "2026-11-15T00:44:08Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Linux smoke"
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "security/snyk (lebbitheplow)",
+      "startedAt": "2026-11-15T00:44:07Z",
+      "state": "SUCCESS",
+      "targetUrl": "https://app.snyk.io/org/lebbitheplow/pr-checks/adb9aa32-882f-431d-adf2-20cef0b443c4"
+    }
+  ],
+  "recordedAt": "2026-11-15T00:56:11.944Z",
+  "sourceCommit": "11ddc89e20c7913c7a79c4ffaf986b566ee9f6ad",
+  "local": {
+    "appearanceChecks": 17,
+    "productionBrowserChecks": 43,
+    "readabilityChecks": 18,
+    "lint": {
+      "errors": 0,
+      "warnings": 313
+    },
+    "build": "passed",
+    "bundleBudgets": "passed",
+    "repositoryAudit": {
+      "complete": false,
+      "uniqueFilesPassed": 428,
+      "expectedFiles": 1218,
+      "note": "Local broad audit stopped in favor of the complete Linux and Windows CI runs. Direct-run TSX/ESM incompatibilities and timeouts are not counted as passes. Initial narrator failure passed an isolated 63-check rerun."
+    }
+  }
+}

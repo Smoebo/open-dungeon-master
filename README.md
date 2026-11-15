@@ -58,3 +58,18 @@ The phone-header regression failed on the previous build before the fix.
 
 The remaining images include the keyboard-selected combat card, phone hand and
 four/six-choice layout fixtures. The theme adds no gameplay behavior or genre default.
+
+## Check status at handoff
+
+`checks-at-handoff.json` preserves a timestamped snapshot for published commit
+`ee8af415cd0ccbbb83b856f16209a46103c189ce` (final implementation `11ddc89e2`).
+Both Linux and Windows CI builds passed. The full test and browser shards were
+still running, so the draft does not claim a full-suite CI pass.
+
+Local appearance contracts, lint, production build/budgets, 43 production
+browser checks and 18 readability checks passed. The broader local audit was
+stopped in favor of the complete CI runs: 428 distinct files had passing
+results out of 1,218. Files that encountered direct-run TSX/ESM incompatibilities
+or timeouts were not counted as passes. An initial narrator-suite failure passed
+an isolated rerun with 63 checks. CI, native-shell and real-device review remain
+visible delivery work; nothing was merged.
