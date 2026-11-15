@@ -1,0 +1,137 @@
+{
+  "base": {
+    "commit": "96b5a50b572d8fc9cc80c06f679e25a34b3d26a7",
+    "run": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43653434657"
+  },
+  "hearth": {
+    "commit": "ee8af415cd0ccbbb83b856f16209a46103c189ce",
+    "run": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43659621094"
+  },
+  "comparison": [
+    {
+      "scenario": "travel-formation-phone",
+      "message": "locator.evaluate: AbortError: The user aborted a request.",
+      "baseMatch": null
+    },
+    {
+      "scenario": "builder-a11y-desktop",
+      "message": "no serious or critical accessibility violations:",
+      "baseMatch": {
+        "scenario": "builder-a11y-desktop",
+        "message": "no serious or critical accessibility violations:"
+      }
+    },
+    {
+      "scenario": "builder-a11y-phone",
+      "message": "no serious or critical accessibility violations:",
+      "baseMatch": {
+        "scenario": "builder-a11y-phone",
+        "message": "no serious or critical accessibility violations:"
+      }
+    },
+    {
+      "scenario": "creator-spells-identity-desktop",
+      "message": "the Spells and Hero steps' new parts:",
+      "baseMatch": {
+        "scenario": "creator-spells-identity-desktop",
+        "message": "the Spells and Hero steps' new parts:"
+      }
+    },
+    {
+      "scenario": "creator-spells-identity-phone",
+      "message": "the Spells and Hero steps' new parts:",
+      "baseMatch": {
+        "scenario": "creator-spells-identity-phone",
+        "message": "the Spells and Hero steps' new parts:"
+      }
+    },
+    {
+      "scenario": "table-layout-desktop",
+      "message": "locator.click: Timeout 30000ms exceeded.",
+      "baseMatch": {
+        "scenario": "table-layout-desktop",
+        "message": "locator.click: Timeout 30000ms exceeded."
+      }
+    },
+    {
+      "scenario": "companion-conduct-desktop",
+      "message": "the card wears the foes' colour (color(srgb 0.890196 0.756863 0.360784 / 0.35), the party's color(srgb 0.890196 0.756863 0.360784 / 0.35))",
+      "baseMatch": {
+        "scenario": "companion-conduct-desktop",
+        "message": "the card wears the foes' colour (color(srgb 0.890196 0.756863 0.360784 / 0.35), the party's color(srgb 0.890196 0.756863 0.360784 / 0.35))"
+      }
+    },
+    {
+      "scenario": "companion-conduct-phone",
+      "message": "the card wears the foes' colour (color(srgb 0.890196 0.756863 0.360784 / 0.35), the party's color(srgb 0.890196 0.756863 0.360784 / 0.35))",
+      "baseMatch": {
+        "scenario": "companion-conduct-phone",
+        "message": "the card wears the foes' colour (color(srgb 0.890196 0.756863 0.360784 / 0.35), the party's color(srgb 0.890196 0.756863 0.360784 / 0.35))"
+      }
+    },
+    {
+      "scenario": "fight-bench-phone",
+      "message": "faults on the bench's screens:",
+      "baseMatch": {
+        "scenario": "fight-bench-phone",
+        "message": "faults on the bench's screens:"
+      }
+    },
+    {
+      "scenario": "day-board-desktop",
+      "message": "the chronicle is solid parchment by day (null)",
+      "baseMatch": {
+        "scenario": "day-board-desktop",
+        "message": "the chronicle is solid parchment by day (null)"
+      }
+    },
+    {
+      "scenario": "split-line-desktop",
+      "message": "axe on the passage by night: nothing-checked: axe checked no rule here",
+      "baseMatch": {
+        "scenario": "split-line-desktop",
+        "message": "axe on the passage by night: nothing-checked: axe checked no rule here"
+      }
+    },
+    {
+      "scenario": "split-line-phone",
+      "message": "axe on the passage by night: nothing-checked: axe checked no rule here",
+      "baseMatch": {
+        "scenario": "split-line-phone",
+        "message": "axe on the passage by night: nothing-checked: axe checked no rule here"
+      }
+    },
+    {
+      "scenario": "name-menu-desktop",
+      "message": "axe on the name menu by day: color-contrast",
+      "baseMatch": {
+        "scenario": "name-menu-desktop",
+        "message": "axe on the name menu by day: color-contrast"
+      }
+    },
+    {
+      "scenario": "name-menu-phone",
+      "message": "axe on the name menu by day: color-contrast",
+      "baseMatch": {
+        "scenario": "name-menu-phone",
+        "message": "axe on the name menu by day: color-contrast"
+      }
+    },
+    {
+      "scenario": "creator-sheets-desktop",
+      "message": "the sheets and the level-up:",
+      "baseMatch": {
+        "scenario": "creator-sheets-desktop",
+        "message": "the sheets and the level-up:"
+      }
+    },
+    {
+      "scenario": "creator-sheets-phone",
+      "message": "the sheets and the level-up:",
+      "baseMatch": {
+        "scenario": "creator-sheets-phone",
+        "message": "the sheets and the level-up:"
+      }
+    }
+  ]
+}

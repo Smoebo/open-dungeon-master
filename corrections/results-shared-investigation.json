@@ -1,0 +1,53 @@
+{
+  "app": false,
+  "results": [
+    {
+      "tag": "travel-formation-desktop",
+      "ok": true,
+      "ms": 19104
+    },
+    {
+      "tag": "travel-formation-phone",
+      "ok": true,
+      "ms": 10228
+    },
+    {
+      "tag": "name-menu-desktop",
+      "ok": false,
+      "ms": 6142,
+      "error": "axe on the name menu by day: color-contrast"
+    },
+    {
+      "tag": "name-menu-phone",
+      "ok": false,
+      "ms": 4769,
+      "error": "axe on the name menu by day: color-contrast"
+    },
+    {
+      "tag": "day-board-desktop",
+      "ok": false,
+      "ms": 12903,
+      "error": "the chronicle is solid parchment by day (null)"
+    },
+    {
+      "tag": "day-board-phone",
+      "ok": true,
+      "ms": 7070
+    },
+    {
+      "tag": "table-layout-desktop",
+      "ok": true,
+      "ms": 162209
+    },
+    {
+      "tag": "table-layout-laptop",
+      "ok": true,
+      "ms": 28284
+    },
+    {
+      "tag": "table-layout-phone",
+      "ok": true,
+      "ms": 9615
+    }
+  ]
+}

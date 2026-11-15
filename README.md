@@ -1,75 +1,100 @@
-# Hearth & Haven visual review
+# Hearth & Haven corrected production review
 
-Original crafted-oak, amber and parchment treatment for Open Game Master.
-Source: `codex/hearth-haven-theme`, implementation commit
-`11ddc89e20c7913c7a79c4ffaf986b566ee9f6ad`, dependent on PR 962.
+Source: `18c309c6fef99adbb07f29886cbd6769eeb97d92` on
+`codex/hearth-haven-theme`, integrating PR 962 at `fccee2be4`.
+Captured 2026-11-14 (America/Toronto). [Draft PR 967](https://github.com/Lebbitheplow/open-game-master/pull/967).
 
-Captured 2026-11-14 with the repository's disposable browser fixture. All
-campaigns and characters are fictional. The loopback join address in lobby
-captures belongs only to the disposable local preview.
+The shared header hooks replace Hearth's positional workaround. Send and the
+moving selected-mode highlight now use oak/amber materials. The hand-label fix
+and original art remain. The map's content clears its painted rail.
 
-The development and production browser matrices each passed all 43 checks, including 320/390px phone
-layouts, text at 125%, keyboard interactions, picker isolation, theme switching,
-transparent decorative overlays and forced-colors hiding. Results are preserved
-in `results-development.json` and `results-production.json`. The displayed images
-are the final production captures. Commit `0444b31` preserves the initial development
-captures at source `2b8156579`; commit `b743626` preserves that source's production
-captures before the phone readability corrections. This gallery is separate from application source.
-Native app shells, real devices/mobile Safari and screen readers still need review.
+## Validation
 
-The final source also passed 18 focused readability checks in
-`results-hearth-readability.json`: separate Back/title columns at 320/390px,
-day/night and 100%/125% text, plus a bright player-hand label over the dark map.
-The phone-header regression failed on the previous build before the fix.
+- Appearance checks: 12 catalog + 5 contracts passed.
+- Full lint: 0 errors, 313 existing warnings. Production build and TypeScript passed.
+- Existing bundle budgets passed: shared CSS 107.5 KiB, rulebook CSS 114.1 KiB.
+- [Expanded production matrix](corrections/results-production.json): 59 passed, 0 failed.
+- [Hearth readability](corrections/results-hearth-readability.json): 20 passed, including actual enabled Send and moving-highlight contrast (7.50:1 / 7.36:1 minimum in both modes).
+- [Shared browser investigation](corrections/results-shared-investigation.json): 6/9 passed; name-menu desktop/phone contrast and day-board desktop gradient assertion remain failing. Travel and table arrangement pass.
+- [CI failure comparison](corrections/ci-failure-comparison.json): 15/16 earlier Hearth failures are identical to failures on the original shared base before Hearth existed.
+- [Machine-readable validation summary](corrections/checks.json).
 
-## Picker
+These results do not clear the shared failures or final CI. Native app-shell,
+real-phone/mobile Safari and screen-reader reviews remain. All campaign data
+are fictional; any loopback join address belongs to the disposable preview.
+No private campaign data, credentials or browser profiles are included.
 
-![Day picker](images/validation-picker-1360-light-1.png)
-![Night picker](images/validation-picker-1360-dark-1.png)
-![Hearth selected on 320px phone in day mode](images/validation-picker-hearth-320-light.png)
-![Hearth selected on 320px phone in night mode](images/validation-picker-hearth-320-dark.png)
+Only `corrections/` contains the current source's captures and results. The
+older root images and JSON are retained as historical evidence of earlier
+commits, and must not be read as validation of this correction.
 
-## Lobby
+## Reviewed views
 
-![Day lobby](images/validation-lobby-1360-light.png)
-![Night lobby](images/validation-lobby-1360-dark.png)
-![Phone day lobby](images/validation-lobby-390-light.png)
-![Phone night lobby](images/validation-lobby-390-dark.png)
+![Phone day header and enabled oak actions](corrections/images/validation-hearth-header-story-light.png)
 
-## Story and combat
+![Phone night header and enabled oak actions](corrections/images/validation-hearth-header-story-dark.png)
 
-![Day story, enlarged text](images/validation-story-1360-light-large.png)
-![Night story, enlarged text](images/validation-story-1360-dark-large.png)
-![Phone day story](images/validation-story-390-light-large.png)
-![Phone night story](images/validation-story-390-dark-large.png)
-![Day combat](images/validation-combat-1360-light-large.png)
-![Night combat](images/validation-combat-1360-dark-large.png)
-![Phone day combat](images/validation-combat-390-light-large.png)
-![Phone night combat](images/validation-combat-390-dark-large.png)
+![320px day header with enlarged text](corrections/images/validation-header-story-320-light-large.png)
 
-## Enlarged map and dialogs
+![Desktop combat with enlarged text](corrections/images/validation-header-combat-1360-light-large.png)
 
-![Day enlarged map](images/validation-map-enlarged-1360-light.png)
-![Night enlarged map](images/validation-map-enlarged.png)
-![Phone day enlarged map](images/validation-map-enlarged-390-light.png)
-![Phone night enlarged map](images/validation-map-enlarged-390-dark.png)
-![Day dice dialog](images/validation-dice-light-large.png)
-![Night dice dialog](images/validation-dice-dark-large.png)
+![Phone map clears its painted frame](corrections/images/validation-frame-clearance-390-light.png)
 
-The remaining images include the keyboard-selected combat card, phone hand and
-four/six-choice layout fixtures. The theme adds no gameplay behavior or genre default.
+![Desktop night map clears its painted frame](corrections/images/validation-frame-clearance-1360-dark.png)
 
-## Check status at handoff
+![Hearth selected in the phone picker](corrections/images/validation-picker-hearth-320-dark.png)
 
-`checks-at-handoff.json` preserves a timestamped snapshot for published commit
-`ee8af415cd0ccbbb83b856f16209a46103c189ce` (final implementation `11ddc89e2`).
-Both Linux and Windows CI builds passed. The full test and browser shards were
-still running, so the draft does not claim a full-suite CI pass.
+![Day lobby](corrections/images/validation-lobby-1360-light.png)
 
-Local appearance contracts, lint, production build/budgets, 43 production
-browser checks and 18 readability checks passed. The broader local audit was
-stopped in favor of the complete CI runs: 428 distinct files had passing
-results out of 1,218. Files that encountered direct-run TSX/ESM incompatibilities
-or timeouts were not counted as passes. An initial narrator-suite failure passed
-an isolated rerun with 63 checks. CI, native-shell and real-device review remain
-visible delivery work; nothing was merged.
+![Night lobby](corrections/images/validation-lobby-1360-dark.png)
+
+## All 48 refreshed screenshots
+
+- [validation-picker-1360-dark-1.png](corrections/images/validation-picker-1360-dark-1.png)
+- [validation-picker-1360-light-1.png](corrections/images/validation-picker-1360-light-1.png)
+- [validation-picker-390-dark-1.png](corrections/images/validation-picker-390-dark-1.png)
+- [validation-picker-390-light-1.png](corrections/images/validation-picker-390-light-1.png)
+- [validation-picker-320-light-1.25.png](corrections/images/validation-picker-320-light-1.25.png)
+- [validation-picker-layout-4.png](corrections/images/validation-picker-layout-4.png)
+- [validation-picker-layout-6.png](corrections/images/validation-picker-layout-6.png)
+- [validation-header-story-320-dark-large.png](corrections/images/validation-header-story-320-dark-large.png)
+- [validation-header-story-390-dark-large.png](corrections/images/validation-header-story-390-dark-large.png)
+- [validation-header-combat-1024-dark-large.png](corrections/images/validation-header-combat-1024-dark-large.png)
+- [validation-header-combat-1360-dark-large.png](corrections/images/validation-header-combat-1360-dark-large.png)
+- [validation-header-combat-1920-dark-large.png](corrections/images/validation-header-combat-1920-dark-large.png)
+- [validation-frame-clearance-390-dark.png](corrections/images/validation-frame-clearance-390-dark.png)
+- [validation-frame-clearance-1360-dark.png](corrections/images/validation-frame-clearance-1360-dark.png)
+- [validation-header-story-320-light-large.png](corrections/images/validation-header-story-320-light-large.png)
+- [validation-header-story-390-light-large.png](corrections/images/validation-header-story-390-light-large.png)
+- [validation-header-combat-1024-light-large.png](corrections/images/validation-header-combat-1024-light-large.png)
+- [validation-header-combat-1360-light-large.png](corrections/images/validation-header-combat-1360-light-large.png)
+- [validation-header-combat-1920-light-large.png](corrections/images/validation-header-combat-1920-light-large.png)
+- [validation-frame-clearance-390-light.png](corrections/images/validation-frame-clearance-390-light.png)
+- [validation-frame-clearance-1360-light.png](corrections/images/validation-frame-clearance-1360-light.png)
+- [validation-lobby-1360-dark.png](corrections/images/validation-lobby-1360-dark.png)
+- [validation-lobby-1360-light.png](corrections/images/validation-lobby-1360-light.png)
+- [validation-lobby-390-dark.png](corrections/images/validation-lobby-390-dark.png)
+- [validation-lobby-390-light.png](corrections/images/validation-lobby-390-light.png)
+- [validation-story-1360-dark-large.png](corrections/images/validation-story-1360-dark-large.png)
+- [validation-story-1360-light-large.png](corrections/images/validation-story-1360-light-large.png)
+- [validation-story-390-dark-large.png](corrections/images/validation-story-390-dark-large.png)
+- [validation-story-390-light-large.png](corrections/images/validation-story-390-light-large.png)
+- [validation-dice-dark-large.png](corrections/images/validation-dice-dark-large.png)
+- [validation-dice-light-large.png](corrections/images/validation-dice-light-large.png)
+- [validation-combat-1360-dark-large.png](corrections/images/validation-combat-1360-dark-large.png)
+- [validation-combat-1360-light-large.png](corrections/images/validation-combat-1360-light-large.png)
+- [validation-combat-390-dark-large.png](corrections/images/validation-combat-390-dark-large.png)
+- [validation-combat-hand-dark-large.png](corrections/images/validation-combat-hand-dark-large.png)
+- [validation-combat-390-light-large.png](corrections/images/validation-combat-390-light-large.png)
+- [validation-combat-hand-light-large.png](corrections/images/validation-combat-hand-light-large.png)
+- [validation-map-enlarged.png](corrections/images/validation-map-enlarged.png)
+- [validation-map-enlarged-390-dark.png](corrections/images/validation-map-enlarged-390-dark.png)
+- [validation-map-enlarged-390-light.png](corrections/images/validation-map-enlarged-390-light.png)
+- [validation-map-enlarged-1360-light.png](corrections/images/validation-map-enlarged-1360-light.png)
+- [validation-combat-card.png](corrections/images/validation-combat-card.png)
+- [validation-picker-hearth-320-light.png](corrections/images/validation-picker-hearth-320-light.png)
+- [validation-picker-hearth-320-dark.png](corrections/images/validation-picker-hearth-320-dark.png)
+- [validation-hearth-header-story-light.png](corrections/images/validation-hearth-header-story-light.png)
+- [validation-hearth-header-story-dark.png](corrections/images/validation-hearth-header-story-dark.png)
+- [validation-hearth-header-combat-light.png](corrections/images/validation-hearth-header-combat-light.png)
+- [validation-hearth-header-combat-dark.png](corrections/images/validation-hearth-header-combat-dark.png)
