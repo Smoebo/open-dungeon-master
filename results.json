@@ -1,6 +1,6 @@
 {
   "theme": "kingdoms",
-  "createdAt": "2026-11-15T00:39:30.737Z",
+  "createdAt": "2026-11-15T03:54:33.915Z",
   "checks": [
     {
       "label": "Appearance picker 1360px dark scale 1",
@@ -16,25 +16,25 @@
         "columns": "337px 337px",
         "cards": [
           {
-            "x": 337.3956298828125,
-            "y": 286.4357604980469,
-            "row": 132,
-            "width": 336.208740234375,
-            "height": 224.23785400390625
-          },
-          {
-            "x": 686,
+            "x": 337,
             "y": 286.171875,
             "row": 132,
             "width": 337,
             "height": 224.765625
           },
           {
-            "x": 347.1099853515625,
-            "y": 529.6804809570312,
-            "row": 369,
+            "x": 696.1099853515625,
+            "y": 292.91485595703125,
+            "row": 132,
             "width": 316.780029296875,
             "height": 211.2796630859375
+          },
+          {
+            "x": 337,
+            "y": 522.9375,
+            "row": 369,
+            "width": 337,
+            "height": 224.765625
           },
           {
             "x": 686,
@@ -224,6 +224,540 @@
     },
     {
       "label": "Picker layout accommodates four and six themes"
+    },
+    {
+      "label": "Readable story header 320px dark enlarged text",
+      "detail": {
+        "readable": 24,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 89,
+          "y": 15,
+          "width": 211,
+          "height": 46,
+          "top": 15,
+          "right": 300,
+          "bottom": 61,
+          "left": 89
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "label": "Table controls consume theme materials and preserve low-health meaning",
+      "detail": {
+        "checks": [
+          {
+            "variable": "--material-send-wash",
+            "actual": "rgb(18, 52, 86)",
+            "expected": "rgb(18, 52, 86)",
+            "image": "none"
+          },
+          {
+            "variable": "--material-send-edge",
+            "actual": "rgb(171, 205, 239)",
+            "expected": "rgb(171, 205, 239)",
+            "image": "linear-gradient(rgb(37, 75, 152), rgb(20, 45, 105))"
+          },
+          {
+            "variable": "--material-chosen-wash",
+            "actual": "rgb(101, 67, 33)",
+            "expected": "rgb(101, 67, 33)",
+            "image": "none"
+          },
+          {
+            "variable": "--material-vital-fill",
+            "actual": "rgb(19, 87, 36)",
+            "expected": "rgb(19, 87, 36)",
+            "image": "none"
+          }
+        ],
+        "lowBefore": "linear-gradient(90deg, rgb(198, 90, 36), rgb(255, 157, 92))",
+        "lowAfter": "linear-gradient(90deg, rgb(198, 90, 36), rgb(255, 157, 92))"
+      }
+    },
+    {
+      "label": "Readable story header 390px dark enlarged text",
+      "detail": {
+        "readable": 24,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 89,
+          "y": 15,
+          "width": 281,
+          "height": 46,
+          "top": 15,
+          "right": 370,
+          "bottom": 61,
+          "left": 89
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "label": "Readable combat header 1024px dark enlarged text",
+      "detail": {
+        "readable": 22,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 47,
+          "y": 21,
+          "width": 946,
+          "height": 27.59375,
+          "top": 21,
+          "right": 993,
+          "bottom": 48.59375,
+          "left": 47
+        },
+        "pageWidth": 1024
+      }
+    },
+    {
+      "label": "Readable combat header 1360px dark enlarged text",
+      "detail": {
+        "readable": 22,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 47,
+          "y": 22.53125,
+          "width": 413.046875,
+          "height": 27.59375,
+          "top": 22.53125,
+          "right": 460.046875,
+          "bottom": 50.125,
+          "left": 47
+        },
+        "pageWidth": 1360
+      }
+    },
+    {
+      "label": "Readable combat header 1920px dark enlarged text",
+      "detail": {
+        "readable": 22,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 47,
+          "y": 33.90625,
+          "width": 577.234375,
+          "height": 27.59375,
+          "top": 33.90625,
+          "right": 624.234375,
+          "bottom": 61.5,
+          "left": 47
+        },
+        "pageWidth": 1920
+      }
+    },
+    {
+      "label": "Enlarged map content clears frame 390px dark",
+      "detail": {
+        "safe": {
+          "left": 29,
+          "right": 361
+        },
+        "rows": 4,
+        "boxes": [
+          {
+            "name": "cine-tabletop-head",
+            "x": 36,
+            "y": 36,
+            "width": 318,
+            "height": 52.78125,
+            "top": 36,
+            "right": 354,
+            "bottom": 88.78125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 706.28125,
+            "width": 318,
+            "height": 50,
+            "top": 706.28125,
+            "right": 354,
+            "bottom": 756.28125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 764.28125,
+            "width": 318,
+            "height": 50,
+            "top": 764.28125,
+            "right": 354,
+            "bottom": 814.28125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 822.28125,
+            "width": 318,
+            "height": 50,
+            "top": 822.28125,
+            "right": 354,
+            "bottom": 872.28125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 880.28125,
+            "width": 318,
+            "height": 50,
+            "top": 880.28125,
+            "right": 354,
+            "bottom": 930.28125,
+            "left": 36
+          }
+        ]
+      }
+    },
+    {
+      "label": "Enlarged map content clears frame 1360px dark",
+      "detail": {
+        "safe": {
+          "left": 42,
+          "right": 1318
+        },
+        "rows": 4,
+        "boxes": [
+          {
+            "name": "cine-tabletop-head",
+            "x": 48,
+            "y": 48,
+            "width": 1264,
+            "height": 36,
+            "top": 48,
+            "right": 1312,
+            "bottom": 84,
+            "left": 48
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 124.5,
+            "width": 240,
+            "height": 50,
+            "top": 124.5,
+            "right": 1312,
+            "bottom": 174.5,
+            "left": 1072
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 182.5,
+            "width": 240,
+            "height": 50,
+            "top": 182.5,
+            "right": 1312,
+            "bottom": 232.5,
+            "left": 1072
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 240.5,
+            "width": 240,
+            "height": 50,
+            "top": 240.5,
+            "right": 1312,
+            "bottom": 290.5,
+            "left": 1072
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 298.5,
+            "width": 240,
+            "height": 50,
+            "top": 298.5,
+            "right": 1312,
+            "bottom": 348.5,
+            "left": 1072
+          }
+        ]
+      }
+    },
+    {
+      "label": "Readable story header 320px light enlarged text",
+      "detail": {
+        "readable": 24,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 89,
+          "y": 15,
+          "width": 211,
+          "height": 46,
+          "top": 15,
+          "right": 300,
+          "bottom": 61,
+          "left": 89
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "label": "Table controls consume theme materials and preserve low-health meaning",
+      "detail": {
+        "checks": [
+          {
+            "variable": "--material-send-wash",
+            "actual": "rgb(18, 52, 86)",
+            "expected": "rgb(18, 52, 86)",
+            "image": "none"
+          },
+          {
+            "variable": "--material-send-edge",
+            "actual": "rgb(171, 205, 239)",
+            "expected": "rgb(171, 205, 239)",
+            "image": "linear-gradient(rgb(37, 75, 152), rgb(20, 45, 105))"
+          },
+          {
+            "variable": "--material-chosen-wash",
+            "actual": "rgb(101, 67, 33)",
+            "expected": "rgb(101, 67, 33)",
+            "image": "none"
+          },
+          {
+            "variable": "--material-vital-fill",
+            "actual": "rgb(19, 87, 36)",
+            "expected": "rgb(19, 87, 36)",
+            "image": "none"
+          }
+        ],
+        "lowBefore": "linear-gradient(90deg, rgb(198, 90, 36), rgb(255, 157, 92))",
+        "lowAfter": "linear-gradient(90deg, rgb(198, 90, 36), rgb(255, 157, 92))"
+      }
+    },
+    {
+      "label": "Readable story header 390px light enlarged text",
+      "detail": {
+        "readable": 24,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 89,
+          "y": 15,
+          "width": 281,
+          "height": 46,
+          "top": 15,
+          "right": 370,
+          "bottom": 61,
+          "left": 89
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "label": "Readable combat header 1024px light enlarged text",
+      "detail": {
+        "readable": 22,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 47,
+          "y": 21,
+          "width": 946,
+          "height": 27.59375,
+          "top": 21,
+          "right": 993,
+          "bottom": 48.59375,
+          "left": 47
+        },
+        "pageWidth": 1024
+      }
+    },
+    {
+      "label": "Readable combat header 1360px light enlarged text",
+      "detail": {
+        "readable": 22,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 47,
+          "y": 22.53125,
+          "width": 413.046875,
+          "height": 27.59375,
+          "top": 22.53125,
+          "right": 460.046875,
+          "bottom": 50.125,
+          "left": 47
+        },
+        "pageWidth": 1360
+      }
+    },
+    {
+      "label": "Readable combat header 1920px light enlarged text",
+      "detail": {
+        "readable": 22,
+        "required": 12,
+        "overlaps": 0,
+        "outside": [],
+        "title": {
+          "x": 47,
+          "y": 33.90625,
+          "width": 577.234375,
+          "height": 27.59375,
+          "top": 33.90625,
+          "right": 624.234375,
+          "bottom": 61.5,
+          "left": 47
+        },
+        "pageWidth": 1920
+      }
+    },
+    {
+      "label": "Enlarged map content clears frame 390px light",
+      "detail": {
+        "safe": {
+          "left": 29,
+          "right": 361
+        },
+        "rows": 4,
+        "boxes": [
+          {
+            "name": "cine-tabletop-head",
+            "x": 36,
+            "y": 36,
+            "width": 318,
+            "height": 52.78125,
+            "top": 36,
+            "right": 354,
+            "bottom": 88.78125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 706.28125,
+            "width": 318,
+            "height": 50,
+            "top": 706.28125,
+            "right": 354,
+            "bottom": 756.28125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 764.28125,
+            "width": 318,
+            "height": 50,
+            "top": 764.28125,
+            "right": 354,
+            "bottom": 814.28125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 822.28125,
+            "width": 318,
+            "height": 50,
+            "top": 822.28125,
+            "right": 354,
+            "bottom": 872.28125,
+            "left": 36
+          },
+          {
+            "name": "cine-order-row",
+            "x": 36,
+            "y": 880.28125,
+            "width": 318,
+            "height": 50,
+            "top": 880.28125,
+            "right": 354,
+            "bottom": 930.28125,
+            "left": 36
+          }
+        ]
+      }
+    },
+    {
+      "label": "Enlarged map content clears frame 1360px light",
+      "detail": {
+        "safe": {
+          "left": 42,
+          "right": 1318
+        },
+        "rows": 4,
+        "boxes": [
+          {
+            "name": "cine-tabletop-head",
+            "x": 48,
+            "y": 48,
+            "width": 1264,
+            "height": 36,
+            "top": 48,
+            "right": 1312,
+            "bottom": 84,
+            "left": 48
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 124.5,
+            "width": 240,
+            "height": 50,
+            "top": 124.5,
+            "right": 1312,
+            "bottom": 174.5,
+            "left": 1072
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 182.5,
+            "width": 240,
+            "height": 50,
+            "top": 182.5,
+            "right": 1312,
+            "bottom": 232.5,
+            "left": 1072
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 240.5,
+            "width": 240,
+            "height": 50,
+            "top": 240.5,
+            "right": 1312,
+            "bottom": 290.5,
+            "left": 1072
+          },
+          {
+            "name": "cine-order-row",
+            "x": 1072,
+            "y": 298.5,
+            "width": 240,
+            "height": 50,
+            "top": 298.5,
+            "right": 1312,
+            "bottom": 348.5,
+            "left": 1072
+          }
+        ]
+      }
     },
     {
       "label": "Lobby 1360px dark"
@@ -649,17 +1183,17 @@
         "story": null,
         "hand": {
           "x": 324,
-          "y": 481.109375,
+          "y": 447.609375,
           "width": 612,
-          "height": 218.5,
+          "height": 252,
           "right": 936,
           "bottom": 699.609375
         },
         "map": {
           "x": 326,
-          "y": 182.140625,
+          "y": 236.140625,
           "width": 608,
-          "height": 507.46875,
+          "height": 453.46875,
           "right": 934,
           "bottom": 689.609375
         },
@@ -685,17 +1219,17 @@
         "story": null,
         "hand": {
           "x": 355,
-          "y": 429,
+          "y": 405.5,
           "width": 578,
-          "height": 228.5,
+          "height": 252,
           "right": 933,
           "bottom": 657.5
         },
         "map": {
           "x": 357,
-          "y": 200.75,
+          "y": 267.75,
           "width": 574,
-          "height": 443.75,
+          "height": 376.75,
           "right": 931,
           "bottom": 644.5
         },
@@ -721,17 +1255,17 @@
         "story": null,
         "hand": {
           "x": 324,
-          "y": 481.109375,
+          "y": 447.609375,
           "width": 612,
-          "height": 218.5,
+          "height": 252,
           "right": 936,
           "bottom": 699.609375
         },
         "map": {
           "x": 326,
-          "y": 182.140625,
+          "y": 236.140625,
           "width": 608,
-          "height": 507.46875,
+          "height": 453.46875,
           "right": 934,
           "bottom": 689.609375
         },
@@ -757,17 +1291,17 @@
         "story": null,
         "hand": {
           "x": 355,
-          "y": 429,
+          "y": 405.5,
           "width": 578,
-          "height": 228.5,
+          "height": 252,
           "right": 933,
           "bottom": 657.5
         },
         "map": {
           "x": 357,
-          "y": 200.75,
+          "y": 267.75,
           "width": 574,
-          "height": 443.75,
+          "height": 376.75,
           "right": 931,
           "bottom": 644.5
         },
@@ -809,11 +1343,11 @@
         "hand": null,
         "map": {
           "x": 19,
-          "y": 245,
+          "y": 262.328125,
           "width": 352,
           "height": 264.5,
           "right": 371,
-          "bottom": 509.5
+          "bottom": 526.828125
         },
         "dialog": null
       }
@@ -853,11 +1387,11 @@
         "hand": null,
         "map": {
           "x": 19,
-          "y": 245,
+          "y": 262.328125,
           "width": 352,
           "height": 264.5,
           "right": 371,
-          "bottom": 509.5
+          "bottom": 526.828125
         },
         "dialog": null
       }
@@ -875,9 +1409,9 @@
         "hand": null,
         "map": {
           "x": 16,
-          "y": 199,
+          "y": 212.828125,
           "width": 288,
-          "height": 208.8125,
+          "height": 194.984375,
           "right": 304,
           "bottom": 407.8125
         },
@@ -919,9 +1453,9 @@
         "hand": null,
         "map": {
           "x": 16,
-          "y": 199,
+          "y": 212.828125,
           "width": 288,
-          "height": 208.8125,
+          "height": 194.984375,
           "right": 304,
           "bottom": 407.8125
         },
@@ -969,17 +1503,17 @@
         "story": null,
         "hand": {
           "x": 324,
-          "y": 481.109375,
+          "y": 447.609375,
           "width": 612,
-          "height": 218.5,
+          "height": 252,
           "right": 936,
           "bottom": 699.609375
         },
         "map": {
           "x": 326,
-          "y": 182.140625,
+          "y": 236.140625,
           "width": 608,
-          "height": 507.46875,
+          "height": 453.46875,
           "right": 934,
           "bottom": 689.609375
         },

@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "mode": "dark",
+      "forced": false,
+      "send": {
+        "color": "rgb(255, 245, 219)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(37, 75, 152), rgb(20, 45, 105))",
+        "border": "rgb(163, 132, 72)"
+      },
+      "chosen": {
+        "color": "rgb(255, 245, 219)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "rgb(172, 197, 237)"
+      },
+      "pill": {
+        "color": "rgb(241, 235, 219)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(37, 75, 152), rgb(20, 45, 105))",
+        "border": "rgb(241, 235, 219)"
+      }
+    },
+    {
+      "mode": "dark",
+      "forced": true,
+      "send": {
+        "color": "rgb(0, 0, 0)",
+        "fill": "rgb(255, 255, 255)",
+        "image": "none",
+        "border": "rgb(0, 0, 0)"
+      },
+      "chosen": {
+        "color": "rgb(0, 0, 0)",
+        "fill": "rgba(255, 255, 255, 0)",
+        "image": "none",
+        "border": "rgb(0, 0, 0)"
+      },
+      "pill": {
+        "color": "rgb(0, 0, 0)",
+        "fill": "rgb(255, 255, 255)",
+        "image": "none",
+        "border": "rgb(0, 0, 0)"
+      }
+    },
+    {
+      "mode": "light",
+      "forced": false,
+      "send": {
+        "color": "rgb(255, 245, 219)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(37, 75, 152), rgb(20, 45, 105))",
+        "border": "rgb(146, 112, 57)"
+      },
+      "chosen": {
+        "color": "rgb(255, 245, 219)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "rgb(36, 73, 129)"
+      },
+      "pill": {
+        "color": "rgb(27, 43, 71)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(37, 75, 152), rgb(20, 45, 105))",
+        "border": "rgb(27, 43, 71)"
+      }
+    },
+    {
+      "mode": "light",
+      "forced": true,
+      "send": {
+        "color": "rgb(0, 0, 0)",
+        "fill": "rgb(255, 255, 255)",
+        "image": "none",
+        "border": "rgb(0, 0, 0)"
+      },
+      "chosen": {
+        "color": "rgb(0, 0, 0)",
+        "fill": "rgba(255, 255, 255, 0)",
+        "image": "none",
+        "border": "rgb(0, 0, 0)"
+      },
+      "pill": {
+        "color": "rgb(0, 0, 0)",
+        "fill": "rgb(255, 255, 255)",
+        "image": "none",
+        "border": "rgb(0, 0, 0)"
+      }
+    }
+  ]
+}

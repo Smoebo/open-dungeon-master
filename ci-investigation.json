@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "commit": "96b5a50b572d8fc9cc80c06f679e25a34b3d26a7",
+    "run": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43653434657",
+    "failures": [
+      "builder-a11y-desktop",
+      "builder-a11y-phone",
+      "companion-conduct-desktop",
+      "companion-conduct-phone",
+      "creator-sheets-desktop",
+      "creator-sheets-phone",
+      "creator-spells-identity-desktop",
+      "creator-spells-identity-phone",
+      "day-board-desktop",
+      "fight-bench-phone",
+      "name-menu-desktop",
+      "name-menu-phone",
+      "split-line-desktop",
+      "split-line-phone",
+      "table-layout-desktop",
+      "world-pack-omissions-desktop",
+      "world-pack-omissions-phone"
+    ]
+  },
+  "priorPR": {
+    "commit": "2d7a9aab8e9d73684cce2878c4d59c2174747b84",
+    "run": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43666785785",
+    "failures": [
+      "builder-a11y-desktop",
+      "builder-a11y-phone",
+      "companion-conduct-desktop",
+      "companion-conduct-phone",
+      "creator-sheets-desktop",
+      "creator-sheets-phone",
+      "creator-spells-identity-desktop",
+      "creator-spells-identity-phone",
+      "day-board-desktop",
+      "fight-bench-phone",
+      "name-menu-desktop",
+      "name-menu-phone",
+      "split-line-desktop",
+      "split-line-phone",
+      "table-layout-desktop",
+      "world-pack-omissions-desktop"
+    ]
+  },
+  "everyPriorFailureAppearsOnBaseline": true,
+  "focused": {
+    "commit": "4374da3fd66d2d2e38b8b1743f22194df1b73ecf",
+    "passed": 4,
+    "total": 9,
+    "failures": [
+      "companion-conduct-desktop",
+      "companion-conduct-phone",
+      "day-board-desktop",
+      "name-menu-desktop",
+      "name-menu-phone"
+    ],
+    "passedScenarios": [
+      "table-layout-desktop",
+      "table-layout-laptop",
+      "table-layout-phone",
+      "day-board-phone"
+    ]
+  },
+  "findings": [
+    "Name-menu day-mode contrast fails at desktop and phone widths.",
+    "Day-board desktop requires a gradient first stop, but theme-session.css supplies the solid material-paper background.",
+    "Hostile companion and ordinary party card computed borders are identical; shared painted card borders override the distinct hostile treatment.",
+    "Prior table-layout desktop timeout was a tooltip intercepting the Notes click. All three local table-layout viewports now pass."
+  ]
+}
