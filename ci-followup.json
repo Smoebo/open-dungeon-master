@@ -1,0 +1,50 @@
+{
+  "source": "3d92137e032048a86a44cad00caef0ad99ca8ecf",
+  "base": "cab3070dc96c895a1d8aae8d6dd34b05c1a6ef65",
+  "date": "2026-11-15",
+  "selectedBrowser": {
+    "passed": 26,
+    "failed": 0,
+    "scenarios": [
+      "name-menu-desktop",
+      "name-menu-phone",
+      "fight-bench-desktop",
+      "fight-bench-phone",
+      "fight-bench-2-desktop",
+      "fight-bench-2-phone",
+      "day-board-desktop",
+      "day-board-phone",
+      "hand-on-board-desktop",
+      "hand-on-board-laptop",
+      "hand-on-board-phone",
+      "split-line-desktop",
+      "split-line-phone",
+      "creator-sheets-desktop",
+      "creator-sheets-phone",
+      "creator-spells-identity-desktop",
+      "creator-spells-identity-phone",
+      "table-layout-desktop",
+      "table-layout-laptop",
+      "table-layout-phone",
+      "builder-a11y-desktop",
+      "builder-a11y-phone",
+      "world-pack-omissions-desktop",
+      "world-pack-omissions-phone",
+      "companion-conduct-desktop",
+      "companion-conduct-phone"
+    ]
+  },
+  "previousWindows": {
+    "run": "https://github.com/Lebbitheplow/open-game-master/actions/runs/43674772120",
+    "failure": "Fight-opening warm-up cancellation timeout",
+    "isolatedCurrentRerun": {
+      "passed": 13,
+      "failed": 0
+    },
+    "interpretation": "Did not reproduce locally; final-head CI still required"
+  },
+  "limitations": [
+    "1024px with 125% text still has a cramped three-pane combat view.",
+    "Native app, physical phone and screen-reader review remain outstanding."
+  ]
+}

@@ -1,25 +1,22 @@
 # High Kingdoms visual review
 
-Review-only evidence for the High Kingdoms appearance, code commit
-`4374da3fd66d2d2e38b8b1743f22194df1b73ecf` on `codex/high-kingdoms-theme`.
-This integrates draft PR 962 at `fccee2be4ace16f5b792032bc3292b6679ec5ac2`.
-Captured November 14, 2026 (Toronto), for draft PR 973.
-All campaigns, characters and room codes are disposable fictional fixtures.
-No production databases, browser profiles or server logs are included.
+Production evidence for source commit `3d92137e032048a86a44cad00caef0ad99ca8ecf`, integrating draft PR 962
+at `cab3070dc96c895a1d8aae8d6dd34b05c1a6ef65` into draft PR 973. Captured November 15, 2026 (Toronto).
 
-The final production matrix passed all 59 checks, including 16 new title,
-map-frame clearance and live material-variable checks. The visible moving
-selection highlight responds to the shared chosen-color variable. Four extra
-day/night and forced-colors action inspections passed. All 52 screenshots are
-from the integrated production build. The first attempt passed 58 checks and
-timed out on its first story navigation; its report is retained separately.
-The warmed complete rerun passed 59/59. Older development, picker and original
-43-check production reports are historical evidence, not reruns of this commit.
-The two desktop lobby invite labels use a fictional example.invalid address
-for publication; their QR images still point to the now-stopped disposable
-local fixture. No live invitation is shown. Additional selected-theme captures
-scroll High Kingdoms into view on phones. Phone captures use emulated viewports,
-not a native app or physical device.
+All 59 theme browser checks and four additional day/night and forced-colors
+action inspections passed. The frame and corner artwork still paints after the
+shared ornament-container visibility change. All 52 screenshots are refreshed
+from this production build. The selected shared browser regression run passed
+26/26 cases, including all three table-layout widths. See `ci-followup.json`.
+The six targeted suites, production build, TypeScript and bundle budgets passed;
+lint reports zero errors and 313 warnings. Shared CSS is 107.7 KiB and rulebook
+CSS is 114.3 KiB. The prior Windows fight-opening timeout did not reproduce in
+an isolated local rerun (13 checks passed); final-head CI remains required.
+
+All campaigns, characters and room codes are disposable fictional fixtures.
+No production databases, browser profiles or server logs are included. Desktop
+lobby invite labels use example.invalid; their QR images point to the stopped
+local fixture. Phone captures use emulated viewports, not physical devices.
 
 | Surface | Day | Night |
 | --- | --- | --- |
@@ -41,14 +38,14 @@ not a native app or physical device.
 | Royal-blue action controls | [Day](images/review-actions-light.png) | [Night](images/review-actions-dark.png) |
 | Forced-colors controls | [Day](images/review-actions-light-forced.png) | [Night](images/review-actions-dark-forced.png) |
 
-The title and frame checks cover their stated bounds; they do not establish
-usability of every pane. The 1024px/125% combat capture still shows a cramped
-three-pane battle layout, which remains a shared-layout review item.
 
-`ci-investigation.json` compares all 16 failures on the previous PR head with
-the original shared base: each failed scenario already appears there. A focused
-production rerun passes all three table-layout viewports and phone day-board
-(4/9 total), while name-menu contrast, the desktop day-board gradient assertion
-and hostile companion border differentiation still fail. These remain shared
-delivery blockers; the 59/59 theme result does not replace full CI clearance.
-Native app-shell, real-phone and screen-reader validation remain outstanding.
+The 1024px/125% combat capture still shows a cramped three-pane layout. Passing
+title bounds does not establish usability of every pane. Native app-shell,
+physical-phone and screen-reader validation remain outstanding.
+
+`ci-investigation.json`, `results-shared-first-attempt.json`,
+`results-development.json`, `results-picker.json` and
+`results-production-original.json` are historical reports from earlier source
+commits. Their old failures are not current results. The five shared failures
+from the first integration all pass in the current selected regression run.
+The theme matrix and selected regression run do not replace full CI clearance.
