@@ -1,14 +1,16 @@
 # High Kingdoms visual review
 
 Review-only evidence for the High Kingdoms appearance, code commit
-`a5f7dc8141e40eb62e7bb60415563411b3513580` on `codex/high-kingdoms-theme`.
+`fbf856bb05bca89b02a34850f2a0efbb3f691662` on `codex/high-kingdoms-theme`.
 The theme depends on draft PR 962. Captured November 14, 2026 (Toronto).
 All campaigns, characters and room codes are disposable fictional fixtures.
 No production databases, browser profiles or server logs are included.
 
 The final development matrix passed 43 checks, followed by six picker checks
 after adding image-decoding readiness to prevent incomplete cold captures.
-The production build passed the same 43 checks. The gallery uses final
+The final production build passed the same 43 checks after correcting the
+in-map hand label to use gilt ink in day mode. Development results precede
+that final text-color correction. The gallery uses final
 production captures; the JSON reports preserve both sets of geometry results.
 The two desktop lobby invite labels use a fictional example.invalid address
 for publication; their QR images still point to the now-stopped disposable
