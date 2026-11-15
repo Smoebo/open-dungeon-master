@@ -1,0 +1,92 @@
+{
+  "source": "d0f70d3b37779dc9635ef65f2640bb818a60d957",
+  "base": "cab3070dc96c895a1d8aae8d6dd34b05c1a6ef65",
+  "capturedAt": "2026-11-15T06:58:15.636Z",
+  "appearance": {
+    "catalog": 12,
+    "contracts": 5
+  },
+  "targetedComponentSuites": 4,
+  "lint": {
+    "errors": 0,
+    "warnings": 313
+  },
+  "productionBuild": "passed including TypeScript",
+  "budgets": {
+    "passed": true,
+    "sharedCssKiB": 107.5,
+    "rulebookCssKiB": 114.1
+  },
+  "productionBrowser": {
+    "passed": 59,
+    "failed": 0
+  },
+  "readability": {
+    "passed": 20,
+    "failed": 0
+  },
+  "sharedBrowser": {
+    "passed": 21,
+    "failed": 0
+  },
+  "sharedBrowserScope": "General repository fixtures using their default appearance, not a Hearth-specific accessibility audit.",
+  "remaining": [
+    "Shared 1024px / 125% text combat crowding, reproduced identically in Hearth and Arcane",
+    "Final published-head CI",
+    "Native app shell",
+    "Real phone / mobile Safari",
+    "Screen-reader review"
+  ],
+  "screenshots": [
+    "validation-picker-1360-dark-1.png",
+    "validation-picker-1360-light-1.png",
+    "validation-picker-390-dark-1.png",
+    "validation-picker-390-light-1.png",
+    "validation-picker-320-light-1.25.png",
+    "validation-picker-layout-4.png",
+    "validation-picker-layout-6.png",
+    "validation-header-story-320-dark-large.png",
+    "validation-header-story-390-dark-large.png",
+    "validation-header-combat-1024-dark-large.png",
+    "validation-header-combat-1360-dark-large.png",
+    "validation-header-combat-1920-dark-large.png",
+    "validation-frame-clearance-390-dark.png",
+    "validation-frame-clearance-1360-dark.png",
+    "validation-header-story-320-light-large.png",
+    "validation-header-story-390-light-large.png",
+    "validation-header-combat-1024-light-large.png",
+    "validation-header-combat-1360-light-large.png",
+    "validation-header-combat-1920-light-large.png",
+    "validation-frame-clearance-390-light.png",
+    "validation-frame-clearance-1360-light.png",
+    "validation-lobby-1360-dark.png",
+    "validation-lobby-1360-light.png",
+    "validation-lobby-390-dark.png",
+    "validation-lobby-390-light.png",
+    "validation-story-1360-dark-large.png",
+    "validation-story-1360-light-large.png",
+    "validation-story-390-dark-large.png",
+    "validation-story-390-light-large.png",
+    "validation-dice-dark-large.png",
+    "validation-dice-light-large.png",
+    "validation-combat-1360-dark-large.png",
+    "validation-combat-1360-light-large.png",
+    "validation-combat-390-dark-large.png",
+    "validation-combat-hand-dark-large.png",
+    "validation-combat-390-light-large.png",
+    "validation-combat-hand-light-large.png",
+    "validation-map-enlarged.png",
+    "validation-map-enlarged-390-dark.png",
+    "validation-map-enlarged-390-light.png",
+    "validation-map-enlarged-1360-light.png",
+    "validation-combat-card.png",
+    "validation-picker-hearth-320-light.png",
+    "validation-picker-hearth-320-dark.png",
+    "validation-narrow-combat-hearth.png",
+    "validation-narrow-combat-arcane.png",
+    "validation-hearth-header-story-light.png",
+    "validation-hearth-header-story-dark.png",
+    "validation-hearth-header-combat-light.png",
+    "validation-hearth-header-combat-dark.png"
+  ]
+}

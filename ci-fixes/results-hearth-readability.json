@@ -1,0 +1,718 @@
+{
+  "theme": "hearth",
+  "checks": [
+    {
+      "title": "Hearth action contrast",
+      "mode": "dark",
+      "materials": [
+        {
+          "label": "Send",
+          "ink": "rgb(244, 244, 218)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(rgb(117, 64, 25), rgb(72, 36, 14))",
+          "minimumContrast": 7.508368963231309
+        },
+        {
+          "label": "Selected mode",
+          "ink": "rgb(244, 244, 218)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(rgb(112, 69, 24), rgb(81, 48, 15))",
+          "minimumContrast": 7.362488389537854
+        }
+      ]
+    },
+    {
+      "title": "Hearth action contrast",
+      "mode": "light",
+      "materials": [
+        {
+          "label": "Send",
+          "ink": "rgb(244, 244, 218)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(rgb(117, 64, 25), rgb(72, 36, 14))",
+          "minimumContrast": 7.508368963231309
+        },
+        {
+          "label": "Selected mode",
+          "ink": "rgb(244, 244, 218)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(rgb(112, 69, 24), rgb(81, 48, 15))",
+          "minimumContrast": 7.362488389537854
+        }
+      ]
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 320,
+      "mode": "dark",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 19.90625,
+          "right": 63,
+          "bottom": 59.90625,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 13,
+          "right": 303,
+          "bottom": 49.78125,
+          "width": 224,
+          "height": 36.78125
+        },
+        "controls": {
+          "x": 29,
+          "y": 72.828125,
+          "right": 303,
+          "bottom": 110.828125,
+          "width": 274,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 120.828125,
+          "width": 312,
+          "height": 116.828125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 320,
+      "mode": "dark",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 300,
+          "bottom": 61,
+          "width": 211,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 300,
+          "bottom": 135.328125,
+          "width": 271,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 147.328125,
+          "width": 312,
+          "height": 143.328125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 320,
+      "mode": "light",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 19.90625,
+          "right": 63,
+          "bottom": 59.90625,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 13,
+          "right": 303,
+          "bottom": 49.78125,
+          "width": 224,
+          "height": 36.78125
+        },
+        "controls": {
+          "x": 29,
+          "y": 72.828125,
+          "right": 303,
+          "bottom": 110.828125,
+          "width": 274,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 120.828125,
+          "width": 312,
+          "height": 116.828125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 320,
+      "mode": "light",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 300,
+          "bottom": 61,
+          "width": 211,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 300,
+          "bottom": 135.328125,
+          "width": 271,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 147.328125,
+          "width": 312,
+          "height": 143.328125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 390,
+      "mode": "dark",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 13,
+          "right": 63,
+          "bottom": 53,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 15.28125,
+          "right": 373,
+          "bottom": 33.671875,
+          "width": 294,
+          "height": 18.390625
+        },
+        "controls": {
+          "x": 29,
+          "y": 59,
+          "right": 373,
+          "bottom": 97,
+          "width": 344,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 107,
+          "width": 382,
+          "height": 103
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 390,
+      "mode": "dark",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 370,
+          "bottom": 61,
+          "width": 281,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 370,
+          "bottom": 135.328125,
+          "width": 341,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 147.328125,
+          "width": 382,
+          "height": 143.328125
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 390,
+      "mode": "light",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 13,
+          "right": 63,
+          "bottom": 53,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 15.28125,
+          "right": 373,
+          "bottom": 33.671875,
+          "width": 294,
+          "height": 18.390625
+        },
+        "controls": {
+          "x": 29,
+          "y": 59,
+          "right": 373,
+          "bottom": 97,
+          "width": 344,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 107,
+          "width": 382,
+          "height": 103
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "The Verdant Archive · In play",
+      "width": 390,
+      "mode": "light",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 370,
+          "bottom": 61,
+          "width": 281,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 370,
+          "bottom": 135.328125,
+          "width": 341,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 147.328125,
+          "width": 382,
+          "height": 143.328125
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 320,
+      "mode": "dark",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 19.90625,
+          "right": 63,
+          "bottom": 59.90625,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 13,
+          "right": 303,
+          "bottom": 49.78125,
+          "width": 224,
+          "height": 36.78125
+        },
+        "controls": {
+          "x": 29,
+          "y": 72.828125,
+          "right": 303,
+          "bottom": 110.828125,
+          "width": 274,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 120.828125,
+          "width": 312,
+          "height": 116.828125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 320,
+      "mode": "dark",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 300,
+          "bottom": 61,
+          "width": 211,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 300,
+          "bottom": 135.328125,
+          "width": 271,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 147.328125,
+          "width": 312,
+          "height": 143.328125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 320,
+      "mode": "light",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 19.90625,
+          "right": 63,
+          "bottom": 59.90625,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 13,
+          "right": 303,
+          "bottom": 49.78125,
+          "width": 224,
+          "height": 36.78125
+        },
+        "controls": {
+          "x": 29,
+          "y": 72.828125,
+          "right": 303,
+          "bottom": 110.828125,
+          "width": 274,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 120.828125,
+          "width": 312,
+          "height": 116.828125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 320,
+      "mode": "light",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 300,
+          "bottom": 61,
+          "width": 211,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 300,
+          "bottom": 135.328125,
+          "width": 271,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 316,
+          "bottom": 147.328125,
+          "width": 312,
+          "height": 143.328125
+        },
+        "pageWidth": 320
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 390,
+      "mode": "dark",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 13,
+          "right": 63,
+          "bottom": 53,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 15.28125,
+          "right": 373,
+          "bottom": 33.671875,
+          "width": 294,
+          "height": 18.390625
+        },
+        "controls": {
+          "x": 29,
+          "y": 59,
+          "right": 373,
+          "bottom": 97,
+          "width": 344,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 107,
+          "width": 382,
+          "height": 103
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 390,
+      "mode": "dark",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 370,
+          "bottom": 61,
+          "width": 281,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 370,
+          "bottom": 135.328125,
+          "width": 341,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 147.328125,
+          "width": 382,
+          "height": 143.328125
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 390,
+      "mode": "light",
+      "scale": 1,
+      "geometry": {
+        "back": {
+          "x": 23,
+          "y": 13,
+          "right": 63,
+          "bottom": 53,
+          "width": 40,
+          "height": 40
+        },
+        "title": {
+          "x": 79,
+          "y": 15.28125,
+          "right": 373,
+          "bottom": 33.671875,
+          "width": 294,
+          "height": 18.390625
+        },
+        "controls": {
+          "x": 29,
+          "y": 59,
+          "right": 373,
+          "bottom": 97,
+          "width": 344,
+          "height": 38
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 107,
+          "width": 382,
+          "height": 103
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "Theme validation · Combat",
+      "width": 390,
+      "mode": "light",
+      "scale": 1.25,
+      "geometry": {
+        "back": {
+          "x": 21.5,
+          "y": 23.65625,
+          "right": 71.5,
+          "bottom": 73.65625,
+          "width": 50,
+          "height": 50
+        },
+        "title": {
+          "x": 89,
+          "y": 15,
+          "right": 370,
+          "bottom": 61,
+          "width": 281,
+          "height": 46
+        },
+        "controls": {
+          "x": 29,
+          "y": 88.328125,
+          "right": 370,
+          "bottom": 135.328125,
+          "width": 341,
+          "height": 47
+        },
+        "header": {
+          "x": 4,
+          "y": 4,
+          "right": 386,
+          "bottom": 147.328125,
+          "width": 382,
+          "height": 143.328125
+        },
+        "pageWidth": 390
+      }
+    },
+    {
+      "title": "Map hand label",
+      "mode": "dark",
+      "paint": {
+        "ink": "rgb(247, 223, 174)",
+        "shadow": "rgba(4, 2, 12, 0.95) 0px 1px 2px, rgba(4, 2, 12, 0.7) 0px 0px 10px"
+      }
+    },
+    {
+      "title": "Map hand label",
+      "mode": "light",
+      "paint": {
+        "ink": "rgb(247, 223, 174)",
+        "shadow": "rgba(4, 2, 12, 0.95) 0px 1px 2px, rgba(4, 2, 12, 0.7) 0px 0px 10px"
+      }
+    }
+  ],
+  "failures": []
+}

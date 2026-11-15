@@ -1,0 +1,78 @@
+{
+  "source": "d0f70d3b37779dc9635ef65f2640bb818a60d957",
+  "width": 1024,
+  "height": 900,
+  "scale": 1.25,
+  "checks": [
+    {
+      "appearance": "hearth",
+      "textSize": "20px",
+      "tutorialClosed": true,
+      "board": {
+        "x": 357,
+        "y": 341.921875,
+        "width": 238,
+        "height": 172.5,
+        "top": 341.921875,
+        "right": 595,
+        "bottom": 514.421875,
+        "left": 357
+      },
+      "hand": {
+        "x": 355,
+        "y": 275.421875,
+        "width": 242,
+        "height": 252,
+        "top": 275.421875,
+        "right": 597,
+        "bottom": 527.421875,
+        "left": 355
+      },
+      "frame": {
+        "x": 334,
+        "y": 160.921875,
+        "width": 284,
+        "height": 384.5,
+        "top": 160.921875,
+        "right": 618,
+        "bottom": 545.421875,
+        "left": 334
+      }
+    },
+    {
+      "appearance": "arcane",
+      "textSize": "20px",
+      "tutorialClosed": true,
+      "board": {
+        "x": 357,
+        "y": 341.921875,
+        "width": 238,
+        "height": 172.5,
+        "top": 341.921875,
+        "right": 595,
+        "bottom": 514.421875,
+        "left": 357
+      },
+      "hand": {
+        "x": 355,
+        "y": 275.421875,
+        "width": 242,
+        "height": 252,
+        "top": 275.421875,
+        "right": 597,
+        "bottom": 527.421875,
+        "left": 355
+      },
+      "frame": {
+        "x": 334,
+        "y": 160.921875,
+        "width": 284,
+        "height": 384.5,
+        "top": 160.921875,
+        "right": 618,
+        "bottom": 545.421875,
+        "left": 334
+      }
+    }
+  ]
+}

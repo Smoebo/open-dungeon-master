@@ -1,0 +1,110 @@
+{
+  "app": false,
+  "results": [
+    {
+      "tag": "name-menu-desktop",
+      "ok": true,
+      "ms": 20457
+    },
+    {
+      "tag": "name-menu-phone",
+      "ok": true,
+      "ms": 11051
+    },
+    {
+      "tag": "fight-bench-desktop",
+      "ok": true,
+      "ms": 137162
+    },
+    {
+      "tag": "fight-bench-phone",
+      "ok": true,
+      "ms": 70798
+    },
+    {
+      "tag": "fight-bench-2-desktop",
+      "ok": true,
+      "ms": 104770
+    },
+    {
+      "tag": "fight-bench-2-phone",
+      "ok": true,
+      "ms": 77245
+    },
+    {
+      "tag": "day-board-desktop",
+      "ok": true,
+      "ms": 9759
+    },
+    {
+      "tag": "day-board-phone",
+      "ok": true,
+      "ms": 5166
+    },
+    {
+      "tag": "hand-on-board-desktop",
+      "ok": true,
+      "ms": 6485
+    },
+    {
+      "tag": "hand-on-board-laptop",
+      "ok": true,
+      "ms": 6426
+    },
+    {
+      "tag": "hand-on-board-phone",
+      "ok": true,
+      "ms": 2769
+    },
+    {
+      "tag": "split-line-desktop",
+      "ok": true,
+      "ms": 4749
+    },
+    {
+      "tag": "split-line-phone",
+      "ok": true,
+      "ms": 2935
+    },
+    {
+      "tag": "creator-sheets-desktop",
+      "ok": true,
+      "ms": 29940
+    },
+    {
+      "tag": "creator-sheets-phone",
+      "ok": true,
+      "ms": 29801
+    },
+    {
+      "tag": "creator-spells-identity-desktop",
+      "ok": true,
+      "ms": 52676
+    },
+    {
+      "tag": "creator-spells-identity-phone",
+      "ok": true,
+      "ms": 37708
+    },
+    {
+      "tag": "builder-a11y-desktop",
+      "ok": true,
+      "ms": 34871
+    },
+    {
+      "tag": "builder-a11y-phone",
+      "ok": true,
+      "ms": 25168
+    },
+    {
+      "tag": "companion-conduct-desktop",
+      "ok": true,
+      "ms": 24582
+    },
+    {
+      "tag": "companion-conduct-phone",
+      "ok": true,
+      "ms": 11482
+    }
+  ]
+}
