@@ -2,7 +2,7 @@
 
 Original crafted-oak, amber and parchment treatment for Open Game Master.
 Source: `codex/hearth-haven-theme`, implementation commit
-`2b815657967915c4eaf222cd6242425bcd118298`, dependent on PR 962.
+`11ddc89e20c7913c7a79c4ffaf986b566ee9f6ad`, dependent on PR 962.
 
 Captured 2026-11-14 with the repository's disposable browser fixture. All
 campaigns and characters are fictional. The loopback join address in lobby
@@ -12,9 +12,15 @@ The development and production browser matrices each passed all 43 checks, inclu
 layouts, text at 125%, keyboard interactions, picker isolation, theme switching,
 transparent decorative overlays and forced-colors hiding. Results are preserved
 in `results-development.json` and `results-production.json`. The displayed images
-are the final production captures; the preceding commit preserves the development
-captures. This gallery is separate from application source.
+are the final production captures. Commit `0444b31` preserves the initial development
+captures at source `2b8156579`; commit `b743626` preserves that source's production
+captures before the phone readability corrections. This gallery is separate from application source.
 Native app shells, real devices/mobile Safari and screen readers still need review.
+
+The final source also passed 18 focused readability checks in
+`results-hearth-readability.json`: separate Back/title columns at 320/390px,
+day/night and 100%/125% text, plus a bright player-hand label over the dark map.
+The phone-header regression failed on the previous build before the fix.
 
 ## Picker
 
