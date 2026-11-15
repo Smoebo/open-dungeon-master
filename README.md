@@ -8,10 +8,12 @@ Captured 2026-11-14 with the repository's disposable browser fixture. All
 campaigns and characters are fictional. The loopback join address in lobby
 captures belongs only to the disposable local preview.
 
-The development browser matrix passed all 43 checks, including 320/390px phone
+The development and production browser matrices each passed all 43 checks, including 320/390px phone
 layouts, text at 125%, keyboard interactions, picker isolation, theme switching,
 transparent decorative overlays and forced-colors hiding. Results are preserved
-in `results-development.json`. This gallery is separate from application source.
+in `results-development.json` and `results-production.json`. The displayed images
+are the final production captures; the preceding commit preserves the development
+captures. This gallery is separate from application source.
 Native app shells, real devices/mobile Safari and screen readers still need review.
 
 ## Picker
