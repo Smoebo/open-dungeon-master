@@ -2,15 +2,15 @@
 
 These are free programs, credits, and infrastructure OGM (Open Game Master, formerly Open Dungeon Master) can apply for. They make the project cheaper and more trustworthy to run: signed releases, faster CI, crash visibility, and more distribution channels. They don't bring in players by themselves.
 
-Last updated 9 Nov 2026. This file is refreshed after each weekly scan.
+Last updated 16 Nov 2026. This file is refreshed after each weekly scan.
 
-**Repo snapshot (9 Nov 2026):** the repos are now [`Lebbitheplow/open-game-master`](https://github.com/Lebbitheplow/open-game-master) and [`Lebbitheplow/open-game-master-client`](https://github.com/Lebbitheplow/open-game-master-client) (old `open-dungeon-master` URLs redirect), and the site is [opengamemaster.com](https://opengamemaster.com). The server repo has 76 stars, 36 forks, and 12 contributors. It's MIT-licensed, and v0.33.0 was released on 7 Nov. FUNDING.yml lists `Lebbitheplow` and Ko-fi, but there's still no live GitHub Sponsors profile, so the Sponsor button only shows Ko-fi.
+**Repo snapshot (16 Nov 2026):** the repos are [`Lebbitheplow/open-game-master`](https://github.com/Lebbitheplow/open-game-master) and [`Lebbitheplow/open-game-master-client`](https://github.com/Lebbitheplow/open-game-master-client) (old `open-dungeon-master` URLs redirect), and the site is [opengamemaster.com](https://opengamemaster.com). The server repo has 85 stars, 38 forks, and 14 contributors. It's MIT-licensed. v0.35.1 (14 Nov) is the latest stable release, with v0.37.0 out as a pre-release on 16 Nov. FUNDING.yml lists `Lebbitheplow` and Ko-fi, but there's still no live GitHub Sponsors profile, so the Sponsor button only shows Ko-fi.
 
 **Naming:** Wizards of the Coast trademarks "Dungeon Master," so the product is now OGM, Open Game Master. The GitHub repos were renamed by 9 Nov. Any program form already filed under the ODM name or old URLs should be updated.
 
 ## Fix first: no LICENSE file in the client repo
 
-`open-game-master-client` has no LICENSE file (still missing on 9 Nov). `package.json` says MIT, but GitHub shows no license, and SignPath and the Android repos check for one.
+`open-game-master-client` has no LICENSE file (still missing on 16 Nov). `package.json` says MIT, but GitHub shows no license, and SignPath and the Android repos check for one.
 
 1. Add an MIT LICENSE file to the client repo, matching `package.json`.
 2. Remove the duplicate v0.23.0 release assets that are still named `open-dungeon-master-client`.
@@ -25,12 +25,22 @@ Last updated 9 Nov 2026. This file is refreshed after each weekly scan.
 | [F-Droid](https://f-droid.org/en/docs/Inclusion_Policy/) | A listing in the main Android open-source app store | A build from source plus Fastlane metadata | Later |
 | [Flathub](https://docs.flathub.org/docs/for-app-authors/requirements) | A listing in the Linux app store | An offline build with bundled npm dependencies, a metainfo file, and some release history. Flathub also has strict rules on AI-written code and submissions. | Later. Lebbi should read the AI rules first. |
 
+## New on 16 Nov
+
+| Program | What we get | What it needs | Who acts |
+|---|---|---|---|
+| [Ollama Community Integrations](https://github.com/ollama/ollama#community-integrations) | A one-line listing in Ollama's README, a list local-AI users read. OGM already supports Ollama, LM Studio, llama.cpp, and vLLM. | A pull request adding one line, probably under "Productivity & Apps" or "Desktop". The README says "Want to add your project? Open a pull request." | Albert or Lebbi |
+| GitHub topics | Shows up when people browse topics like [virtual-tabletop](https://github.com/topics/virtual-tabletop) (134 repos) | The client repo has no topics. The server repo has only generic tabletop ones. Suggested: `virtual-tabletop`, `dnd-5e`, `ttrpg`, `ollama`, `local-llm`, `self-hosted`, and `android` for the client. | Lebbi, as repo admin |
+| [Groupfinder library](https://groupfinder.gg/library/about) | A free, editor-reviewed entry page in a tabletop directory for systems and tools | One form, a person reviews it, no fee. Anyone can submit. The maintainer can claim the entry later. | Albert submits, Lebbi claims |
+| [Kilo Open Source Sponsorship](https://kilo.ai/oss) | Seed tier for smaller projects: 5 Enterprise seats plus AI code reviews on public pull requests | Apply. Kilo picks the tier. Accepted projects agree that Kilo can feature them in its marketing. It overlaps with Greptile, so pick one. | Lebbi |
+| [Ona for Open Source](https://ona.com/open-source) | Up to $200 a month in credits per person for background coding agents | Maintainers or core contributors of an "active, well-established" project apply with their GitHub profile. Credits depend on how much each person contributes. | Lebbi and Albert, each on their own |
+
 ## New on 9 Nov
 
 | Program | What we get | What it needs | Who acts |
 |---|---|---|---|
 | [Neon Open Source Program](https://neon.com/programs/open-source) | A monthly cash sponsorship for a six-month renewable term, paid through GitHub Sponsors, plus optional Neon and AI Gateway credits up to $5k each. The project doesn't need to use Neon. | An OSI license, active development, and a live GitHub Sponsors profile. In return, a labeled Neon logo in one place, such as the README. | Lebbi, after turning on GitHub Sponsors |
-| [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted-data/blob/master/CONTRIBUTING.md) listing | A spot in the Games section of the main self-hosted software list, which fits the Docker server | First release must be more than four months old. Ours was 25 Jul, so it qualifies after 25 Nov. Working install instructions. | Albert or Lebbi opens the PR after 25 Nov |
+| [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted-data/blob/master/CONTRIBUTING.md) listing | A spot in the Games section of the main self-hosted software list, which fits the Docker server | First release must be more than four months old. Ours was 25 Jul, so it qualifies after 25 Nov. Working install instructions. | Albert or Lebbi opens the PR on or after 26 Nov |
 
 ## Apply now (found 27 Oct)
 
@@ -58,7 +68,7 @@ Last updated 9 Nov 2026. This file is refreshed after each weekly scan.
 
 ## Hold for later
 
-- **Anthropic Claude for Open Source:** needs 20 outside authors with merged PRs in the last 12 months. We had about 9 at the 27 Oct check.
+- **Anthropic Claude for Open Source:** now six months of Claude Ultra. The route that fits us still needs 20 outside contributors with merged PRs in the last 12 months. On 16 Nov the repo had 14 contributors in total.
 - **AMD AI Developer Program:** $100 in GPU credits. Worth it once AMD GPU testing is real work.
 - **MacStadium Open Source:** waitlist only.
 - **GitHub Secure Open Source Fund:** a weak fit for a young end-user app at our size.
