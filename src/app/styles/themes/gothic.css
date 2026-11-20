@@ -109,3 +109,15 @@ html[data-appearance="gothic"] .ornate::after { border-width: 0 3px 3px 0; }
      desktop's proportion to it: 196px on a 26px rail is 90px on a 12px one. */
   --theme-lobby-corner-size-small: 90px;
 }
+[data-appearance="gothic"] .theme-ornaments[data-surface="lobby"] > span {
+  /* The pinnacles stand above the piece's top arm and nothing stands beside
+     its left arm, so the painting's arms are off the rail's centre line by 4%
+     of its side in opposite directions: the top arm hung inside the rail and
+     the left arm outside it. Each corner moves out by that much on one axis
+     and in on the other; the margins are the same for all four because each
+     corner is pinned by its own two sides. */
+  margin: -8px 8px;
+}
+@media (max-width: 540px) {
+  [data-appearance="gothic"] .theme-ornaments[data-surface="lobby"] > span { margin: -3px 4px; }
+}
