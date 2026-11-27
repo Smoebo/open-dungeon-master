@@ -344,6 +344,73 @@ for (const [genre, plates] of Object.entries(R.REVEALED_ENEMY_PLATES)) {
     }
   }
 }
+// A disguise with a recorded race is a person of that race. A werewolf
+// entered as "Sister Anne, an elf woman" drew the genre's one plate for a
+// humanoid, as every other disguised creature beside her did, and as no
+// person with a face did: a tell before any reveal. Whatever the creature's
+// type or rank, since the record says who the table sees.
+for (const [genre, type, slug, name, cr] of [
+  ["horror", "humanoid", "werewolf", "Sister Anne", 3],
+  ["horror", "undead", "vampire", "The Old Family", 13],
+  ["mystery", "fiend", "rakshasa", "The Untouchable Magnate", 13],
+  ["cyberpunk", "undead", "lich", "The Uploaded Founder", 21],
+  ["steampunk", "undead", "vampire", "The Peer of the Realm", 13],
+  ["post_apocalyptic", "undead", "vampire-spawn", "Blood Baron's Thrall", 5],
+  // Somebody the genre renamed who is what they seem, so the two look alike.
+  ["horror", "humanoid", "bandit", "Road Vulture", 1],
+  // And one with no painted creature behind the block at all.
+  ["horror", "humanoid", "custom", "The Verger", 2],
+]) {
+  const look = { cr, genre, seed: name, slug, name };
+  const plain = R.monsterPlaceholder(type, look);
+  // A token painted for this name or block in this genre (another branch
+  // paints some of these as people), found the way the resolver finds it.
+  const tokens = R.GENRE_ENEMY_TOKENS[genre.replace(/_/g, "-")];
+  const stem = plain.slice(plain.lastIndexOf("/") + 1, -".webp".length);
+  const hasToken = Boolean(tokens) && (stem in (tokens.names ?? {}) || Object.values(tokens.slugs ?? {}).includes(stem));
+  for (const [race, gender, plate] of [["high_elf", "Female", "elf-feminine"], ["human", "Male", "human-masculine"], ["hill_dwarf", "", "dwarf-neutral"], ["Wood Elf", "Nonbinary", "wood-elf-neutral"]]) {
+    const face = R.monsterPlaceholder(type, { ...look, race, gender });
+    if (hasToken) {
+      // Art painted for this name in this genre is still the better picture.
+      if (face !== plain) {
+        failures.push(`${genre}'s ${name} has a token of its own and lost it to a recorded race: ${face}`);
+      }
+      continue;
+    }
+    if (!face.endsWith(`/character-race/${plate}.webp`)) {
+      failures.push(`${genre}'s ${name}, recorded as ${race} ${gender || "(no gender)"}, drew ${face}, not ${plate}`);
+    }
+    check(face, `${genre} ${name} as ${race}`);
+  }
+  // No race on record, or none the table knows: as before.
+  for (const race of [undefined, null, "", "unknown", "martian"]) {
+    if (R.monsterPlaceholder(type, { ...look, race, gender: "Female" }) !== plain) {
+      failures.push(`${genre}'s ${name} with the race ${JSON.stringify(race)} changed its plate`);
+    }
+  }
+  // The reveal still wins over the face, where there is a creature to show.
+  const shown = R.monsterPlaceholder(type, { ...look, race: "high_elf", gender: "Female", revealed: true });
+  if (R.MONSTER_FAMILIES[slug] && R.MONSTER_FAMILIES[slug] !== "bandit" && shown.includes("/character-race/")) {
+    failures.push(`${genre}'s ${name} kept the elf's face after the reveal: ${shown}`);
+  }
+}
+// Where something is painted for the enemy, a recorded race does not take it:
+// the creature under its own name, a genre's token for the name, a role in a
+// genre that draws roles (its own race plates, as before), and a stat block
+// somebody wrote.
+for (const [genre, type, slug, name] of [
+  ["horror", "humanoid", "werewolf", "Werewolf"],
+  ["high_fantasy", "humanoid", "werewolf", "Captain Hale"],
+  ["cyberpunk", "humanoid", "bandit", "Street Ganger"],
+  ["high_fantasy", "humanoid", "bandit", "Raider"],
+  ["horror", "humanoid", "homebrew:abc", "Sister Anne"],
+]) {
+  const look = { cr: 3, genre, seed: name, slug, name };
+  const face = R.monsterPlaceholder(type, { ...look, race: "high_elf", gender: "Female" });
+  if (face.includes("/character-race/")) {
+    failures.push(`${genre}'s ${name} (${slug}) lost its own plate to a recorded race: ${face}`);
+  }
+}
 // ...while the SRD creature under its own name still draws its plate there.
 expectPlate("cyberpunk plain troll", R.monsterPlaceholder("giant", { cr: 5, genre: "cyberpunk", slug: "troll", name: "Troll 1" }), "troll");
 // Unknown creature: falls back to its type.

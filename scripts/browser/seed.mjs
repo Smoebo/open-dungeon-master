@@ -1273,7 +1273,7 @@ const revealTables = {};
     sheets.createSheet(table.id, player.id, 5, heroInput({ name: "Wren Hale", class: "fighter", level: 5 }));
     const started = await invokeEngine(campaigns.getCampaignById(table.id), { kind: "human", userId: world.owner.id }, {
       name: "start_encounter",
-      args: { enemies: [{ monster: "werewolf", name: "The Good Doctor" }] },
+      args: { enemies: [{ monster: "werewolf", name: "The Good Doctor", race: "human", gender: "male" }] },
     });
     if (!started.ok) {
       throw new Error(`the reveal table's fight did not start: ${started.error}`);

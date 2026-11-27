@@ -9,6 +9,9 @@
 import { check, eventually, openPanelTab, untilStill } from "../lib.mjs";
 
 const WOLF = '[src*="/monster/werewolf.webp"]';
+// In disguise he is the man the table recorded, not the genre's one plate for
+// a humanoid, which every other disguised creature beside him drew too.
+const MAN = '[src*="/character-race/human-masculine.webp"]';
 
 export default {
   name: "console-reveal-enemy",
@@ -50,6 +53,7 @@ export default {
     await t.open(`/campaigns/${table.id}`);
     await eventually(() => page.locator(`${root}.cine-stage`).count(), { timeoutMs: 30_000, label: "the table's stage" });
     check((await wolves()) === 0, "The Good Doctor is drawn as a werewolf before anyone revealed him");
+    check((await page.locator(`${root}${MAN}`).count()) > 0, "The Good Doctor in disguise is not drawn as the man he was recorded as");
     await openForm();
 
     await eventually(() => box().count(), { label: "Put its disguise back, labelled" });

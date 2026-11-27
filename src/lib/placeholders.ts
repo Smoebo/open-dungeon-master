@@ -1286,6 +1286,16 @@ export function monsterPlaceholder(
       // (enemyNpcPlaceholder); with none it is the role token, as before.
       return enemyNpcPlaceholder(family, options) ?? `${BASE}/monster/${family}.webp`;
     }
+    // Nothing painted for it, and the table recorded who it is: that
+    // race's own face. A werewolf entered as "Sister Anne, an elf woman"
+    // drew the genre's one plate for a humanoid, like every other
+    // disguised creature beside her, and a person drawn that way was a
+    // tell. Before the boss plate: a recorded person is not "the big one"
+    // until revealed.
+    const person = raceFamily(recordedRace(options.race));
+    if (person) {
+      return `${BASE}/character-race/${person}-${normalizePresentation(options.presentation, options.gender)}.webp`;
+    }
   }
   if (typeof options.cr === "number" && options.cr >= BOSS_CR_FLOOR && BOSS_GENRES.has(slug)) {
     return `${BASE}/monster/${slug}-boss.webp`;
