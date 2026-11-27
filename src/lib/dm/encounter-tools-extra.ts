@@ -11,6 +11,7 @@ import { resolvePcOpportunityAttacks } from "@/lib/dm/opportunity";
 import { addEnemiesTool, handleAddEnemies } from "@/lib/dm/encounter-spawn";
 import { handleLairAction, handleLegendaryAction, handleLegendaryResist, legendaryTools } from "@/lib/dm/legendary-tools";
 import { declareIntentTool, handleDeclareIntent } from "@/lib/dm/intent-tools";
+import { handleRevealEnemy } from "@/lib/dm/reveal-tools";
 import { canonicalCondition } from "@/lib/dm/mutations";
 import { conditionNameRefusal } from "@/lib/dm/set-condition";
 import { instancesOf, pruneMeta, wakesOnDamage, type ConditionMetaMap } from "@/lib/dm/condition-logic";
@@ -53,6 +54,7 @@ export const EXTRA_ENCOUNTER_TOOL_NAMES = [
   "legendary_resist",
   "lair_action",
   "declare_intent",
+  "reveal_enemy",
 ] as const;
 
 type ToolDef = {
@@ -283,6 +285,13 @@ function handleEnemyCondition(
   if (!enemy) {
     return unknownEnemyRef(encounter.id, "enemyId", args.enemyId);
   }
+  // "revealed" is no condition: it is the mark that a disguised creature has
+  // been seen for what it is (reveal-tools.ts), kept on its row past the
+  // fight and past its death. The GM's ordinary word for it does the real
+  // thing, and clearing it puts the disguise back.
+  if (isConditionNamed(args.condition ?? "", "revealed")) {
+    return handleRevealEnemy(campaign, JSON.stringify({ enemyId: enemy.id, disguised: action === "clear" }));
+  }
   if (enemy.status !== "alive") {
     return { error: `${enemy.displayName} is ${enemy.status}.`, retry: true };
   }
@@ -477,6 +486,8 @@ export function applyExtraEncounterCall(
       return { result: handleLairAction(campaign, turn, rawArguments) };
     case "declare_intent":
       return { result: handleDeclareIntent(campaign, rawArguments, sheets, sheetsById) };
+    case "reveal_enemy":
+      return { result: handleRevealEnemy(campaign, rawArguments) };
     default:
       return null;
   }

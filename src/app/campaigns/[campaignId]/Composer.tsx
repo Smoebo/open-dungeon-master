@@ -340,7 +340,7 @@ function ComposerInner({
             smiteOffered={hostOffers(capabilities, "opportunitySmite")}
             faceOf={(enemyId) => {
               const foe = encounter?.enemies.find((enemy) => enemy.id === enemyId);
-              return foe ? [monsterPlaceholder(foe.type, { cr: foe.cr, genre: genre ?? undefined, seed: foe.name, slug: foe.slug, name: foe.name, race: foe.race, gender: foe.gender })] : [];
+              return foe ? [monsterPlaceholder(foe.type, { cr: foe.cr, genre: genre ?? undefined, seed: foe.name, slug: foe.slug, name: foe.name, race: foe.race, gender: foe.gender, revealed: foe.revealed })] : [];
             }}
           />
         ) : pending.parkedFor === "watch" ? (

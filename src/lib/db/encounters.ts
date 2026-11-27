@@ -177,6 +177,12 @@ export type EncounterEnemy = {
   // src/lib/actor-sex-logic.ts foeLook; a Cast NPC's are the Cast's.
   race?: string;
   gender?: Gender;
+  // The table has seen what this creature really is (reveal_enemy,
+  // src/lib/dm/reveal-tools.ts): in a genre that draws a disguised monster
+  // as a person, its token is the creature it fights as from here on. Kept
+  // on the row, so a new name, damage and a later fight do not put the mask
+  // back. Absent while the disguise holds.
+  revealed?: true;
   // The enemy row this one rides, as its mount (issue 1055): the pair stands
   // on this rider's token and the mount's own turn moves it
   // (src/lib/dm/enemy-riders.ts). Empty on foot.
@@ -246,6 +252,7 @@ type EnemyRow = {
   carried_from?: string | null;
   race?: string | null;
   gender?: string | null;
+  revealed?: number | null;
   rides_enemy_id?: string | null;
   led_by_enemy_id?: string | null;
   created_at: string;
@@ -367,6 +374,7 @@ function mapEnemy(row: EnemyRow): EncounterEnemy {
     ...(row.carried_from ? { carriedFrom: row.carried_from } : {}),
     ...(row.race ? { race: row.race } : {}),
     ...(storedGender(row.gender) ? { gender: storedGender(row.gender) } : {}),
+    ...(row.revealed ? { revealed: true as const } : {}),
     ...(row.rides_enemy_id ? { ridesEnemyId: row.rides_enemy_id, ...pairSizeOf(row.rides_enemy_id) } : {}),
     ...(row.led_by_enemy_id === SLOT_OWED ? { slotOwed: true as const } : row.led_by_enemy_id ? { ledBy: row.led_by_enemy_id } : {}),
     createdAt: row.created_at,
@@ -560,6 +568,8 @@ export function insertEnemy(input: {
   // it; a Cast NPC's look is the Cast's, read live, so theirs stays "".
   race?: string;
   gender?: Gender;
+  // Already seen for what it is in an earlier fight (reveal_enemy).
+  revealed?: boolean;
   // A creature come back from an earlier fight as it left them
   // (src/lib/dm/foe-return.ts): its hit points, its conditions, the XP the
   // earlier fight did not already pay, and the row it came from. Absent, it
@@ -586,8 +596,8 @@ export function insertEnemy(input: {
       `INSERT INTO encounter_enemies (
         id, encounter_id, campaign_id, slug, display_name, max_hp, current_hp,
         ac, initiative, status, cr, xp, stat_json, conditions_json, condition_meta_json,
-        npc_id, carried_from, race, gender, created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'alive', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        npc_id, carried_from, race, gender, revealed, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'alive', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     )
     .run(
       id,
@@ -608,6 +618,7 @@ export function insertEnemy(input: {
       arrives?.carriedFrom ?? "",
       input.race ?? "",
       input.gender || (input.npcId ? "" : pickedGender(id)),
+      input.revealed ? 1 : 0,
       now,
       now,
     );
@@ -835,6 +846,15 @@ export function setEnemyLook(enemyId: string, look: { gender?: Gender; race?: st
   getDatabase()
     .prepare(`UPDATE encounter_enemies SET gender = COALESCE(?, gender), race = COALESCE(?, race), updated_at = ? WHERE id = ?`)
     .run(look.gender ?? null, look.race ?? null, nowIso(), enemyId);
+}
+
+// Whether the table has seen what a disguised creature really is
+// (reveal_enemy, src/lib/dm/reveal-tools.ts); false puts the mask back.
+export function setEnemyRevealed(enemyId: string, revealed: boolean) {
+  keepRow("encounter_enemies", enemyId);
+  getDatabase()
+    .prepare(`UPDATE encounter_enemies SET revealed = ?, updated_at = ? WHERE id = ?`)
+    .run(revealed ? 1 : 0, nowIso(), enemyId);
 }
 
 // Puts this enemy on a mount, another row of its fight, or takes it off

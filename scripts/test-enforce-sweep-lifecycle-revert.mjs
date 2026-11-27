@@ -121,6 +121,7 @@ const RECIPES = {
     { variant: "hero pushed", stage: "fight", before: (c) => c.kit.giveTurn(c.mage.id), args: (c) => ({ token: c.hero.id, x: 5, y: 7, forced: true, reason: "a shove" }) },
   ],
   declare_intent: one("fight", (c) => ({ actor: c.e1.id, verb: "raises its club", kind: "melee", target: c.hero.id })),
+  reveal_enemy: one("fight", (c) => ({ enemyId: c.e1.id })),
   set_movement: one("fight", (c) => ({ token: c.hero.id, movement: "fly" })),
   apply_damage: [
     { variant: "hero", stage: "fight", args: (c) => ({ characterId: c.hero.id, amount: 7, type: "fire" }) },

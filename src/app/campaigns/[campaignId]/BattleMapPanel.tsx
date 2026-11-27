@@ -220,7 +220,7 @@ export function BattleMapPanel({
       byRef.set(sheet.id, characterPlaceholder({ race: sheet.race, class: sheet.class, gender: sheet.gender }));
     }
     for (const enemy of encounter?.enemies ?? []) {
-      byRef.set(enemy.id, monsterPlaceholder(enemy.type, { cr: enemy.cr, genre, seed: enemy.name, slug: enemy.slug, name: enemy.name, race: enemy.race, gender: enemy.gender }));
+      byRef.set(enemy.id, monsterPlaceholder(enemy.type, { cr: enemy.cr, genre, seed: enemy.name, slug: enemy.slug, name: enemy.name, race: enemy.race, gender: enemy.gender, revealed: enemy.revealed }));
     }
     // Somebody the DM put down by hand has no sheet and no stat block: the
     // face the Cast gives them when it knows them, else one of the neutral

@@ -300,6 +300,26 @@ await test("Observer Effect: a failed CHA save ends a creature's invisibility fo
   must(await spend(scene, "horror_observer_effect", { targetEnemyId: scene.near.id }), "Observer Effect against a made save");
   t.world.clearDice();
   assert.ok(foeHas(scene.near.id, "invisible"), "the save negates");
+  // A shapechanger forced into its true form is seen for what it is on the
+  // board too (reveal_enemy's mark); a creature with one form has none to show.
+  const shown = (id) => t.world.enemies().find((entry) => entry.id === id).revealed;
+  scene = await t.stage({ classId: "parapsychologist", level: 18 });
+  t.kit.setEnemy(scene.near.id, { stats: { traits: ["Shapechanger. It can use its action to polymorph into a wolf-humanoid hybrid or into a wolf."] } });
+  t.world.dice(20);
+  must(await spend(scene, "horror_observer_effect", { targetEnemyId: scene.near.id }), "Observer Effect against a shapechanger's made save");
+  t.world.clearDice();
+  assert.equal(shown(scene.near.id), undefined, "a save made keeps its disguise");
+  scene = await t.stage({ classId: "parapsychologist", level: 18 });
+  t.kit.setEnemy(scene.near.id, { stats: { traits: ["Shapechanger. It can use its action to polymorph into a wolf-humanoid hybrid or into a wolf."] } });
+  t.world.dice(1);
+  must(await spend(scene, "horror_observer_effect", { targetEnemyId: scene.near.id }), "Observer Effect at a shapechanger");
+  t.world.clearDice();
+  assert.equal(shown(scene.near.id), true, "its true form shows");
+  scene = await t.stage({ classId: "parapsychologist", level: 18 });
+  t.world.dice(1);
+  must(await spend(scene, "horror_observer_effect", { targetEnemyId: scene.near.id }), "Observer Effect at a creature of one form");
+  t.world.clearDice();
+  assert.equal(shown(scene.near.id), undefined, "nothing to show");
 });
 
 const strike = async (scene, enemy, faces, args = {}) => {

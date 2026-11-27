@@ -2250,6 +2250,10 @@ function ensureSchema(db: SqliteDatabase) {
     // plate (src/lib/placeholders.ts). A Cast NPC's own record wins.
     ["race", `TEXT NOT NULL DEFAULT ''`],
     ["gender", `TEXT NOT NULL DEFAULT ''`],
+    // 1 once the table has seen what a disguised creature really is (The
+    // Good Doctor is a werewolf): its token draws the creature it fights as
+    // from then on (reveal_enemy, src/lib/dm/reveal-tools.ts).
+    ["revealed", `INTEGER NOT NULL DEFAULT 0`],
     // The enemy row this one rides ('' on foot): a goblin on a wolf is two
     // rows, and the rider's names its mount (issue 1055,
     // src/lib/dm/enemy-riders.ts).

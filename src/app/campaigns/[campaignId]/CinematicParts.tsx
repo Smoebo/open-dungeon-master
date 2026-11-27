@@ -110,7 +110,7 @@ export function facesFor(
     return [entry.kind === "npc" ? entry.face : null, npcPlaceholder(null, entry.name)];
   }
   const enemy = enemies?.find((candidate) => candidate.id === entry.id);
-  return [enemy ? monsterPlaceholder(enemy.type, { cr: enemy.cr, genre, seed: enemy.name, slug: enemy.slug, name: enemy.name, race: enemy.race, gender: enemy.gender }) : null];
+  return [enemy ? monsterPlaceholder(enemy.type, { cr: enemy.cr, genre, seed: enemy.name, slug: enemy.slug, name: enemy.name, race: enemy.race, gender: enemy.gender, revealed: enemy.revealed }) : null];
 }
 
 // ---- the initiative ribbon along the top ----

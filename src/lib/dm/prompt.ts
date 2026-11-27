@@ -249,6 +249,9 @@ export type DmEncounterState = {
     moving?: string;
     // Who it rides or carries (issue 1055).
     pair?: string;
+    // On an enemy the genre draws in disguise, until it is revealed: how to
+    // say the mask is off (src/lib/dm/reveal-tools.ts disguiseNote).
+    disguise?: string;
   }>;
   // Combatants fighting on the side their kind does not (issue 503): a
   // character turned against the party, a creature the party dominates.
@@ -1297,6 +1300,9 @@ export function buildGameStateBlock(state: DmGameState): string {
       }
       if (enemy.pair) {
         parts.push(enemy.pair);
+      }
+      if (enemy.disguise) {
+        parts.push(enemy.disguise);
       }
       lines.push(parts.join(" | "));
     }

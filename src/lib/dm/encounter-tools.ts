@@ -476,6 +476,7 @@ function handleStartEncounter(
       ...(entry.npcId ? { npcId: entry.npcId } : {}),
       race: entry.race,
       gender: entry.gender,
+      revealed: entry.revealed,
       ...(carry ? { arrives: carry.arrives } : {}),
     });
   });

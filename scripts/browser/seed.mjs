@@ -1249,6 +1249,39 @@ const enemyTurns = {};
   }
 }
 
+// A person's horror table in a fight with a monster the genre presents as a
+// person, per viewport: The Good Doctor fights as a werewolf and his token is
+// a person until the GM reveals him (reveal_enemy).
+const revealTables = {};
+{
+  const { invokeEngine } = await import("../../src/lib/dm/invoke.ts");
+  for (const viewport of ["desktop", "phone"]) {
+    const table = campaigns.createCampaign(world.owner.id, {
+      title: `Reveal Table (${viewport})`,
+      description: "A horror table whose doctor is not what he seems.",
+      theme: "horror",
+      maxPlayers: 6,
+      startingLevel: 5,
+      difficulty: "normal",
+      gameSettings: { ttsEnabled: false, dmMode: "human", genre: "horror" },
+    });
+    const seated = campaigns.joinByInviteCode(player.id, campaigns.getCampaignById(table.id).inviteCode);
+    if ("error" in seated) {
+      throw new Error(`could not seat the player at the reveal table: ${seated.error}`);
+    }
+    campaigns.setCampaignStatus(table.id, "active");
+    sheets.createSheet(table.id, player.id, 5, heroInput({ name: "Wren Hale", class: "fighter", level: 5 }));
+    const started = await invokeEngine(campaigns.getCampaignById(table.id), { kind: "human", userId: world.owner.id }, {
+      name: "start_encounter",
+      args: { enemies: [{ monster: "werewolf", name: "The Good Doctor" }] },
+    });
+    if (!started.ok) {
+      throw new Error(`the reveal table's fight did not start: ${started.error}`);
+    }
+    revealTables[viewport] = { id: table.id, doctor: "The Good Doctor" };
+  }
+}
+
 // A person's table in a fight, per viewport (issue #621): one goblin on an
 // open board, its action unspent, for the Monster Hand's Dash, Disengage
 // and Dodge cards and the roster's "N ft left · Dashed".
@@ -4866,6 +4899,7 @@ const ids = {
   longOpening,
   fightInBuilding,
   enemyTurns,
+  revealTables,
   enemyMoves,
   levelTableId: levelTable.id,
   secretsTableId: secretsTable.id,
@@ -4974,6 +5008,7 @@ const ids = {
     ...Object.fromEntries(Object.entries(spotlightTables).map(([viewport, id]) => [id, `${SPOTLIGHT_TITLE} (${viewport})`])),
     ...Object.fromEntries(Object.entries(directed).map(([viewport, table]) => [table.id, `Directed Table (${viewport})`])),
     ...Object.fromEntries(Object.entries(enemyTurns).map(([viewport, table]) => [table.id, `Enemy Turn Table (${viewport})`])),
+    ...Object.fromEntries(Object.entries(revealTables).map(([viewport, table]) => [table.id, `Reveal Table (${viewport})`])),
     ...Object.fromEntries(Object.entries(enemyMoves).map(([viewport, table]) => [table.id, `Enemy Moves Table (${viewport})`])),
     ...Object.fromEntries(Object.entries(dominate).flatMap(([viewport, table]) => [[table.id, `Dominate Table (${viewport})`], [table.heldId, `Held Table (${viewport})`]])),
   },

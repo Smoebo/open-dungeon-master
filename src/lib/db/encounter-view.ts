@@ -98,6 +98,11 @@ export type PublicEncounter = {
     // when unrecorded, and nothing a player could not already see.
     race?: string;
     gender?: string;
+    // The table has seen what a disguised creature really is (reveal_enemy):
+    // its thumbnail is the creature it fights as, not the genre's person
+    // (monsterPlaceholder's `revealed`). Absent while the disguise holds,
+    // and from an older server.
+    revealed?: true;
     // The enemy this one rides (issue 1055): the two stand on one token, the
     // rider's, so a tap on it has to ask which of them is meant. Absent on
     // foot, and when the mount is not in this viewer's list.
@@ -364,9 +369,9 @@ function entryFace(cast: CastLookup, npcId: string, name: string): { face?: stri
 // Who a foe is, for its face: a Cast NPC's own record, read live so an edit
 // there shows in a running fight, else its row's look, the one a 3D board
 // view's model reads too (src/lib/actor-sex-logic.ts).
-function lookOf(cast: CastLookup, enemy: EncounterEnemy): { race?: string; gender?: string } {
+function lookOf(cast: CastLookup, enemy: EncounterEnemy): { race?: string; gender?: string; revealed?: true } {
   const { race, gender } = foeLook(enemy, cast.byId(enemy.npcId));
-  return { ...(race ? { race } : {}), ...(gender ? { gender } : {}) };
+  return { ...(race ? { race } : {}), ...(gender ? { gender } : {}), ...(enemy.revealed ? { revealed: true as const } : {}) };
 }
 
 // How far an enemy may still walk this turn, for the person running it: the

@@ -401,6 +401,17 @@ export const COMBAT_ADJUDICATIONS: CatalogEntry[] = [
     ],
   },
   {
+    name: "reveal_enemy",
+    label: "Reveal a disguised enemy",
+    category: "combat",
+    summary: "The table sees what a disguised enemy really is: its token becomes the creature it fights as.",
+    needsEncounter: true,
+    fields: [
+      { name: "enemyId", label: "Enemy", kind: "enemy", required: true },
+      { name: "disguised", label: "Put its disguise back", kind: "boolean", help: "Undoes a reveal: it changed back, or the wrong enemy was picked. Unticked reveals it." },
+    ],
+  },
+  {
     name: "take_action",
     label: "Action",
     category: "combat",

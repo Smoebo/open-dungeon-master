@@ -257,6 +257,52 @@ const goodDoctor = R.monsterPlaceholder("humanoid", { cr: 3, genre: "horror", sl
 if (goodDoctor.includes("/werewolf.")) {
   failures.push(`horror's The Good Doctor drew ${goodDoctor}, giving the werewolf away`);
 }
+// The reveal (reveal_enemy): once the table has seen what a disguised
+// creature is, its token is the creature it fights as. Before this the doctor
+// who turned into a wolf stayed a person on the board to the end of the fight.
+for (const [genre, name, slug, plate] of [
+  ["horror", "The Good Doctor", "werewolf", "werewolf"],
+  ["mystery", "The Night Clerk", "vampire-spawn", "vampire-spawn"],
+  ["horror", "The Landlord", "wererat", "wererat"],
+  ["horror", "The Old Family", "vampire", "vampire"],
+  ["horror", "The Archivist", "lich", "lich"],
+  ["mystery", "The Untouchable Magnate", "rakshasa", "rakshasa"],
+  ["mystery", "The Locked Chest", "mimic", "mimic"],
+  // An alias: the mummy lord shares the mummy's plate.
+  ["horror", "The First Founder", "mummy-lord", "mummy"],
+]) {
+  const look = { cr: 3, genre, seed: name, slug, name };
+  if (new RegExp(`/${plate}\.webp$`).test(R.monsterPlaceholder("humanoid", look))) {
+    failures.push(`${genre}'s ${name} drew the ${plate} before anyone revealed it`);
+  }
+  expectPlate(`${genre} ${name} revealed`, R.monsterPlaceholder("humanoid", { ...look, revealed: true }), plate);
+}
+// Nothing else moves: an enemy nobody revealed in any genre, a revealed one
+// whose stat block has no painted plate or is somebody's own, and a revealed
+// one in a genre whose reskin is no disguise (a Sump Rat is a sump rat).
+for (const genre of ["high_fantasy", "dark_fantasy", "mystery", "horror", "cyberpunk", "steampunk", "post_apocalyptic", "custom", ""]) {
+  for (const [type, slug, name] of [["humanoid", "werewolf", "The Good Doctor"], ["beast", "giant-rat", "Sump Rat"], ["humanoid", "bandit", "Hired Rough"], ["undead", "lich", "Lich"]]) {
+    const look = { cr: 3, genre, seed: name, slug, name };
+    const plain = R.monsterPlaceholder(type, look);
+    if (R.monsterPlaceholder(type, { ...look, revealed: false }) !== plain || R.monsterPlaceholder(type, { ...look, revealed: null }) !== plain) {
+      failures.push(`${genre || "no genre"}: an unrevealed ${name} changed its plate`);
+    }
+    const disguise = genre === "horror" || genre === "mystery";
+    if (!disguise && R.monsterPlaceholder(type, { ...look, revealed: true }) !== plain) {
+      failures.push(`${genre || "no genre"}: revealing ${name} changed a plate that hid nothing`);
+    }
+  }
+}
+// The last two are people known by what they do: a Road Vulture is a bandit
+// and a Smiling Neighbor a cultist, with no creature behind either.
+for (const [slug, name] of [["swamp-gulper", "The Thing in the Well"], ["custom", "The Thing in the Well"], ["homebrew:abc", "Werewolf"], [undefined, "The Thing in the Well"], ["bandit", "Road Vulture"], ["cultist", "Smiling Neighbor"]]) {
+  for (const genre of ["horror", "mystery"]) {
+    const look = { cr: 3, genre, seed: name, slug, name, race: "human", gender: "Female" };
+    if (R.monsterPlaceholder("monstrosity", { ...look, revealed: true }) !== R.monsterPlaceholder("monstrosity", look)) {
+      failures.push(`${genre}: revealing ${name} (${slug}) with no painted creature behind it changed its plate`);
+    }
+  }
+}
 // ...while the SRD creature under its own name still draws its plate there.
 expectPlate("cyberpunk plain troll", R.monsterPlaceholder("giant", { cr: 5, genre: "cyberpunk", slug: "troll", name: "Troll 1" }), "troll");
 // Unknown creature: falls back to its type.

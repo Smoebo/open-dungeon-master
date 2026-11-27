@@ -250,6 +250,7 @@ import { renderVariantRules } from "@/lib/dm/rules-logic";
 import { storyContextTokens, storyEndpointUnreachable, storyWindowAssumed } from "@/lib/model-client";
 import { restoreMentionedNpcs } from "@/lib/dm/npc-archive";
 import { handleRecallStory } from "@/lib/dm/recall";
+import { disguiseNote } from "@/lib/dm/reveal-tools";
 import { handleSearchLore, searchLoreTool } from "@/lib/dm/lore-search";
 import { handleReadCard, readCardTool } from "@/lib/dm/prep-card-tool";
 import { countPrepCards } from "@/lib/db/prep-cards";
@@ -506,6 +507,8 @@ export function buildEncounterState(campaignId: string, sheets: CharacterSheet[]
   const enemies = listEnemies(encounter.id);
   const due = enemiesOwedTurn(encounter);
   const board = getBattleMapForEncounter(encounter.id);
+  // For the line of an enemy the genre draws in disguise (reveal-tools.ts).
+  const genre = getCampaignById(campaignId)?.genre;
   const lair = encounter.legendary.lair ? legendaryLairLines(enemies) : [];
   // The bonus swing the acting hero's Attack action earned (issue 966): told
   // here, the turn's end waits for it rather than the narration's say-so.
@@ -596,6 +599,7 @@ export function buildEncounterState(campaignId: string, sheets: CharacterSheet[]
       // A rider is carried: its movement is its mount's, told on the pair's line.
       ...(enemy.ridesEnemyId ? {} : enemyMoving(encounter, enemy, board)),
       ...pairNote(enemies, enemy),
+      ...(genre ? disguiseNote({ genre }, enemy) : {}),
     })),
     ...sidesForState(encounter),
     map: buildMapText(encounter.id, sheets),

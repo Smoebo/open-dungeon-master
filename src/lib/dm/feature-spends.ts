@@ -14,7 +14,7 @@
 import { allocateSeq, type Campaign } from "@/lib/db/campaigns";
 import { getBattleMapForEncounter, getTokenByRef } from "@/lib/db/battle-maps";
 import { getDmTurn } from "@/lib/db/dm-turns";
-import { getActiveEncounter, listEnemies, patchEnemyConditions } from "@/lib/db/encounters";
+import { getActiveEncounter, listEnemies, patchEnemyConditions, setEnemyRevealed } from "@/lib/db/encounters";
 import { latestRoll } from "@/lib/db/rolls";
 import { insertSheetAudit } from "@/lib/db/sheet-audit";
 import { getSheetById, listSheets, patchSheet } from "@/lib/db/sheets";
@@ -69,7 +69,7 @@ type Ability = "str" | "dex" | "con" | "int" | "wis" | "cha";
 // to be away from its own, the world's plane being the Material. Before this
 // the banishment was only a sentence for the GM, and the creature was turned.
 const CHANNEL_TURNINGS = [
-  { name: "Turn the Faithless", beyond: true, ability: "cha" as const, types: /fey|fiend/i, note: "A creature that failed drops any disguise or illusion: its true form shows." },
+  { name: "Turn the Faithless", beyond: true, ability: "cha" as const, types: /fey|fiend/i, note: "A creature that failed drops any disguise or illusion: its true form shows.", unmasks: true },
   { name: "Abjure the Extraplanar", beyond: true, ability: "cha" as const, types: /aberration|celestial|elemental|fey|fiend/i },
   { name: "Arcane Abjuration", beyond: true, ability: "wis" as const, types: /celestial|elemental|fey|fiend/i, single: true, banish: true },
 ];
@@ -373,7 +373,7 @@ function turnUndead(
   // `ability`: the class's spellcasting ability the DC is read with (a
   // cleric's Wisdom, a paladin's Charisma), so a multiclass sheet whose first
   // caster class is another does not lend that class's DC.
-  kind: { types: RegExp; destroy: boolean; name: string; single?: boolean; target?: string; note?: string; beyond?: boolean; ability?: Ability; banish?: boolean } = { types: /undead/i, destroy: true, name: "Turn Undead", ability: "wis" },
+  kind: { types: RegExp; destroy: boolean; name: string; single?: boolean; target?: string; note?: string; beyond?: boolean; ability?: Ability; banish?: boolean; unmasks?: boolean } = { types: /undead/i, destroy: true, name: "Turn Undead", ability: "wis" },
 ): Resolution {
   const encounter = getActiveEncounter(campaign.id);
   if (!encounter) {
@@ -452,6 +452,11 @@ function turnUndead(
       [TURNED]: { rounds: 10, source: sheet.id, endsOnDamage: true },
     };
     patchEnemyConditions(enemy.id, conditions, meta);
+    // Turn the Faithless: "its true form shows", on the board too
+    // (src/lib/dm/reveal-tools.ts).
+    if (kind.unmasks) {
+      setEnemyRevealed(enemy.id, true);
+    }
     outcomes.push(`${enemy.displayName} is turned for a minute (WIS ${save.total ?? "failed"} vs DC ${dc}).`);
   }
   publishEncounter(campaign.id);

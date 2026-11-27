@@ -92,6 +92,9 @@ export type ResolvedEnemyRequest = {
   // An SRD race id and a gender for the face, "" or absent for unspecified.
   race?: string;
   gender?: Gender;
+  // Come back from a fight where the table saw what it really is
+  // (reveal_enemy): it arrives without its disguise.
+  revealed?: true;
   // The entry this creature carries as its mount (issue 1055): made as a row
   // of its own beside its rider's, which is linked to it once both exist.
   carries?: ResolvedEnemyRequest;
@@ -279,6 +282,7 @@ function carriedEntry(row: EncounterEnemy): ResolvedEnemyRequest {
     ...(row.npcId ? { npcId: row.npcId } : {}),
     ...(row.race ? { race: row.race } : {}),
     ...(gender ? { gender } : {}),
+    ...(row.revealed ? { revealed: true as const } : {}),
   };
 }
 
@@ -503,6 +507,7 @@ export function handleAddEnemies(
       ...(arrival.entry.npcId ? { npcId: arrival.entry.npcId } : {}),
       race: arrival.entry.race,
       gender: arrival.entry.gender,
+      revealed: arrival.entry.revealed,
       ...(arrival.carry ? { arrives: arrival.carry.arrives } : {}),
     }),
   );

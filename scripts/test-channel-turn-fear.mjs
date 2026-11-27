@@ -60,6 +60,9 @@ await test("Turn the Faithless turns the fiend in reach, leaves the beast, and s
   assert.equal(foe(beast.id).conditions.includes("turned"), false);
   assert.equal(foe(far.id).conditions.includes("turned"), false, "out of 30 feet");
   assert.match(out.result.also, /disguise/);
+  // "Its true form shows" on the board too (reveal_enemy's mark).
+  assert.equal(foe(fiend.id).revealed, true);
+  assert.equal(foe(beast.id).revealed, undefined);
   assert.equal(used(ancients), 1);
 });
 
@@ -67,6 +70,7 @@ await test("A save made leaves the creature unturned, and the use is still spent
   const [fiend] = await stage(ancients);
   const out = await channel(ancients, "turn the faithless", [20]);
   assert.equal(out.ok, true, out.error);
+  assert.equal(foe(fiend.id).revealed, undefined, "a save made keeps its disguise");
   assert.equal(foe(fiend.id).conditions.includes("turned"), false);
   assert.equal(used(ancients), 1);
 });

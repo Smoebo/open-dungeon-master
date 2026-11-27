@@ -182,6 +182,7 @@ export const NOT_AN_ACTOR = {
   enemy_flees: "the enemy matrix",
   legendary_action: "the enemy matrix",
   declare_intent: "the enemy matrix",
+  reveal_enemy: "the GM marks what the table has seen; the creature does nothing",
   legendary_resist: "the enemy matrix",
   apply_hazard: "a hazard acts on them",
   summon_pet: "the story gives a creature; the spell that calls one is cast_buff",

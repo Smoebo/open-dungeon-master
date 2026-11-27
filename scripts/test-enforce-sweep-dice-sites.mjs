@@ -771,6 +771,7 @@ const NO_ROW = {
   // Fights, creatures and the board: the creature's dice, or none.
   add_enemies: "adds creatures; their initiative is the GM's die",
   legendary_action: "a creature's action", declare_intent: "a creature's intent",
+  reveal_enemy: "marks an enemy's token as the creature it is; no die",
   legendary_resist: "a creature's resistance", lair_action: "the lair's action", set_movement: "the board's movement budget",
   end_encounter: "ends the fight",
   // Player spells and features whose d20, if any, is the creature's save.

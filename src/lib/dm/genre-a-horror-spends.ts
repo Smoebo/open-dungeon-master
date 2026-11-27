@@ -7,7 +7,8 @@
 //
 // A refusal says what is missing and that nothing was spent: the spend engine
 // pays the pool only for a play that returns a result.
-import { getActiveEncounter, getEnemy, patchEnemyConditions, saveEncounter, type EncounterEnemy } from "@/lib/db/encounters";
+import { getActiveEncounter, getEnemy, patchEnemyConditions, saveEncounter, setEnemyRevealed, type EncounterEnemy } from "@/lib/db/encounters";
+import { isShapechanger } from "@/lib/dm/enemy-polymorph-logic";
 import { publishEncounter } from "@/lib/dm/enemy-damage";
 import { withinFeet } from "@/lib/dm/authored-saves";
 import { resolveSpendEffect, type SpendContext } from "@/lib/dm/authored-spend-effects";
@@ -132,6 +133,12 @@ function observerEffect(ctx: SpendContext): Resolution {
   const enemy = ctx.args.targetEnemyId ? getEnemy(ctx.args.targetEnemyId) : null;
   if ("error" in out || !enemy || !enemy.conditions.some((entry) => isConditionNamed(entry, "observed"))) {
     return out;
+  }
+  // A shapechanger forced into its true form is seen for what it is, on the
+  // board too (src/lib/dm/reveal-tools.ts).
+  if (isShapechanger(enemy.stats) && !enemy.revealed) {
+    setEnemyRevealed(enemy.id, true);
+    publishEncounter(ctx.campaign.id);
   }
   const hiding = enemy.conditions.filter((entry) => UNSEEN.some((name) => isConditionNamed(entry, name)));
   if (hiding.length) {
