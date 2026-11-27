@@ -260,7 +260,11 @@ if (goodDoctor.includes("/werewolf.")) {
 // The reveal (reveal_enemy): once the table has seen what a disguised
 // creature is, its token is the creature it fights as. Before this the doctor
 // who turned into a wolf stayed a person on the board to the end of the fight.
-for (const [genre, name, slug, plate] of [
+// In every genre, since the GM decides what was a disguise: horror and mystery
+// are only where it happens most. A row's last cell is true where the art
+// for the enemy's unrevealed face is still to merge, so only the revealed
+// plate is held, and that the two differ.
+for (const [genre, name, slug, plate, facePending] of [
   ["horror", "The Good Doctor", "werewolf", "werewolf"],
   ["mystery", "The Night Clerk", "vampire-spawn", "vampire-spawn"],
   ["horror", "The Landlord", "wererat", "wererat"],
@@ -268,38 +272,75 @@ for (const [genre, name, slug, plate] of [
   ["horror", "The Archivist", "lich", "lich"],
   ["mystery", "The Untouchable Magnate", "rakshasa", "rakshasa"],
   ["mystery", "The Locked Chest", "mimic", "mimic"],
-  // An alias: the mummy lord shares the mummy's plate.
-  ["horror", "The First Founder", "mummy-lord", "mummy"],
+  // An alias: the mummy lord shares the mummy's plate until it has its own.
+  ["horror", "The First Founder", "mummy-lord", R.MONSTER_FAMILIES["mummy-lord"]],
+  // The stat block's plate is the wrong picture for these, so each has a
+  // revealed plate of its own (REVEALED_ENEMY_PLATES): the mimic's is a
+  // treasure chest, and the settings that explain monsters with science do
+  // not reveal a caped vampire.
+  ["horror", "The Wrong Door", "mimic", "horror-wrong-door-revealed"],
+  ["horror", "Wrong Door 2", "mimic", "horror-wrong-door-revealed"],
+  ["cyberpunk", "Board Chairman", "rakshasa", "cyberpunk-board-chairman-revealed", true],
+  ["cyberpunk", "Immortality Baron", "vampire", "cyberpunk-immortality-baron-revealed", true],
+  ["cyberpunk", "Sewer Cell Operative", "wererat", "cyberpunk-sewer-operative-revealed", true],
+  ["post_apocalyptic", "The Blood Baron", "vampire", "post-apocalyptic-blood-baron-revealed", true],
+  // The other genres with nothing painted for the name: the stat block's.
+  ["cyberpunk", "The Uploaded Founder", "lich", "lich"],
+  ["steampunk", "The Peer of the Realm", "vampire", "vampire", true],
+  ["post_apocalyptic", "Blood Baron's Thrall", "vampire-spawn", "vampire-spawn"],
+  // A revealed plate belongs to its genre: the same name elsewhere is its
+  // stat block.
+  ["mystery", "The Wrong Door", "mimic", "mimic"],
+  ["horror", "Board Chairman", "rakshasa", "rakshasa"],
 ]) {
   const look = { cr: 3, genre, seed: name, slug, name };
-  if (new RegExp(`/${plate}\.webp$`).test(R.monsterPlaceholder("humanoid", look))) {
+  const hidden = R.monsterPlaceholder("humanoid", look);
+  const shown = R.monsterPlaceholder("humanoid", { ...look, revealed: true });
+  if (hidden === shown) {
+    failures.push(`${genre}'s ${name} draws ${hidden} revealed or not`);
+  }
+  if (!facePending && new RegExp(`/${plate}\\.webp$`).test(hidden)) {
     failures.push(`${genre}'s ${name} drew the ${plate} before anyone revealed it`);
   }
-  expectPlate(`${genre} ${name} revealed`, R.monsterPlaceholder("humanoid", { ...look, revealed: true }), plate);
+  // A real file, and a plate some resolver draws (the reverse check below).
+  check(shown, `${genre} ${name} revealed`);
+  expectPlate(`${genre} ${name} revealed`, shown, plate);
 }
-// Nothing else moves: an enemy nobody revealed in any genre, a revealed one
-// whose stat block has no painted plate or is somebody's own, and a revealed
-// one in a genre whose reskin is no disguise (a Sump Rat is a sump rat).
+// Nothing else moves. An enemy nobody revealed, in any genre; and one whose
+// plate is already its stat block's (fantasy draws the family from the first
+// round), which a reveal leaves as it is.
 for (const genre of ["high_fantasy", "dark_fantasy", "mystery", "horror", "cyberpunk", "steampunk", "post_apocalyptic", "custom", ""]) {
-  for (const [type, slug, name] of [["humanoid", "werewolf", "The Good Doctor"], ["beast", "giant-rat", "Sump Rat"], ["humanoid", "bandit", "Hired Rough"], ["undead", "lich", "Lich"]]) {
+  for (const [type, slug, name] of [["humanoid", "werewolf", "The Good Doctor"], ["beast", "giant-rat", "Sump Rat"], ["humanoid", "bandit", "Hired Rough"], ["undead", "lich", "Lich"], ["fiend", "rakshasa", "Board Chairman"]]) {
     const look = { cr: 3, genre, seed: name, slug, name };
     const plain = R.monsterPlaceholder(type, look);
     if (R.monsterPlaceholder(type, { ...look, revealed: false }) !== plain || R.monsterPlaceholder(type, { ...look, revealed: null }) !== plain) {
       failures.push(`${genre || "no genre"}: an unrevealed ${name} changed its plate`);
     }
-    const disguise = genre === "horror" || genre === "mystery";
-    if (!disguise && R.monsterPlaceholder(type, { ...look, revealed: true }) !== plain) {
-      failures.push(`${genre || "no genre"}: revealing ${name} changed a plate that hid nothing`);
+    const family = R.MONSTER_FAMILIES[slug];
+    if (plain.endsWith(`/monster/${family}.webp`) && R.monsterPlaceholder(type, { ...look, revealed: true }) !== plain) {
+      failures.push(`${genre || "no genre"}: revealing ${name}, already drawn as its ${family}, changed its plate`);
     }
   }
 }
-// The last two are people known by what they do: a Road Vulture is a bandit
-// and a Smiling Neighbor a cultist, with no creature behind either.
-for (const [slug, name] of [["swamp-gulper", "The Thing in the Well"], ["custom", "The Thing in the Well"], ["homebrew:abc", "Werewolf"], [undefined, "The Thing in the Well"], ["bandit", "Road Vulture"], ["cultist", "Smiling Neighbor"]]) {
-  for (const genre of ["horror", "mystery"]) {
+// A revealed enemy with no other face to show: no painted creature behind its
+// stat block, a stat block somebody wrote (whatever it is called), and a
+// person known by what they do (a Road Vulture is a bandit and a Smiling
+// Neighbor a cultist, with no creature behind either).
+for (const [slug, name] of [["swamp-gulper", "The Thing in the Well"], ["custom", "The Thing in the Well"], ["homebrew:abc", "Werewolf"], ["homebrew:abc", "The Wrong Door"], [undefined, "The Thing in the Well"], ["bandit", "Road Vulture"], ["cultist", "Smiling Neighbor"]]) {
+  for (const genre of ["horror", "mystery", "cyberpunk", "steampunk", "post_apocalyptic", "high_fantasy"]) {
     const look = { cr: 3, genre, seed: name, slug, name, race: "human", gender: "Female" };
     if (R.monsterPlaceholder("monstrosity", { ...look, revealed: true }) !== R.monsterPlaceholder("monstrosity", look)) {
       failures.push(`${genre}: revealing ${name} (${slug}) with no painted creature behind it changed its plate`);
+    }
+  }
+}
+// Every revealed plate is named by an enemy its genre's bestiary ships, so
+// the table cannot keep a plate no card can reach.
+for (const [genre, plates] of Object.entries(R.REVEALED_ENEMY_PLATES)) {
+  const entries = JSON.parse(readFileSync(path.join(ROOT, `src/lib/bestiary/${genre}.json`), "utf8")).entries;
+  for (const [plate, names] of Object.entries(plates)) {
+    if (!names.some((name) => entries.some((entry) => entry.name === name))) {
+      failures.push(`${plate}: no ${genre} bestiary entry is called ${names.join(" or ")}`);
     }
   }
 }

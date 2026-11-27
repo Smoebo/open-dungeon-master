@@ -924,6 +924,18 @@ const GENRE_ENEMY_TOKEN_PLATES = [
   { id: "dark-fantasy-penitent", subject: "a penitent executioner, a hooded flagellant with a heavy blade" },
 ];
 
+// A disguised enemy once the table has seen what it is (REVEALED_ENEMY_PLATES
+// in src/lib/placeholders.ts), where its stat block's plate is the wrong
+// picture. Hand-picked art like the genre tokens above; the prompts and
+// originals are recorded in docs/art/reveal-plates-2026-11-26.json.
+const REVEALED_ENEMY_PLATES = [
+  { id: "horror-wrong-door-revealed", subject: "an old wooden house door split open into a fanged mouth with a long purple tongue, its brass knob a staring eye" },
+  { id: "cyberpunk-board-chairman-revealed", subject: "a gene-spliced predator, a snarling tiger-striped face above a torn charcoal suit and loosened tie" },
+  { id: "cyberpunk-immortality-baron-revealed", subject: "a longevity magnate, a hairless veined face with red eyes and transfusion lines running into a white suit collar" },
+  { id: "cyberpunk-sewer-operative-revealed", subject: "a rat-spliced infiltrator, a furred rat face with long incisors under a hood, a rebreather hanging loose" },
+  { id: "post-apocalyptic-blood-baron-revealed", subject: "a gaunt wasteland warlord wired into a dialysis rig, blood bags strapped to a leather coat" },
+];
+
 // Threat, which a creature type cannot express. Once the bestiary carries a
 // type, the fourteen plates above answer "what is it" for all 576 roster
 // entries; they still cannot say "this one is the centrepiece", so a CR 18
@@ -1069,6 +1081,9 @@ export function placeholderJobs() {
   }
   for (const token of GENRE_ENEMY_TOKEN_PLATES) {
     portrait("monster", token.id, token.subject, "creature");
+  }
+  for (const plate of REVEALED_ENEMY_PLATES) {
+    portrait("monster", plate.id, plate.subject, "creature");
   }
   for (const role of ENEMY_NPC_VARIANT_ROLES) {
     for (const race of ENEMY_NPC_VARIANT_RACES) {

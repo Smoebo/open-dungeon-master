@@ -1182,8 +1182,53 @@ function familyPlate(genre: string, slug: string | null | undefined, name: strin
   return family;
 }
 
-// The genres whose reskin is a disguise the story can lift (reveal_enemy).
-const DISGUISE_GENRES = new Set(["horror", "mystery"]);
+// ---- revealed enemies ----
+
+// What a disguised enemy looks like once the table has seen it
+// (reveal_enemy, src/lib/dm/reveal-tools.ts), where the stat block's own
+// plate is the wrong picture: horror's Wrong Door fights as a mimic, and the
+// mimic's plate is a treasure chest; a cyberpunk Immortality Baron fights as
+// a vampire, and his setting explains him with science, not a cape. By genre,
+// then by the whole name on the card, spelled and matched as
+// GENRE_ENEMY_TOKENS names are. Any other revealed enemy draws its stat
+// block's family plate.
+export const REVEALED_ENEMY_PLATES: Readonly<Record<string, Record<string, string[]>>> = {
+  horror: { "horror-wrong-door-revealed": ["The Wrong Door"] },
+  cyberpunk: {
+    "cyberpunk-board-chairman-revealed": ["Board Chairman"],
+    "cyberpunk-immortality-baron-revealed": ["Immortality Baron"],
+    "cyberpunk-sewer-operative-revealed": ["Sewer Cell Operative"],
+  },
+  "post-apocalyptic": { "post-apocalyptic-blood-baron-revealed": ["The Blood Baron"] },
+};
+
+const REVEALED_ENEMY_LOOKUP: Record<string, Map<string, string>> = Object.fromEntries(
+  Object.entries(REVEALED_ENEMY_PLATES).map(([genre, plates]) => [
+    genre,
+    new Map(
+      Object.entries(plates).flatMap(([plate, names]) =>
+        names.flatMap((name) => genreNameSpellings(name).map((spelling) => [spelling, plate] as const)),
+      ),
+    ),
+  ]),
+);
+
+// The plate a revealed enemy draws, or null when the reveal has no other
+// face to show: its own revealed plate in its genre, else the stat block's
+// family. Never a person known by what they do (ENEMY_ROLES: a Road Vulture
+// is a bandit, with nothing behind it), and never from the name of a stat
+// block somebody wrote.
+function revealedPlate(genre: string, slug: string | null | undefined, name: string | null | undefined): string | null {
+  if (ownStatBlock(slug)) {
+    return null;
+  }
+  const own = REVEALED_ENEMY_LOOKUP[genre]?.get(familyKey(name));
+  if (own) {
+    return own;
+  }
+  const family = familyOf(slug);
+  return family && !ENEMY_ROLES.has(family) ? family : null;
+}
 
 export type MonsterLook = {
   cr?: number | null;
@@ -1223,13 +1268,11 @@ export function monsterPlaceholder(
 ): string {
   const slug = genreSlug(options.genre);
   // A disguise that has come off (The Good Doctor has turned into the wolf):
-  // the stat block's own plate, past the genre token and the reskin guard
-  // that kept the surprise. Only where the reskin is a disguise: a cyberpunk
-  // Sump Rat is a sump rat however well the table knows it. A block with no
-  // painted family draws as before, and so does a person known by what they
-  // do (ENEMY_ROLES): a Road Vulture is a bandit, with nothing behind it.
-  const unmasked = options.revealed && DISGUISE_GENRES.has(slug) && !ownStatBlock(options.slug) ? familyOf(options.slug) : null;
-  if (unmasked && !ENEMY_ROLES.has(unmasked)) {
+  // past the genre token and the reskin guard that kept the surprise, in
+  // every genre, since the GM decides what was a disguise. An enemy with no
+  // other face to show draws as before (revealedPlate).
+  const unmasked = options.revealed ? revealedPlate(slug, options.slug, options.name) : null;
+  if (unmasked) {
     return `${BASE}/monster/${unmasked}.webp`;
   }
   if (!ownStatBlock(options.slug)) {

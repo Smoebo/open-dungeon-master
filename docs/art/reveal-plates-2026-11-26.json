@@ -1,0 +1,96 @@
+{
+  "recordedOn": "2026-11-26",
+  "author": "Smoebo",
+  "source": "Generated with the Grok Build command-line tool 1.0.60 (image_gen), one image per prompt, as original designs. The 1024x1024 JPEG originals are kept outside the repository; their hashes are below.",
+  "encoding": "Each original resized once to 256x256 (fit: cover) and encoded once to WebP quality 75 with sharp 0.35.5 (libvips 8.18.7). No other edit.",
+  "use": "Drawn only for a revealed enemy of that name in that genre (REVEALED_ENEMY_PLATES in src/lib/placeholders.ts), where the stat block's own plate is the wrong picture: the mimic's is a treasure chest, and cyberpunk and the wasteland explain their monsters with science.",
+  "subjectBasis": "Original designs for named SRD 5.1 creatures (mimic, rakshasa, vampire, wererat) as each genre's bestiary presents them, per docs/art/creature-art-guidance.md. No Product Identity subject appears; each image was inspected at full size for its anatomy as well as its prompt.",
+  "review": "Each shipped plate was viewed in a round crop at 96px and 40px on a dark and a light surround, per docs/art/token-readability.md.",
+  "plates": [
+    {
+      "file": "public/assets/placeholders/monster/horror-wrong-door-revealed.webp",
+      "subject": "The Wrong Door revealed (horror, fights as the SRD mimic)",
+      "basis": "an original mimic in the shape of a house door: a named SRD 5.1 creature (mimic) in a form the SRD describes it taking, not a published illustration",
+      "prompt": "A monstrous mimic in the shape of an old wooden house door, the door split open into a huge fanged mouth with a long purple tongue, the wood grain stretched like flesh, the brass knob become a staring eye, sticky strands between the teeth. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. The door monster fills the frame from top to bottom, the mouth centred. Plain painterly backdrop of faded green wallpaper that runs flat to every edge and corner of the square image with no vignette and no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 539251,
+        "sha256": "eeb90d82b5ceca572c880b4cb1fcc13b1f2085e8d14e4c6b6feb5d1a14d577bf"
+      },
+      "width": 256,
+      "height": 256,
+      "bytes": 11640,
+      "sha256": "7d15a104b9e69ad369fcdfce7f2c4d87505e8b404817b4dc124f91ef7c94a7c7"
+    },
+    {
+      "file": "public/assets/placeholders/monster/cyberpunk-board-chairman-revealed.webp",
+      "subject": "Board Chairman revealed (cyberpunk, fights as the SRD rakshasa)",
+      "basis": "an original gene-spliced predator with a tiger's head for the genre's reading of a named SRD 5.1 creature (rakshasa)",
+      "prompt": "A corporate chairman revealed as a gene-spliced predator, a tiger-striped furred face with slit amber eyes and fangs above a torn charcoal suit collar and loosened tie, chrome claws raised at the edge of the frame. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Head and upper shoulders fill about 80 percent of the frame, face centred and large, eyes clearly visible, intense expression. Plain painterly backdrop of deep gold, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 620017,
+        "sha256": "c29e5d2e3be38e1bba5e60d001d6a59031296af8d0f7470f64ad86c84357fca0"
+      },
+      "width": 256,
+      "height": 256,
+      "bytes": 16366,
+      "sha256": "cb1fa23803a2b5ceb1983e232204a86679f214061354e252bfdabf07b7bf8a84"
+    },
+    {
+      "file": "public/assets/placeholders/monster/cyberpunk-immortality-baron-revealed.webp",
+      "subject": "Immortality Baron revealed (cyberpunk, fights as the SRD vampire)",
+      "basis": "an original longevity patient kept alive by transfusion for the genre's reading of a named SRD 5.1 creature (vampire)",
+      "prompt": "A longevity magnate revealed, an unnaturally young face on a wasted ancient body with translucent skin, transfusion lines running into the collar of a white suit, eyes with a red medical sheen, science gone wrong and no cape and no fangs. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Head and upper shoulders fill about 80 percent of the frame, face centred and large, eyes clearly visible, intense expression. Plain painterly backdrop of pale rose, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 417324,
+        "sha256": "9c23166381b5466da4e4c9995b78d794aaaa8e660480ebc55df46243ddd4a560"
+      },
+      "width": 256,
+      "height": 256,
+      "bytes": 7708,
+      "sha256": "1d46d721916a2aa12a531f15e34a133429b79f3e39abe8df4bda7e22cce896f9"
+    },
+    {
+      "file": "public/assets/placeholders/monster/cyberpunk-sewer-operative-revealed.webp",
+      "subject": "Sewer Cell Operative revealed (cyberpunk, fights as the SRD wererat)",
+      "basis": "an original rat-spliced infiltrator for the genre's reading of a named SRD 5.1 creature (wererat)",
+      "prompt": "An infiltrator revealed as a rat-spliced mutant, a furred rat-like face with long incisors and whiskers under a pushed-back hood, the rebreather hanging loose, grey tactical jumpsuit. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Head and upper shoulders fill about 80 percent of the frame, face centred and large, eyes clearly visible, intense expression. Plain painterly backdrop of sewer green, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 410377,
+        "sha256": "32c7698f1220a5b1db6d25aa919c4959438bbcf082149599de1869013d7dc659"
+      },
+      "width": 256,
+      "height": 256,
+      "bytes": 8324,
+      "sha256": "6080dbd16e251fa86866ed925709c2d97104cf7ea761867bb1d005a728d1ca20"
+    },
+    {
+      "file": "public/assets/placeholders/monster/post-apocalyptic-blood-baron-revealed.webp",
+      "subject": "The Blood Baron revealed (post-apocalyptic, fights as the SRD vampire)",
+      "basis": "an original wasteland warlord on a dialysis rig for the genre's reading of a named SRD 5.1 creature (vampire)",
+      "prompt": "A gaunt wasteland warlord wired into a salvaged dialysis rig, clear tubing running dark red into his neck and collar, blood bags worn like armour on a long leather coat, translucent grey skin and red-rimmed eyes, a science-gone-wrong blood addict and no cape. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Head and upper shoulders fill about 80 percent of the frame, face centred and large, eyes clearly visible, intense expression. Plain painterly backdrop of dried-blood red, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 459973,
+        "sha256": "029ef61b275b4f4f1d6fe249540cf8ec650d5e94f075f5fdde2e9b960f620219"
+      },
+      "width": 256,
+      "height": 256,
+      "bytes": 9130,
+      "sha256": "d484f44d6bc8b1d1ab2e8191115599daf1ab8d5a16444d228eb65bedf3c472c8"
+    }
+  ]
+}
