@@ -83,6 +83,10 @@ export default {
     await t.shot("revealed-day");
     await page.evaluate((mode) => (document.documentElement.dataset.theme = mode), theme);
 
+    // The fight's own list too: its row drew the stat block's plate whatever
+    // the reveal said, so the doctor stayed a stand-in there.
+    await openPanelTab(t, "party");
+    await eventually(() => page.locator(`${root}[data-enemy-row] ${WOLF}`).count(), { label: "the werewolf on the doctor's row of the fight's list" });
     // The way back, by the same form.
     await openForm();
     await pickDoctor();

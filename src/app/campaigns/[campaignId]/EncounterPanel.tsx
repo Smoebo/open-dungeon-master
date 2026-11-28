@@ -25,6 +25,13 @@ function crLabel(cr: number): string {
 
 // Live enemy roster during combat. Deliberately vague: players see health
 // states, never numbers; exact HP stays on the server.
+// An enemy's plate as the board and the initiative strip draw it: by its
+// recorded race and gender while it is a person, and as the creature it
+// fights as once revealed.
+function enemyPlate(enemy: PublicEncounter["enemies"][number], genre: string | null | undefined): string {
+  return monsterPlaceholder(enemy.type, { cr: enemy.cr, genre, seed: enemy.name, slug: enemy.slug, name: enemy.name, race: enemy.race, gender: enemy.gender, revealed: enemy.revealed });
+}
+
 export function EncounterPanel({
   campaignId,
   encounter,
@@ -80,7 +87,7 @@ export function EncounterPanel({
       }
       const enemy = enemiesById.get(entry.id);
       if (enemy) {
-        return [monsterPlaceholder(enemy.type, { cr: enemy.cr, genre, seed: enemy.name, slug: enemy.slug, name: enemy.name, race: enemy.race, gender: enemy.gender, revealed: enemy.revealed })];
+        return [enemyPlate(enemy, genre)];
       }
       return entry.kind === "npc" ? [entry.face, npcPlaceholder(null, entry.name)] : [];
     };
@@ -201,6 +208,7 @@ export function EncounterPanel({
                     seed={group.members[0].name}
                     slug={group.members[0].slug}
                     name={group.members[0].name}
+                    art={enemyPlate(group.members[0], genre)}
                     size="size-6"
                     className={cn("rounded-full", !standing.length && "grayscale")}
                   />
@@ -230,6 +238,7 @@ export function EncounterPanel({
           return (
             <li
               key={enemy.id}
+              data-enemy-row={enemy.id}
               className={cn(
                 "animate-fade-up rounded-md border border-stone-800 bg-stone-950/60 px-2 py-1.5 transition-[color,background-color,border-color,opacity] duration-[260ms] ease-settle hover:border-stone-700",
                 out && "opacity-60",
@@ -251,6 +260,10 @@ export function EncounterPanel({
                     seed={enemy.name}
                     slug={enemy.slug}
                     name={enemy.name}
+                    // The face every other screen draws of this enemy: this
+                    // row drew its stat block's plate whatever its recorded
+                    // race or a reveal said.
+                    art={enemyPlate(enemy, genre)}
                     size="size-8"
                     className={cn("rounded-full", out && "grayscale")}
                   />
