@@ -1,0 +1,586 @@
+{
+  "recordedOn": "2026-11-28",
+  "author": "Smoebo",
+  "generator": "Grok command-line tool (image_gen), 1024px originals",
+  "encoding": "sharp: 256x256 cover, WebP quality 75, smartSubsample",
+  "subjectBasis": "The young, adult and ancient dragons of the ten SRD 5.1 colours, as original designs per docs/art/creature-art-guidance.md. The SRD gives each dragon numbers and a breath weapon and no description of its looks, so the head shapes are invented and no published illustration was named or supplied.",
+  "why": "The plates these replace (docs/art/core-monster-plates-2026-11-18.json) did not tell the ages apart: an ancient was often the dimmest of its three. Each age is now painted to a rule that survives at token size. Young: lean, in profile, short horns, about 65 percent of the frame on a bright backdrop, a wisp of breath. Adult: heavy-jawed, a full crown of horns, about 85 percent of the frame, its breath pouring out. Ancient: seen from the front and from below, a scarred head lowered toward the viewer with shoulders and wings behind it, on a dark backdrop. A colour keeps its hue at every age; age shows as wear at the edges, so a copper dragon is still read as copper at 40px.",
+  "review": "Each plate was viewed as a full square and as a round crop at 96px and 40px on dark and light. The ancients were painted four times: the first ran their horns into the corners the round crop cuts, the second came back on a painted disc, three of the third sat on a backdrop of their own colour, and all of the third were heads with no body, which Albert caught. The young red and blue were painted twice for a neck that ended in mid-air, and the ancient blue once more for a body that faded out at the bottom edge. The wyrmlings are unchanged.",
+  "totals": {
+    "plates": 30,
+    "bytesBefore": 375112,
+    "bytesAfter": 395484
+  },
+  "plates": [
+    {
+      "file": "public/assets/placeholders/monster/young-red-dragon.webp",
+      "subject": "young red dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young red dragon, lean and sleek, with deep crimson red scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a small lick of flame. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame with open backdrop above and at the sides, and the neck widens into the chest and runs off the bottom edge of the picture, so nothing is cut off in mid-air. Plain painterly backdrop of pale gold that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "71dbcfe843972432fba0ca694a64069fc4e4f9479bb2ec672e56a531cf6f1542"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 8020,
+        "sha256": "566a1649fb2e2158f5dd2102effb0b4ce206d8f3c9b5f4465ee99a49d16aeb98"
+      },
+      "replacedSha256": "a58ca8f65803dc3c5b6ffe5db2601970f8f04e12790e32c5fa2a318dcbd46028"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-red-dragon.webp",
+      "subject": "adult red dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult red dragon in its prime, powerful and heavy-jawed, with deep crimson red scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out roaring orange fire. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of ember orange that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "01282b7abeb4d0b97ab1dae317c1f56cd6aa068f8534c21c66c2730450d3e3c1"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16298,
+        "sha256": "2893cd04133c0342b65adafcd3fdf2e4756963903eae6980c575d7f56578947f"
+      },
+      "replacedSha256": "af41f4892c771b9cd5fafcf72d139adcea11392e5b3a14e308704b58cfcf51bb"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-red-dragon.webp",
+      "subject": "ancient red dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient red dragon of enormous size, a colossal battle-scarred head that is still unmistakably red in colour, with deep crimson red scales worn and cracked with age and edged here and there with soot and glowing ember cracks, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing yellow eyes, jaws wide in a roar with a torrent of roaring orange fire pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark charcoal grey smoke with a few orange sparks drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "ca25fdb0d5c7e49c31fb4cf40b618100ec03e99d45a96a2c69f7a6fd72684174"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16558,
+        "sha256": "d847922a2ec4fd59bfbc1fad0157f2fde95e2752d7c9c9e8d6c75187838d3f03"
+      },
+      "replacedSha256": "2d4f9a4994635beebb03dcb9369b68025036ec09ca59ae52d59911e76dc63529"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-black-dragon.webp",
+      "subject": "young black dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young black dragon, lean and sleek, with glossy jet black scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a thin dribble of green acid. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale sickly green that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "57120199a33bc0258e0942905cae36513bf335543664101160f2d54792c69a7e"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 5760,
+        "sha256": "7ae7b4fc297faefdfa3da57ee7e6220433ab60bf893cd62f34f8c029d4863854"
+      },
+      "replacedSha256": "eb9151a128193d78f7fbcba1e4b633a323b577653a557d5e361bfeb6b3e91809"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-black-dragon.webp",
+      "subject": "adult black dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult black dragon in its prime, powerful and heavy-jawed, with glossy jet black scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out bright green acid. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of swamp green that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "6be78957a554c9edcd2e2fb9d45535429a62db84cba9e946b294871d89295ee4"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 12884,
+        "sha256": "0e88ee156f63d698803e0e008eca02a6013738f06e6cbf394e78cc6bb4259acd"
+      },
+      "replacedSha256": "76b18677aa1f05fce24839571de10839e2156624aef0e63f7df2243bb0944c46"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-black-dragon.webp",
+      "subject": "ancient black dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient black dragon of enormous size, a colossal battle-scarred head that is still unmistakably black in colour, with glossy jet black scales worn and cracked with age and edged here and there with swamp slime and pitted acid burns, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing acid green eyes, jaws wide in a roar with a torrent of bright green acid pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark swamp green drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "f47baa686e35bd37dedf82f4efe509ea38da3d6cafb1203edb63a42edfee92f7"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 13614,
+        "sha256": "64d41ae34d17ca391fdb44ac51264f9dedd29b5e3787c2f13fe1b4e0ce7f14c1"
+      },
+      "replacedSha256": "5b1498d840bb4cbbdcf258cba30e171890ad45567a5b07ec2ad8fd8686bd0589"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-blue-dragon.webp",
+      "subject": "young blue dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young blue dragon, lean and sleek, with sapphire blue scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a few small sparks of lightning. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame with open backdrop above and at the sides, and the neck widens into the chest and runs off the bottom edge of the picture, so nothing is cut off in mid-air. Plain painterly backdrop of pale sand that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "55b72c0840e29b86ce6ce1f44298b11aa45b40b9ce44f137612b2e81aa16da6a"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 7752,
+        "sha256": "f1d50c502349f79307c1e124a56c15f8b9526663865f41d19b35e9f6c8db7a34"
+      },
+      "replacedSha256": "81697e56f9f47a32cc8cafa81feba97effcf0c3a1d91ba540bbb54a08f822935"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-blue-dragon.webp",
+      "subject": "adult blue dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult blue dragon in its prime, powerful and heavy-jawed, with sapphire blue scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out crackling white-blue lightning. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of desert tan that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "f6bde7704cb5509bc4cc9187851b980026572bbfcb8d126aac44288b10d39d09"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 15022,
+        "sha256": "3c78deb4b342afe0e21da425aeb5e58caa1e0da1702b47e8902b5cb1195a3b40"
+      },
+      "replacedSha256": "ab2cb70a53a4fd2e3fcabe8b35b8b8c5c4862542803bee6bcff04f86308b01f7"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-blue-dragon.webp",
+      "subject": "ancient blue dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient blue dragon of enormous size, a colossal battle-scarred head that is still unmistakably blue in colour, with sapphire blue scales worn and cracked with age and edged here and there with sand-scoured edges and lightning burn marks, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing white-blue eyes, jaws wide in a roar with a torrent of crackling white-blue lightning pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. Its chest and shoulders are solid and fully painted right down to the bottom edge and out to both side edges, not fading or dissolving into the smoke. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark dusty amber-brown sandstorm drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "f895f3a9bd51bf6f1af13949c7b0a670b673d14c8a02b89e5c363c87b43112c3"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16504,
+        "sha256": "6710ea33022407b56ecf0a7ea1220224bd6f55ceea134eb226782becee2d67bb"
+      },
+      "replacedSha256": "83cf04c53d6539127e8537a3da26ac0cdf01da2b81fc04724cd089a447bcc98e"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-green-dragon.webp",
+      "subject": "young green dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young green dragon, lean and sleek, with emerald green scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a thin curl of yellow-green gas. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale mist grey that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "9c86bbe449ba46af241f246a4f68000b93c7cfefe503c130f510fcff5464df07"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 7478,
+        "sha256": "ecdfd34be3f2bf62fc2a82fed1605e8293ce0140b6c6d537e19ac23011bb7d76"
+      },
+      "replacedSha256": "e50a7307103e62a6e00c954e517d8eeb42d610f45f9e9e12cb77b5253a7a03f4"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-green-dragon.webp",
+      "subject": "adult green dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult green dragon in its prime, powerful and heavy-jawed, with emerald green scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out billowing yellow-green poison gas. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of fog grey that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "c8efe56fce318694803e9653ba5acac9f974ed1bdc1d3876645b5f99c095103c"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 15534,
+        "sha256": "ded4b210bf66cec57aa10f0acdd151b6f1c0ebda8e40624dc79e685f03937099"
+      },
+      "replacedSha256": "19d597b642d35e087b69f33070ebfc4f3492b9b7f0ff1678f56183240e9e6786"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-green-dragon.webp",
+      "subject": "ancient green dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient green dragon of enormous size, a colossal battle-scarred head that is still unmistakably green in colour, with emerald green scales worn and cracked with age and edged here and there with moss and lichen, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing yellow eyes, jaws wide in a roar with a torrent of billowing yellow-green poison gas pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark cold grey fog drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "57c2ec4cc1b37cdbe07678e5a6fe1f7c8de6cb60d017cf25e66efe5252e34f1e"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 14346,
+        "sha256": "3c44a39d0a68063ffd5b400a258e3a6eea9da48235d35046b8c4b5683024eca5"
+      },
+      "replacedSha256": "61e5973ed66c96e400b9fb8c380fe90af52d746a48683ac7d930256db609a2f2"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-white-dragon.webp",
+      "subject": "young white dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young white dragon, lean and sleek, with chalky matte snow white scales, rough and not metallic, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a small puff of frosty breath. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale sky blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "26c2299ccbb73daae7bf4a77962ae2c1b68e22897bc29c4996c9072e2e7ce5b6"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 5782,
+        "sha256": "37f8d4bae75ab3fbf407e437c4aac7e0f0fb58d019788b3a68539c5630e9a160"
+      },
+      "replacedSha256": "e2381de88a174b1d275c7621b7ece13c7f5963d243b37ba5bc019d7f38e3a887"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-white-dragon.webp",
+      "subject": "adult white dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult white dragon in its prime, powerful and heavy-jawed, with chalky matte snow white scales, rough and not metallic, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out a blast of freezing white frost. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of glacier blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "feb11630ae1a09fc1c30f965747ad9da3e804c0c792697dbc2b46d6e35c3f8d3"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 13744,
+        "sha256": "c19633dae2b16a364297017708478afb7d00f0e7f2cc6b3c69a8ec36e5eede64"
+      },
+      "replacedSha256": "d6e77342fc18e4f0acc78188e5b7bebe6615f98dc93e85b319a72e74166f018b"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-white-dragon.webp",
+      "subject": "ancient white dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient white dragon of enormous size, a colossal battle-scarred head that is still unmistakably white in colour, with chalky matte snow white scales, rough and not metallic worn and cracked with age and edged here and there with thick ice and hanging icicles, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing pale ice blue eyes, jaws wide in a roar with a torrent of a blast of freezing white frost pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark polar blue drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "ac36abf698a345b40879171e10a5ecd1d6a581e4e371efa571924e5303b9a690"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16684,
+        "sha256": "dccb1aabb8cad7d4c209abf7cf5bdbfcc885a5dc65b29e58c525056fdb7c780e"
+      },
+      "replacedSha256": "a42ec0276f8c86e94e1c2b55c83c48f3e47c4f457f1bce1eb271f0f897ba248a"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-brass-dragon.webp",
+      "subject": "young brass dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young brass dragon, lean and sleek, with dull yellow brass metal scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a small puff of hot smoke. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale turquoise that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "c8f2c874bd8f61d044acf80cc640304bc0db96e52894ee8a7483605ee7437723"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 8418,
+        "sha256": "0576157724a3ca9b0ffb9d085c9f5b43b1ce3d9d0f1855df779878a14770cd37"
+      },
+      "replacedSha256": "29c73d744cbd1d5d9c1eee58e70703fce88cdcf3be1580617355061b2c2d0c35"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-brass-dragon.webp",
+      "subject": "adult brass dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult brass dragon in its prime, powerful and heavy-jawed, with dull yellow brass metal scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out a jet of fire. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of teal that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "cdc01583d5dffe1353786a27267f17c1cc781ae2425bbf57aaed9c497ef8eef8"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 15170,
+        "sha256": "6be17d280a6afb46639ca0ee6f425162bdb5d2d4cb6c034ff417b23ecaf344e0"
+      },
+      "replacedSha256": "57bc676c9b0b5cc282eaeb02ca9ae2cc4133757adeb8fdc3646b063cb6801d3a"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-brass-dragon.webp",
+      "subject": "ancient brass dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient brass dragon of enormous size, a colossal battle-scarred head that is still unmistakably brass in colour, with dull yellow brass metal scales worn and cracked with age and edged here and there with dark tarnish and heat stains, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing amber eyes, jaws wide in a roar with a torrent of a jet of fire pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark teal drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "0dd1763accabcee50f35971e446c39d07d18c5cb37d6c74076a40f9958be32ac"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16342,
+        "sha256": "b9d22da9ad07538c0be3e55508e4bb6ad1a6ee6ae0ed6b39205808c62a07774c"
+      },
+      "replacedSha256": "2a432d3e0b06b9f3be64a4aaffaba8ab59c34f3083dea01a618f8245f5948294"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-bronze-dragon.webp",
+      "subject": "young bronze dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young bronze dragon, lean and sleek, with dark brown bronze metal scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a few small sparks of lightning. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale sea blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "5da864ba221207fab444075df7456001d0f5a0c412bc33ceb85e4f8f96e3c2bb"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 6828,
+        "sha256": "db5d0ad4e9141e4142effe1eb08fc4b1f60755efed058745b827c100685e84b5"
+      },
+      "replacedSha256": "e3126b7790796ada550512c7f223e782d63595a3c7951cad6dfc74b8d3572910"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-bronze-dragon.webp",
+      "subject": "adult bronze dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult bronze dragon in its prime, powerful and heavy-jawed, with dark brown bronze metal scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out crackling white-blue lightning. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of deep sea blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "dd6a889ad4d121b9907cc79dc05538020304301facff2903c8e36449fb8f730d"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 14860,
+        "sha256": "997ccd67cd08e0e57318d1f3e1d07e24cd402fa02d94e60ea1aa01406ab1a9d8"
+      },
+      "replacedSha256": "91db877c57990748f184714036a46985524484d15b91103cc64f8f4f94358d9c"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-bronze-dragon.webp",
+      "subject": "ancient bronze dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient bronze dragon of enormous size, a colossal battle-scarred head that is still unmistakably bronze in colour, with dark brown bronze metal scales worn and cracked with age and edged here and there with sea-green patina and barnacles, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing pale blue eyes, jaws wide in a roar with a torrent of crackling white-blue lightning pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark stormy sea blue drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "a3b8cddbbf61277a1f8d9b5b8077706ad46a7d9ff671a0e76e5ec84005e76c06"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16704,
+        "sha256": "d18ef9ef59fafda1810de6d248607683e8f90cf559710ddc084e3d1c1e714b2a"
+      },
+      "replacedSha256": "98c664e48e408113fff9130372d646933f338b223c9ed15a610367af3e413c17"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-copper-dragon.webp",
+      "subject": "young copper dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young copper dragon, lean and sleek, with bright orange copper metal scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a thin dribble of green acid. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale aqua that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "4c34ae9442d76cf5adacbcefff37fb52d3e2084ba6fa3e52b0632793227b22c0"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 9022,
+        "sha256": "0ad7534d3bd9e7902d806699f64a0a53fa6041be739fe098c7c088ce58a2e6ff"
+      },
+      "replacedSha256": "bb90b66cbfacd23dd34f5de9932e2b63f73873e0eea8dcfb6b9e76fa5dfa50a3"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-copper-dragon.webp",
+      "subject": "adult copper dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult copper dragon in its prime, powerful and heavy-jawed, with bright orange copper metal scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out bright green acid. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of turquoise that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "c9ef4a7d5cb942f67617abb50f3eaa58c18fbc8460fa58714b4f66b3f6af4b64"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 19830,
+        "sha256": "8bbc134e4762318d9b6e05a884148a9bce9f09a182958734184dc5c09259d3eb"
+      },
+      "replacedSha256": "78fd5bde9033e341713867b37f155d109c9ec7030c2cf3a85f48a43a1ce03df4"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-copper-dragon.webp",
+      "subject": "ancient copper dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient copper dragon of enormous size, a colossal battle-scarred head that is still unmistakably copper in colour, with bright orange copper metal scales worn and cracked with age and edged here and there with blue-green verdigris, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing emerald green eyes, jaws wide in a roar with a torrent of bright green acid pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark teal green drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "fb2db4a7556db4adff7699aca01c4d530236633c362f9a9989521d38cc4f8ab3"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 15320,
+        "sha256": "ef96546a04acf5fb9f6802a92e692c2d8aa1851c7eb5e200bc816bda0aeecf7a"
+      },
+      "replacedSha256": "f0c96b6668470cd58a95ccfea290e775d1808cba9cca87ef0cd319a35b60742c"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-gold-dragon.webp",
+      "subject": "young gold dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young gold dragon, lean and sleek, with shining polished gold metal scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a small lick of golden flame. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale royal blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "869ed5c9e08def927b0968532b6ee630aac3f6038e12af3b291cc35324c3f4b5"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 7304,
+        "sha256": "f3738cd28aceb9ce1477da52990166591b383e02ec40581ab915dce90ca75155"
+      },
+      "replacedSha256": "22b328f23bb6fbee4f96ff78971f94253c8e62b12f00e889a1c4680ecaedeb54"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-gold-dragon.webp",
+      "subject": "adult gold dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult gold dragon in its prime, powerful and heavy-jawed, with shining polished gold metal scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out golden fire. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of royal blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "848f0eec9797e00a8820a86a2d94a2950b3749a4fde5386550be64e0a889d3bc"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 19194,
+        "sha256": "0adf4af434292e66de374615dbe16bc50f6e421cc0b16c970e246edbedbc3350"
+      },
+      "replacedSha256": "7aa3c6d61492895ce58461bd82646b25b3a1568e891b2af24d8a75877d540de0"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-gold-dragon.webp",
+      "subject": "ancient gold dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient gold dragon of enormous size, a colossal battle-scarred head that is still unmistakably gold in colour, with shining polished gold metal scales worn and cracked with age and edged here and there with deep scratches and darkened old gold, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing bright gold eyes, jaws wide in a roar with a torrent of golden fire pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark midnight blue drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "e59b7a3df0c6152683453d7f390cf1573b200b58954c834bef45b59f1ed9fdd3"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 19650,
+        "sha256": "a2f4a255560515d35f2609e6015f78dff84a8a45f36e2a7e450a2b1e9b1a9941"
+      },
+      "replacedSha256": "5b88a634408e7dd7de699f08d9357e4c10ed378ef2ea882114dcb2fb23ef760f"
+    },
+    {
+      "file": "public/assets/placeholders/monster/young-silver-dragon.webp",
+      "subject": "young silver dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "A young silver dragon, lean and sleek, with bright polished mirror-silver metal scales, a slender neck, a narrow smooth muzzle, short stubby horns only just grown in, bright clean unscarred scales and wide alert eyes, its mouth half open with a small puff of frosty breath. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and a long slim neck fill about 65 percent of the frame, with open backdrop all around them. Plain painterly backdrop of pale lavender that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "eacd458935d140ab59556894e18bef4f06bbb311a590891d65cc3de6efb10b9e"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 8252,
+        "sha256": "3d63367ae043b26a27b6c21086abb5e34c9d759e5d9afd7d6a2f43ad7964455c"
+      },
+      "replacedSha256": "ba32661e5edf662d8104cb0b1d3d15978bc0a80830221f7d9c8a08876ac99987"
+    },
+    {
+      "file": "public/assets/placeholders/monster/adult-silver-dragon.webp",
+      "subject": "adult silver dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An adult silver dragon in its prime, powerful and heavy-jawed, with bright polished mirror-silver metal scales, a thick muscular neck, a full crown of long swept-back horns, a row of spines down the neck and glaring eyes, jaws open in a roar pouring out a blast of freezing frost. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen in three-quarter view. The head and thick neck fill about 85 percent of the frame. Plain painterly backdrop of cobalt blue that runs flat to every edge and corner with no round shape, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "90ce52a12ca208bb6c5976198dccbe05471450b12cf2667c57d51c0a50e94b5a"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16420,
+        "sha256": "58a052c6c1d2f4dd032219a3d8489285d0eaf9f4b8e848c7d137addafb14dc39"
+      },
+      "replacedSha256": "93d17ca1a1010bdf4d6ce839cc2b1caf3726e4af7072333888e49b6d55a4505e"
+    },
+    {
+      "file": "public/assets/placeholders/monster/ancient-silver-dragon.webp",
+      "subject": "ancient silver dragon",
+      "basis": "named SRD 5.1 creature",
+      "prompt": "An ancient silver dragon of enormous size, a colossal battle-scarred head that is still unmistakably silver in colour, with bright polished mirror-silver metal scales worn and cracked with age and edged here and there with dull pewter tarnish and frost, a massive crown of huge gnarled horns that sweep up and curve inward with one horn chipped, a heavy armoured brow, a beard of long spikes under the jaw, old claw scars across the muzzle and glowing pale ice blue eyes, jaws wide in a roar with a torrent of a blast of freezing frost pouring from its mouth, and a thin bright rim of light along the edges of its horns and head. Square 1:1 role-playing game token portrait. Highly detailed dramatic digital painting in the style of dark fantasy game art, crisp focal detail, saturated colour, strong contrast. Seen from the front and from a low angle looking up at it, the head lowered toward the viewer. Behind the head its enormously thick neck rises into massive scaled shoulders and the tops of two half-spread wings, so the dragon's body fills the picture from side to side and runs off the bottom edge and both side edges. It is a whole living dragon seen close, never a floating head, a mask or a trophy. The head is the largest thing in the picture, with the horn tips just inside the top edge. Plain painterly backdrop of dark slate blue drifting smoke, the same from the centre to all four corners, with no vignette, no halo, no disc, no ring and no round shape behind the head, lighter than the subject, with no scenery. One identifying cue only. The subject's outline must stand out clearly from the backdrop. Must read clearly as a 40 pixel round token. Full square image, no border, no circular frame, no text, no lettering, no watermark, no logo. Original design, not a likeness of any real person, film character or published illustration.",
+      "original": {
+        "format": "jpeg",
+        "width": 1024,
+        "height": 1024,
+        "sha256": "24055b0f0dab0586683fc32fff766d1ec850697b1430d347156f1c6cb132e043"
+      },
+      "shipped": {
+        "width": 256,
+        "height": 256,
+        "bytes": 16190,
+        "sha256": "d479da53e570920ae62b14719bb4d175c2a7d172a5d9f14879765f003d69afbf"
+      },
+      "replacedSha256": "09a4c2b280bab0f4d8df0d77772ba918cb45a23a615608b9fabf8576bf04766e"
+    }
+  ]
+}
